@@ -1,0 +1,860 @@
+{
+  "ServiceIndustries": {
+    "templateComponents": {
+      "template-1": {
+        "shared": {
+          "Topbar": "ServiceTopbar1",
+          "Header": "ServiceHeader1",
+          "Footer": "ServiceFooter1"
+        },
+        "pages": {
+          "home": {
+            "components": [
+              {
+                "key": "Banner",
+                "component": "ServiceBanner1"
+              },
+              {
+                "key": "FeatureCards",
+                "component": "ServiceFeatureCards1"
+              },
+              {
+                "key": "AboutPage",
+                "component": "ServiceAboutPage1"
+              },
+              {
+                "key": "FeatureStrip",
+                "component": "ServiceFeatureStrip1"
+              },
+              {
+                "key": "Partners",
+                "component": "ServicePartners1"
+              },
+              {
+                "key": "Service",
+                "component": "ServiceService1"
+              },
+              {
+                "key": "WhyChooseUs",
+                "component": "ServiceWhyChooseUs1"
+              },
+              {
+                "key": "HowWeWork",
+                "component": "ServiceHowWeWork1"
+              },
+              {
+                "key": "Testimonial",
+                "component": "ServiceTestimonial1"
+              },
+              {
+                "key": "Blog",
+                "component": "ServiceBlog1"
+              },
+              {
+                "key": "CtaBanner",
+                "component": "ServiceCtaBanner1"
+              },
+              {
+                "key": "ContactSection",
+                "component": "ServiceContactSection1"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "sections": {
+      "Header": {
+        "variants": {
+          "ServiceHeader1": {
+            "site": {
+              "siteName": "Aquafix",
+              "tagline": "Plumbing & Repair Solutions",
+              "logo": {
+                "light": "/icon.png"
+              },
+              "TopBar": {
+                "phone": "(111) 222-333-444",
+                "phoneHref": "tel:1112223334",
+                "ctaButton": {
+                  "label": "Sign In",
+                  "href": "/signin"
+                }
+              },
+              "copyright": "© 2025 Aquafix. All rights reserved."
+            },
+            "meta": {
+              "siteTitle": "Aquafix | Top-Notch Plumbing & Repair Solutions",
+              "siteDescription": "Aquafix provides expert plumbing services including faucet repairs, drain cleaning, water heater installation, pipe replacement, and 24/7 emergency plumbing solutions.",
+              "keywords": [
+                "plumbing services",
+                "emergency plumber",
+                "drain cleaning",
+                "water heater installation",
+                "pipe repair",
+                "faucet repair",
+                "toilet installation",
+                "residential plumbing",
+                "commercial plumbing",
+                "24/7 plumber"
+              ]
+            },
+            "nav": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "About",
+                "href": "/about-us"
+              },
+              {
+                "label": "Services",
+                "href": "#",
+                "children": [
+                  {
+                    "label": "Faucet & Leak Repairs",
+                    "href": "/service-details"
+                  },
+                  {
+                    "label": "Drain Cleaning Services",
+                    "href": "/service-details"
+                  },
+                  {
+                    "label": "Water Heater Services",
+                    "href": "/service-details"
+                  },
+                  {
+                    "label": "Toilet Installation & Repair",
+                    "href": "/service-details"
+                  },
+                  {
+                    "label": "Pipe Installation & Replacement",
+                    "href": "/service-details"
+                  },
+                  {
+                    "label": "General Plumbing Services",
+                    "href": "/service-details"
+                  }
+                ]
+              },
+              {
+                "label": "Work",
+                "href": "/work"
+              },
+              {
+                "label": "Blogs",
+                "href": "/blog"
+              },
+              {
+                "label": "Pages",
+                "href": "#",
+                "children": [
+                  {
+                    "label": "About Us",
+                    "href": "/about-us"
+                  },
+                  {
+                    "label": "Our Team",
+                    "href": "/team"
+                  },
+                  {
+                    "label": "Testimonials",
+                    "href": "/testimonial"
+                  },
+                  {
+                    "label": "FAQ",
+                    "href": "/faq"
+                  },
+                  {
+                    "label": "Contact",
+                    "href": "/contact-us"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "Footer": {
+        "variants": {
+          "ServiceFooter1": {
+            "logoImage": "/icon.png",
+            "desc": "Professional plumbing services you can trust. Available 24/7 for all your plumbing needs.",
+            "ctaButton": {
+              "label": "Call +1 (570) 365-379",
+              "href": "tel:+15703650379"
+            },
+            "columns": [
+              {
+                "title": "Company",
+                "links": [
+                  {
+                    "label": "About Us",
+                    "href": "/about-us"
+                  },
+                  {
+                    "label": "Our Team",
+                    "href": "/team"
+                  },
+                  {
+                    "label": "Careers",
+                    "href": "/career"
+                  },
+                  {
+                    "label": "Contact",
+                    "href": "/contact-us"
+                  }
+                ]
+              },
+              {
+                "title": "Services",
+                "links": [
+                  {
+                    "label": "Plumbing",
+                    "href": "/service-details"
+                  },
+                  {
+                    "label": "Faucet Repair",
+                    "href": "/service-details"
+                  },
+                  {
+                    "label": "Installation",
+                    "href": "/service-details"
+                  },
+                  {
+                    "label": "Maintenance",
+                    "href": "/service-details"
+                  }
+                ]
+              }
+            ],
+            "footerContact": {
+              "phone": "(111) 222-333-444",
+              "phoneHref": "tel:1112223334",
+              "email": "info@aquafix.com",
+              "address": "123 Plumbing Street, New York, NY 10001"
+            },
+            "socialLinks": [
+              {
+                "label": "facebook",
+                "href": "https://www.facebook.com/"
+              },
+              {
+                "label": "twitter",
+                "href": "https://www.twitter.com/"
+              },
+              {
+                "label": "instagram",
+                "href": "https://www.instagram.com/"
+              }
+            ],
+            "copyright": "© 2025 Aquafix. All rights reserved. Designed by Uxpitter.",
+            "legalLinks": [
+              {
+                "label": "Privacy Policy",
+                "href": "/privacy-policy"
+              }
+            ]
+          }
+        }
+      },
+      "Banner": {
+        "variants": {
+          "ServiceBanner1": [
+            {
+              "badge": "Trusted Plumbing Experts",
+              "title": "Top-Notch Plumbing & Repair Solutions,",
+              "highlightedTitle": "Quality Work.",
+              "desc": "We take pride in providing exceptional plumbing services with a focus on quality and reliability. From routine maintenance to emergency repairs and comprehensive installations, we've got you covered.",
+              "buttons": [
+                {
+                  "label": "Get A Quote",
+                  "href": "/quote",
+                  "variant": "primary"
+                },
+                {
+                  "label": "See All Services",
+                  "href": "/services",
+                  "variant": "secondary",
+                  "icon": "arrow-right"
+                }
+              ],
+              "bgImageUrl": "/plumberImage/image1.jpg",
+              "socialProof": {
+                "avatarImages": [
+                  "/personImage/men2.png",
+                  "/personImage/men2.png",
+                  "/personImage/men2.png"
+                ],
+                "ratingBadge": "4.3k",
+                "label": "4,300+ Satisfied Clients"
+              }
+            },
+            {
+              "badge": "24/7 Emergency Support",
+              "title": "Fast & Reliable Pipe Repairs,",
+              "highlightedTitle": "Always Available.",
+              "desc": "Plumbing disasters don't wait for business hours. Our certified technicians are on standby 24/7 to solve your pipe leaks, drain clogs, and emergency breakdowns rapidly.",
+              "buttons": [
+                {
+                  "label": "Call Emergency",
+                  "href": "tel:+1919876654321",
+                  "variant": "primary"
+                },
+                {
+                  "label": "View Pricing",
+                  "href": "/pricing",
+                  "variant": "secondary",
+                  "icon": "arrow-right"
+                }
+              ],
+              "bgImageUrl": "/plumberImage/image2.jpg",
+              "socialProof": {
+                "avatarImages": [
+                  "/personImage/women3.png",
+                  "/personImage/men4.png",
+                  "/personImage/men5.png"
+                ],
+                "ratingBadge": "5.0k",
+                "label": "5,000+ Emergency Calls Fixed"
+              }
+            },
+            {
+              "badge": "Commercial & Residential",
+              "title": "Advanced Water Heater & Drainage,",
+              "highlightedTitle": "Certified Techs.",
+              "desc": "Upgrade your home or business plumbing infrastructure with state-of-the-art water heaters, complete re-piping solutions, and eco-friendly water systems.",
+              "buttons": [
+                {
+                  "label": "Book Inspection",
+                  "href": "/contact",
+                  "variant": "primary"
+                },
+                {
+                  "label": "Explore Solutions",
+                  "href": "/services",
+                  "variant": "secondary",
+                  "icon": "arrow-right"
+                }
+              ],
+              "bgImageUrl": "/plumberImage/image3.jpg",
+              "socialProof": {
+                "avatarImages": [
+                  "/personImage/men3.png",
+                  "/personImage/men4.png",
+                  "/personImage/men5.png"
+                ],
+                "ratingBadge": "99%",
+                "label": "Customer Satisfaction Rate"
+              }
+            }
+          ]
+        }
+      },
+      "FeatureCards": {
+        "variants": {
+          "ServiceFeatureCards1": [
+            {
+              "icon": "wrench",
+              "title": "Expert Plumbers",
+              "desc": "Skilled & certified professionals"
+            },
+            {
+              "icon": "shield-alert",
+              "title": "24/7 Emergency",
+              "desc": "We're available anytime"
+            },
+            {
+              "icon": "badge-check",
+              "title": "Quality Work",
+              "desc": "Reliable solutions you can trust"
+            },
+            {
+              "icon": "thumbs-up",
+              "title": "Affordable Pricing",
+              "desc": "Transparent pricing with no hidden fees"
+            }
+          ]
+        }
+      },
+      "AboutPage": {
+        "variants": {
+          "ServiceAboutPage1": {
+            "pretitle": "Welcome to Aquafix",
+            "title": "With years of industry experience, our team of skilled professionals is dedicated to providing",
+            "highlightedTitle": "top-notch solutions.",
+            "sideImages": {
+              "mainLeft": "/plumberImage/image6.jpg"
+            },
+            "badge": {
+              "title": "Trusted by Thousands",
+              "desc": "Delivering reliable service with complete satisfaction"
+            },
+            "subTitle": " Who We Are",
+            "heading": "We focus on customer satisfaction and quality",
+            "desc": "Our team of skilled professionals is dedicated to providing top-notch solutions and exceptional customer service. Our commitment to quality workmanship, ensuring that every job is done right the first time.",
+            "stats": [
+              {
+                "id": 1,
+                "number": "18",
+                "suffix": "+",
+                "label": "Year Experience",
+                "iconName": "calendar"
+              },
+              {
+                "id": 2,
+                "number": "4.3K",
+                "suffix": "+",
+                "label": "Happy Clients",
+                "iconName": "users"
+              },
+              {
+                "id": 3,
+                "number": "25",
+                "suffix": "+",
+                "label": "Qualified Experts",
+                "iconName": "award"
+              }
+            ],
+            "button": {
+              "label": "About Us",
+              "href": "/about-us"
+            }
+          }
+        }
+      },
+      "FeatureStrip": {
+        "variants": {
+          "ServiceFeatureStrip1": [
+            {
+              "icon": "shield-check",
+              "title": "Quality Workmanship",
+              "desc": "We deliver reliable and long-lasting solutions"
+            },
+            {
+              "icon": "heart-handshake",
+              "title": "Customer First",
+              "desc": "Your satisfaction is our top priority"
+            },
+            {
+              "icon": "clock",
+              "title": "On-Time Service",
+              "desc": "We value your time and always deliver on schedule"
+            },
+            {
+              "icon": "users",
+              "title": "Expert Team",
+              "desc": "Skilled professionals with years of experience"
+            }
+          ]
+        }
+      },
+      "Partners": {
+        "variants": {
+          "ServicePartners1": {
+            "badge": "TRUSTED BY",
+            "title": "Trusted by Our Partners",
+            "desc": "We are proud to work with leading brands who trust our expertise and services.",
+            "partners": [
+              {
+                "id": 1,
+                "name": "Hafele",
+                "logo": "/partners/image1.png"
+              },
+              {
+                "id": 2,
+                "name": "Jaquar",
+                "logo": "/partners/jaguar.png"
+              },
+              {
+                "id": 3,
+                "name": "Astral Pipes",
+                "logo": "/partners/astral.png"
+              },
+              {
+                "id": 4,
+                "name": "FinOlex Pipes & Fittings",
+                "logo": "/partners/finolex.png"
+              },
+              {
+                "id": 5,
+                "name": "CERA",
+                "logo": "/partners/cera.png"
+              },
+              {
+                "id": 6,
+                "name": "Asian Paints",
+                "logo": "/partners/asian.png"
+              },
+              {
+                "id": 7,
+                "name": "Berger",
+                "logo": "/partners/berger.png"
+              },
+              {
+                "id": 8,
+                "name": "Palace",
+                "logo": "/partners/palace.png"
+              },
+              {
+                "id": 9,
+                "name": "Finish",
+                "logo": "/partners/finish.png"
+              },
+              {
+                "id": 10,
+                "name": "America",
+                "logo": "/partners/america.png"
+              }
+            ]
+          }
+        }
+      },
+      "Service": {
+        "variants": {
+          "ServiceService1": {
+            "badge": "OUR SERVICES",
+            "title": {
+              "normal": "Our",
+              "highlighted": "Plumbing Services"
+            },
+            "description": "We provide reliable and professional plumbing solutions to keep your home or business running smoothly.",
+            "services": [
+              {
+                "id": "faucet-leak-repairs",
+                "iconName": "faucet",
+                "title": "Faucet & Leak Repairs",
+                "description": "Fixing leaks and faulty fixtures quickly and efficiently.",
+                "image": {
+                  "src": "/plumberImage/image1.jpg",
+                  "alt": "Plumber repairing a faucet"
+                },
+                "href": "/service-details"
+              },
+              {
+                "id": "drain-cleaning-services",
+                "iconName": "drain",
+                "title": "Drain Cleaning Services",
+                "description": "Remove clogs and blockages to ensure smooth water flow.",
+                "image": {
+                  "src": "/plumberImage/image2.jpg",
+                  "alt": "Plumber cleaning a drain"
+                },
+                "href": "/service-details"
+              },
+              {
+                "id": "water-heater-services",
+                "iconName": "water-heater",
+                "title": "Water Heater Services",
+                "description": "Installation, repair and maintenance of all types of water heaters.",
+                "image": {
+                  "src": "/plumberImage/image4.jpg",
+                  "alt": "Water heater unit"
+                },
+                "href": "/service-details"
+              },
+              {
+                "id": "toilet-installation-repair",
+                "iconName": "toilet",
+                "title": "Toilet Installation & Repair",
+                "description": "Professional installation and repair for all types of toilets.",
+                "image": {
+                  "src": "/plumberImage/image7.jpg",
+                  "alt": "Plumber installing a toilet"
+                },
+                "href": "/service-details"
+              },
+              {
+                "id": "pipe-installation-replacement",
+                "iconName": "pipe",
+                "title": "Pipe Installation & Replacement",
+                "description": "High-quality pipe installation and replacement for long-term reliability.",
+                "image": {
+                  "src": "/plumberImage/image8.jpg",
+                  "alt": "Plumbing pipes and fittings"
+                },
+                "href": "/service-details"
+              },
+              {
+                "id": "general-plumbing-services",
+                "iconName": "tools",
+                "title": "General Plumbing Services",
+                "description": "All types of plumbing solutions for your home and business.",
+                "image": {
+                  "src": "/plumberImage/image9.jpg",
+                  "alt": "Plumber with tools"
+                },
+                "href": "/service-details"
+              }
+            ],
+            "bottomBanner": {
+              "callSection": {
+                "title": "Need Help? Call Us",
+                "phone": "+91 98766 54321",
+                "phoneHref": "tel:+919876654321"
+              },
+              "emergencySection": {
+                "title": "24/7 Emergency Service",
+                "desc": "We are available anytime you need us!"
+              },
+              "button": {
+                "label": "BOOK A SERVICE",
+                "href": "/booking"
+              }
+            }
+          }
+        }
+      },
+      "WhyChooseUs": {
+        "variants": {
+          "ServiceWhyChooseUs1": {
+            "badge": "WHY CHOOSE US",
+            "title": {
+              "normal": "Reliable Plumbing Solutions",
+              "highlighted": "You Can Count On"
+            },
+            "description": "We are committed to providing high-quality plumbing services with honesty, integrity, and unmatched professionalism.",
+            "sideImage": {
+              "src": "/plumberImage/image3.jpg",
+              "alt": "Plumber working under a sink"
+            },
+            "features": [
+              {
+                "id": "experienced-plumbers",
+                "iconName": "user-check",
+                "title": "Experienced Plumbers",
+                "description": "Our licensed plumbers bring years of experience to every job."
+              },
+              {
+                "id": "quality-workmanship",
+                "iconName": "wrench",
+                "title": "Quality Workmanship",
+                "description": "We use advanced tools and techniques to ensure top results."
+              },
+              {
+                "id": "emergency-service",
+                "iconName": "clock",
+                "title": "24/7 Emergency Service",
+                "description": "We're available around the clock to handle your plumbing emergencies."
+              },
+              {
+                "id": "customer-satisfaction",
+                "iconName": "thumbs-up",
+                "title": "Customer Satisfaction",
+                "description": "Our priority is your satisfaction and peace of mind."
+              },
+              {
+                "id": "transparent-pricing",
+                "iconName": "tag",
+                "title": "Transparent Pricing",
+                "description": "No hidden costs – just honest and affordable pricing."
+              },
+              {
+                "id": "wide-range-services",
+                "iconName": "layers",
+                "title": "Wide Range Of Services",
+                "description": "From minor leaks to major installations, we do it all."
+              }
+            ]
+          }
+        }
+      },
+      "HowWeWork": {
+        "variants": {
+          "ServiceHowWeWork1": {
+            "badge": "WHO TO WORK",
+            "image": "/droplet2.png",
+            "title": "Standard Working Process",
+            "steps": [
+              {
+                "id": 1,
+                "number": "01",
+                "title": "Inspect & Analyse",
+                "desc": "It is a long establish be distracted by looking at its layout."
+              },
+              {
+                "id": 2,
+                "number": "02",
+                "title": "Quote & Supply",
+                "desc": "It is a long establish be distracted by looking at its layout."
+              },
+              {
+                "id": 3,
+                "number": "03",
+                "title": "Clean Up & Finish",
+                "desc": "It is a long establish be distracted by looking at its layout."
+              },
+              {
+                "id": 4,
+                "number": "04",
+                "title": "Quality Improve",
+                "desc": "It is a long establish be distracted by looking at its layout."
+              }
+            ]
+          }
+        }
+      },
+      "Testimonial": {
+        "variants": {
+          "ServiceTestimonial1": {
+            "badge": "TESTIMONIALS",
+            "image": "/water.png",
+            "image2": "/img1.png",
+            "title": "What Our Clients Say",
+            "testimonialItems": [
+              {
+                "id": 1,
+                "name": "Patric Stone",
+                "role": "Co-Founder",
+                "image": "/personImage/men2.png",
+                "quote": "Lorem ipsum is that it has a more-or-less normal distribution of letters, here making it look like readable English. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.",
+                "rating": 5
+              },
+              {
+                "id": 2,
+                "name": "Sarah Jenkins",
+                "role": "Operations Manager",
+                "image": "/personImage/women1.png",
+                "quote": "The team transformed our operations with their prompt service and expert execution. They delivered beyond our expectations, ensuring minimal downtime for our facilities.",
+                "rating": 5
+              },
+              {
+                "id": 3,
+                "name": "Michael Chen",
+                "role": "Facility Director",
+                "image": "/personImage/men2.png",
+                "quote": "Reliable, professional, and thorough. Their attention to detail on every maintenance job gives us total confidence that our infrastructure is in good hands.",
+                "rating": 5
+              },
+              {
+                "id": 4,
+                "name": "Emily Rodriguez",
+                "role": "Property Manager",
+                "image": "/personImage/women2.png",
+                "quote": "Exceptional service standards from start to finish. Communication was clear, quotes were transparent, and the final results were flawless.",
+                "rating": 5
+              },
+              {
+                "id": 5,
+                "name": "David Miller",
+                "role": "Head of Maintenance",
+                "image": "/personImage/men3.png",
+                "quote": "We have worked with several service providers over the years, but their team stands out for their efficiency, modern equipment, and dedication to safety.",
+                "rating": 5
+              },
+              {
+                "id": 6,
+                "name": "Amanda Taylor",
+                "role": "Commercial Director",
+                "image": "/personImage/women3.png",
+                "quote": "Quick turnaround times and top-notch craftsmanship. Their systematic process made scheduling large-scale jobs effortless for our business.",
+                "rating": 5
+              },
+              {
+                "id": 7,
+                "name": "Robert Wilson",
+                "role": "Site Supervisor",
+                "image": "/personImage/men4.png",
+                "quote": "Impressive service quality! Their technicians arrived fully equipped, identified the core issues immediately, and resolved everything seamlessly.",
+                "rating": 5
+              },
+              {
+                "id": 8,
+                "name": "Jessica Adams",
+                "role": "General Manager",
+                "image": "/personImage/women4.png",
+                "quote": "Outstanding experience working with them. From customer support to field service execution, everything was handled with extreme professionalism.",
+                "rating": 5
+              }
+            ]
+          }
+        }
+      },
+      "Blog": {
+        "variants": {
+          "ServiceBlog1": {
+            "badge": "LATEST BLOGS",
+            "title": "Plumbing Tips & Insights",
+            "posts": [
+              {
+                "id": 1,
+                "slug": "/blog-details",
+                "image": "/plumberImage/image3.jpg",
+                "date": "May 05, 2024",
+                "title": "5 Signs You Need Professional Plumbing Help",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 2,
+                "slug": "/blog-details",
+                "image": "/plumberImage/image1.jpg",
+                "date": "May 15, 2024",
+                "title": "How to Prevent Common Drain Blockages",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 3,
+                "slug": "/blog-details",
+                "image": "/plumberImage/image2.jpg",
+                "date": "May 10, 2024",
+                "title": "Benefits of Regular Plumbing Maintenance",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 4,
+                "slug": "/blog-details",
+                "image": "/plumberImage/image7.jpg",
+                "date": "May 03, 2024",
+                "title": "Choosing the Right Water Heater for Your Home",
+                "readMoreText": "Read More"
+              }
+            ],
+            "CtaBanner": {
+              "title": "Need Emergency Plumbing Service?",
+              "desc": "We're available 24/7 to solve your plumbing problems.",
+              "button": {
+                "label": "Call Now: +91 98765 43210",
+                "href": "tel:+919876543210"
+              }
+            }
+          }
+        }
+      },
+      "ContactSection": {
+        "variants": {
+          "ServiceContactSection1": {
+            "title": "Get in Touch",
+            "contactItems": [
+              {
+                "iconTitle": "Phone",
+                "values": ["+91 98766 54321"]
+              },
+              {
+                "iconTitle": "Email",
+                "values": ["info@aquafix.com"]
+              },
+              {
+                "iconTitle": "Address",
+                "values": ["123 Plumbing Street, New York, NY 10001"]
+              },
+              {
+                "iconTitle": "Working Hours",
+                "values": [
+                  "Mon - Sat: 8:00 AM - 8:00 PM, 24/7 Emergency Support"
+                ]
+              }
+            ],
+            "map": {
+              "title": "Find Us",
+              "address": "123 Plumbing Street, New York, NY 10001",
+              "directionsText": "Get Directions",
+              "directionsUrl": "https://maps.google.com/?q=123+Plumbing+Street,+New+York,+NY+10001",
+              "embedUrl": "https://www.google.com/maps?q=123+Plumbing+Street,+New+York,+NY+10001&output=embed"
+            }
+          }
+        }
+      }
+    }
+  }
+}

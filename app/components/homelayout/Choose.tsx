@@ -1,0 +1,189 @@
+"use client";
+
+import React from "react";
+import siteData from "@/data/site.json";
+import {
+  ShieldCheck,
+  Wrench,
+  Clock,
+  ThumbsUp,
+  DollarSign,
+  Home,
+} from "lucide-react";
+
+// Extract Type (Compile-Time)
+export type ChooseUsData =
+  typeof siteData.ServiceIndustries.sections.WhyChooseUs.variants.ServiceWhyChooseUs1;
+
+// Access Data safely (Runtime)
+const defaultChooseData: ChooseUsData =
+  siteData?.ServiceIndustries?.sections?.WhyChooseUs?.variants
+    ?.ServiceWhyChooseUs1;
+
+// Dynamic Icon Renderer
+const renderFeatureIcon = (iconName: string) => {
+  const iconProps = { className: "h-6 w-6 text-white" };
+
+  switch (iconName) {
+    case "shield":
+    case "experienced":
+      return <ShieldCheck {...iconProps} />;
+    case "wrench":
+    case "quality":
+      return <Wrench {...iconProps} />;
+    case "clock":
+    case "emergency":
+      return <Clock {...iconProps} />;
+    case "thumbs-up":
+    case "satisfaction":
+      return <ThumbsUp {...iconProps} />;
+    case "dollar":
+    case "pricing":
+      return <DollarSign {...iconProps} />;
+    case "home":
+    case "services":
+      return <Home {...iconProps} />;
+    default:
+      return <ShieldCheck {...iconProps} />;
+  }
+};
+
+export default function Choose({ chooseData }: { chooseData?: ChooseUsData }) {
+  const chooseusdata = chooseData || defaultChooseData;
+
+  const badge = chooseusdata?.badge || "WHY CHOOSE US";
+
+  const title = chooseusdata?.title || {
+    normal: "Reliable Plumbing Solutions You Can",
+    highlighted: "Count On",
+  };
+
+  const description =
+    chooseusdata?.description ||
+    "We are committed to providing high-quality plumbing services with honesty, integrity, and unmatched professionalism.";
+
+  const features = chooseusdata?.features || [
+    {
+      id: "1",
+      iconName: "shield",
+      title: "EXPERIENCED PLUMBERS",
+      description:
+        "Our licensed plumbers bring years of experience to every job.",
+    },
+    {
+      id: "2",
+      iconName: "wrench",
+      title: "QUALITY WORKMANSHIP",
+      description:
+        "We use advanced tools and techniques to ensure long-lasting results.",
+    },
+    {
+      id: "3",
+      iconName: "clock",
+      title: "24/7 EMERGENCY SERVICE",
+      description:
+        "We're available around the clock to handle your plumbing emergencies.",
+    },
+    {
+      id: "4",
+      iconName: "thumbs-up",
+      title: "CUSTOMER SATISFACTION",
+      description: "Our priority is your satisfaction and peace of mind.",
+    },
+    {
+      id: "5",
+      iconName: "dollar",
+      title: "TRANSPARENT PRICING",
+      description: "No hidden costs – just honest and affordable pricing.",
+    },
+    {
+      id: "6",
+      iconName: "home",
+      title: "WIDE RANGE OF SERVICES",
+      description: "From minor leaks to major installations, we do it all.",
+    },
+  ];
+
+  const imageSrc =
+    chooseusdata?.sideImage?.src ||
+    "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=1200";
+
+  return (
+    <section className="relative w-full overflow-hidden bg-white py-8">
+      <div className="relative mx-auto max-w-[1400px] md:min-h-[600px] lg:min-h-[700px]">
+
+        {/* CONTENT */}
+        <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 md:min-h-[600px] lg:min-h-[700px]">
+
+          {/* SPACER - TABLET/DESKTOP ONLY */}
+          <div className="hidden md:block md:col-span-3 lg:col-span-4" />
+
+          {/* CONTENT CARD */}
+          <div className="order-1 flex flex-col justify-center bg-white px-5  sm:px-8 pb-5 md:order-none md:col-span-9 md:my-8 md:py-10 md:pl-20 md:pr-8 md:[clip-path:polygon(12%_0,_100%_0,_100%_100%,_0_100%)] lg:my-10 lg:col-span-8 lg:py-14 lg:pl-36 lg:pr-16 lg:[clip-path:polygon(15%_0,_100%_0,_100%_100%,_0_100%)]">
+
+            {/* SUBHEADING / BADGE */}
+            <div className="mb-3 flex flex-col items-center text-center md:items-start md:text-left">
+              <span className="text-[12px] font-bold uppercase tracking-wider text-[#1E40AF] md:text-[12px] lg:text-[13px]">
+                {badge}
+              </span>
+
+              <div className="mt-1.5 h-[2px] w-8 bg-[#1E40AF]" />
+            </div>
+
+            {/* MAIN HEADING */}
+            <h2 className="mb-4 text-center text-[24px] font-extrabold leading-[1.18] text-[#0F172A] sm:text-[30px] md:text-left md:text-[30px] lg:text-[42px]">
+              {title.normal}{" "}
+              <span className="text-[#1E40AF]">{title.highlighted}</span>
+            </h2>
+
+            {/* DESCRIPTION */}
+            {description && (
+              <p className="mx-auto mb-6 max-w-2xl text-center text-[13px] font-medium leading-relaxed text-[#64748B] sm:text-[14px] md:mx-0 md:text-left lg:mb-8 lg:text-[15px]">
+                {description}
+              </p>
+            )}
+
+            {/* DIVIDER */}
+            <div className="mb-6 h-[1px] w-full bg-gray-100 lg:mb-8" />
+
+            {/* FEATURES GRID */}
+            <div className="grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-2 md:gap-x-4 md:gap-y-5 lg:gap-x-8 lg:gap-y-7">
+              {features.map((feature: any) => (
+                <div
+                  key={feature.id}
+                  className="flex items-start gap-3 md:gap-3 lg:gap-4"
+                >
+                  {/* BLUE ICON BOX */}
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1E40AF] shadow-sm md:h-9 md:w-9 lg:h-11 lg:w-11">
+                    {renderFeatureIcon(feature.iconName)}
+                  </div>
+
+                  {/* FEATURE TEXT */}
+                  <div className="text-left">
+                    <h3 className="text-[12px] font-extrabold uppercase tracking-tight text-[#0F172A] md:text-[11px] lg:text-[14px]">
+                      {feature.title}
+                    </h3>
+
+                    <p className="mt-1 text-[11px] font-medium leading-normal text-[#64748B] md:text-[10px] lg:text-[12px]">
+                      {feature.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* IMAGE */}
+        <div className="relative mt-0 h-[280px] w-full sm:h-[330px] md:absolute md:inset-0 md:z-0 md:mt-0 md:h-full md:w-[78%] md:[clip-path:polygon(0_0,58%_0,43%_100%,0_100%)] lg:w-[83%] lg:[clip-path:polygon(0_0,60%_0,45%_100%,0_100%)]">
+          <img
+            src={imageSrc}
+            alt={chooseusdata?.sideImage?.alt || "Plumber fixing pipe"}
+            className="h-full w-full object-cover object-left-top"
+          />
+        </div>
+
+      </div>
+    </section>
+  );
+}
