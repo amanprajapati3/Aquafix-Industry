@@ -250,13 +250,12 @@ export default function AboutSection({
               </p>
             )}
 
-            {/* Animated Stats */}
             {stats.length > 0 && (
               <div className="mt-8 grid w-full grid-cols-2 gap-4 rounded-2xl border border-gray-100 bg-white p-4 shadow-[0_10px_30px_rgba(0,0,0,0.05)] sm:grid-cols-3 sm:gap-2 sm:p-6">
                 {stats.map((stat, idx) => (
                   <div
                     key={stat.id || idx}
-                    className={`flex flex-col items-center gap-3 text-center sm:flex-row sm:items-center sm:gap-3.5 sm:text-left ${
+                    className={`flex  flex-col items-center gap-3 text-center sm:flex-row sm:items-center sm:gap-3.5 sm:text-left ${
                       idx !== 0
                         ? "border-l border-gray-100 pl-3 sm:border-l sm:border-gray-100 sm:pl-6"
                         : ""
@@ -276,13 +275,13 @@ export default function AboutSection({
                     </div>
 
                     {/* Stat Number & Label */}
-                    <div className="flex flex-col items-center sm:items-start">
+                    <div className="flex  flex-col pt-6 items-center sm:items-start">
                       <span className="text-[22px] font-black leading-none text-[#1E40AF] sm:text-[28px]">
                         <AnimatedCounter targetString={stat.number} />
                         <span className="text-[#84CC16]">{stat.suffix}</span>
                       </span>
 
-                      <span className="mt-1.5 text-sm font-semibold text-[#64748B] ">
+                      <span className="mt-1.5 min-h-10 text-sm font-semibold text-[#64748B]">
                         {stat.label}
                       </span>
                     </div>
@@ -324,11 +323,11 @@ export default function AboutSection({
                   </div>
 
                   <div className="flex flex-col">
-                    <h4 className="text-[14px] font-bold text-[#0F172A] sm:text-[15px]">
+                    <h4 className="text-[17px] font-bold text-[#0F172A]">
                       {item.title}
                     </h4>
 
-                    <p className="mt-0.5 text-[12px] font-medium leading-relaxed text-[#64748B]">
+                    <p className="mt-0.5 text-[14px] font-medium leading-relaxed text-[#64748B]">
                       {item.desc}
                     </p>
                   </div>
