@@ -109,6 +109,42 @@ export interface AboutStat {
   label: string;
   iconName: string;
 }
+export interface AboutValueItem {
+  id: number;
+  title: string;
+  desc: string;
+  iconName: string;
+}
+export interface OurValuesData {
+    subTitle: string;
+    title: string;
+    items: AboutValueItem[];
+}
+export interface TeamMember {
+  id: number;
+  name: string;
+  role: string;
+  image: string;
+  slug: string;
+  socials?: {
+    facebook?: string;
+    twitter?: string;
+    linkedin?: string;
+  };
+}
+
+export interface TeamSectionData {
+  subTitle: string;
+  title: string;
+  members: TeamMember[];
+}
+
+export interface AboutCtaBannerData {
+  title: string;
+  desc: string;
+  phoneLabel: string;
+  phoneHref: string;
+}
 
 export interface AboutPageData {
   pretitle: string;
@@ -116,6 +152,12 @@ export interface AboutPageData {
   highlightedTitle: string;
   sideImages: {
     mainLeft: string;
+  };
+  banner: {
+    breadcrumbCurrent: string;
+    breadcrumbHome: string;
+    backgroundImage: string;
+    title: string;
   };
   badge: {
     title: string;
@@ -129,6 +171,9 @@ export interface AboutPageData {
     label: string;
     href: string;
   };
+  ourValues:OurValuesData;
+  team?: TeamSectionData;
+  ctaBanner?: AboutCtaBannerData;
 }
 
 export interface PartnerItem {
@@ -209,6 +254,14 @@ export interface HowWeWorkData {
   steps: WorkStep[];
 }
 
+export interface TestimonialBannerData {
+  breadcrumbHome: string;
+  breadcrumbCurrent: string;
+  title: string;
+  backgroundImage: string;
+  homeHref: string;
+}
+
 export interface TestimonialItem {
   id: number;
   name: string;
@@ -219,6 +272,7 @@ export interface TestimonialItem {
 }
 
 export interface TestimonialData {
+  banner?: TestimonialBannerData;
   badge: string;
   title: string;
   testimonialItems: TestimonialItem[];
@@ -245,6 +299,35 @@ export interface CtaBannerData {
   button: CtaButton;
 }
 
+export interface ContactBannerData {
+  breadcrumbHome: string;
+  breadcrumbCurrent: string;
+  title: string;
+  backgroundImage: string;
+  homeHref: string;
+}
+
+export interface ContactTopCard {
+  iconName: string;
+  title: string;
+  description: string;
+  value: string;
+}
+
+export interface ContactFormFeature {
+  iconName: string;
+  title: string;
+  description: string;
+}
+
+export interface ContactFormSection {
+  tagline: string;
+  title: string;
+  description: string;
+  features: ContactFormFeature[];
+  submitButtonText: string;
+}
+
 export interface ContactItem {
   iconTitle: string;
   values: string[];
@@ -259,7 +342,240 @@ export interface ContactMap {
 }
 
 export interface ContactSectionData {
+  banner?: ContactBannerData;
+  tagline?: string;
   title: string;
+  description?: string;
+  topCards?: ContactTopCard[];
+  formSection?: ContactFormSection;
   contactItems: ContactItem[];
   map: ContactMap;
+}
+
+export interface VisionPageBannerData {
+  breadcrumbHome: string;
+  breadcrumbCurrent: string;
+  title: string;
+  backgroundImage: string;
+  homeHref: string;
+}
+
+export interface VisionMissionCard {
+  id: number;
+  title: string;
+  desc: string;
+  image: string;
+  iconName: string;
+}
+
+export interface VisionMissionValue {
+  id: number;
+  title: string;
+  desc: string;
+  iconName: string;
+}
+
+export interface VisionMissionSectionData {
+  subTitle: string;
+  title: string;
+  cards: VisionMissionCard[];
+  values: VisionMissionValue[];
+}
+
+export interface ServiceVisionMissionVariant {
+  banner: VisionPageBannerData;
+  visionMission: VisionMissionSectionData;
+}
+
+export interface VisionMissionPageData {
+  VisionMissionPage: {
+    variants: Record<string, ServiceVisionMissionVariant>;
+  };
+}
+
+export interface FaqBannerData {
+  breadcrumbHome: string;
+  breadcrumbCurrent: string;
+  title: string;
+  backgroundImage: string;
+  homeHref: string;
+}
+
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+export interface FAQContactCtaData {
+  title: string;
+  description: string;
+  buttonText: string;
+  buttonUrl: string;
+}
+
+export interface ServiceFaqSection1Data {
+  banner?: FaqBannerData;
+  tagline: string;
+  title: string;
+  description: string;
+  faqs: FaqItem[];
+  contactCta: FAQContactCtaData;
+}
+
+export interface FaqSectionVariants {
+  ServiceFaqSection1: ServiceFaqSection1Data;
+}
+
+export interface FaqSectionData {
+  FaqSection: {
+    variants: FaqSectionVariants;
+  };
+}
+
+export interface EnquiryBannerData {
+  breadcrumbHome: string;
+  breadcrumbCurrent: string;
+  title: string;
+  backgroundImage: string;
+  homeHref: string;
+}
+
+export interface EnquiryFeature {
+  iconName: string;
+  title: string;
+  description: string;
+}
+
+export interface EnquiryFormData {
+  title: string;
+  submitButtonText: string;
+}
+
+export interface ServiceEnquiryData {
+  banner?: EnquiryBannerData;
+  tagline: string;
+  title: string;
+  description: string;
+  features: EnquiryFeature[];
+  form: EnquiryFormData;
+}
+
+export interface EnquirySectionVariants {
+  ServiceEnquirySection1: ServiceEnquiryData;
+}
+
+export interface EnquirySectionData {
+  EnquirySection: {
+    variants: EnquirySectionVariants;
+  };
+}
+
+export interface IndustryBannerData {
+  breadcrumbHome: string;
+  breadcrumbCurrent: string;
+  title: string;
+  backgroundImage: string;
+  homeHref: string;
+}
+
+export interface IndustryCardItem {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  iconName: string;
+  link?: string;
+}
+
+export interface ServiceIndustryData {
+  banner?: IndustryBannerData;
+  tagline: string;
+  title: string;
+  description: string;
+  cards: IndustryCardItem[];
+}
+
+export interface PricingBannerData {
+  breadcrumbHome: string;
+  breadcrumbCurrent: string;
+  title: string;
+  backgroundImage: string;
+  homeHref: string;
+}
+
+export interface PricingTab {
+  id: string;
+  label: string;
+  iconName: string;
+}
+
+export interface PricingPlanItem {
+  id: string;
+  name: string;
+  price: string;
+  period: string;
+  billingInfo: string;
+  isRecommended: boolean;
+  badgeText?: string;
+  iconName: string;
+  includedTitle: string;
+  features: string[];
+  buttonText: string;
+  buttonLink: string;
+  footerNote: string;
+  footerIcon: string;
+}
+
+export interface PricingBottomFeature {
+  iconName: string;
+  title: string;
+  description: string;
+}
+
+export interface ServicePricingSectionData {
+  banner?: PricingBannerData;
+  tagline: string;
+  title: string;
+  description: string;
+  tabs: PricingTab[];
+  plans: Record<string, PricingPlanItem[]>;
+  bottomFeatures: PricingBottomFeature[];
+}
+
+export interface QuoteBannerData {
+  breadcrumbHome: string;
+  breadcrumbCurrent: string;
+  title: string;
+  backgroundImage: string;
+  homeHref: string;
+}
+
+export interface QuoteFeatureItem {
+  iconName: string;
+  title: string;
+  description: string;
+}
+
+export interface ServiceTypeOption {
+  label: string;
+  value: string;
+}
+
+export interface QuoteFormFields {
+  namePlaceholder: string;
+  emailPlaceholder: string;
+  phonePlaceholder: string;
+  typeOptions: ServiceTypeOption[];
+  requirementsPlaceholder: string;
+  submitButtonText: string;
+}
+
+export interface GetQuoteSectionData {
+  banner?: QuoteBannerData;
+  tagline: string;
+  title: string;
+  description: string;
+  features: QuoteFeatureItem[];
+  formTitle: string;
+  formFields: QuoteFormFields;
 }

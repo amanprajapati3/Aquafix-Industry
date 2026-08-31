@@ -15,7 +15,13 @@ import {
   BlogData,
   PartnersData,
   ContactSectionData,
-  HowWeWorkData, // new type — add to typeSection.ts (see note below)
+  HowWeWorkData,
+  ServiceVisionMissionVariant, // new type — add to typeSection.ts (see note below)
+  ServiceFaqSection1Data,
+  ServiceEnquiryData,
+  ServiceIndustryData,
+  ServicePricingSectionData,
+  GetQuoteSectionData
 } from "@/type/typeSection";
 
 const sec = siteData.ServiceIndustries.sections;
@@ -39,4 +45,11 @@ export const pageData = {
   Testimonial: sec.Testimonial.variants.ServiceTestimonial1 as TestimonialData,
   blog: sec.Blog.variants.ServiceBlog1 as BlogData,
   contactSection: sec.ContactSection.variants.ServiceContactSection1 as ContactSectionData,
+
+  visionMissionPage: sec.VisionMissionPage.variants.ServiceVisionMissionPage1 as ServiceVisionMissionVariant,
+  faqPage: sec.FaqSection.variants.ServiceFaqSection1 as ServiceFaqSection1Data,
+  enquiryPage: sec.EnquirySection.variants.ServiceEnquirySection1 as ServiceEnquiryData,
+  industryPage: sec.IndustrySection.variants.ServiceIndustrySection1 as ServiceIndustryData,
+  pricingPage: sec.PricingSection.variants.ServicePricingSection1 as ServicePricingSectionData,
+  quotePage: sec.GetQuoteSection.variants.GetQuoteSection1 as GetQuoteSectionData,
 };

@@ -89,7 +89,7 @@ export default function TestimonialSection({
         {/* HEADER */}
         <div className="flex flex-col items-center text-center">
           {data.badge && (
-            <div className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-[#2467EC] sm:text-sm">
+            <div className="inline-flex items-center gap-2 text-sm font-black uppercase tracking-widest text-[#2467EC] sm:text-sm">
               <Wrench className="h-4 w-4" />
               <span>{data.badge}</span>
               <Wrench className="h-4 w-4 -scale-x-100" />

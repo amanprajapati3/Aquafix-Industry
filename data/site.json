@@ -110,7 +110,7 @@
               },
               {
                 "label": "Services",
-                "href": "#",
+                "href": "services",
                 "children": [
                   {
                     "label": "Faucet & Leak Repairs",
@@ -151,16 +151,20 @@
                 "href": "#",
                 "children": [
                   {
-                    "label": "About Us",
-                    "href": "/about-us"
+                    "label": "Mission & Vision",
+                    "href": "/mission"
                   },
                   {
                     "label": "Our Team",
                     "href": "/team"
                   },
                   {
-                    "label": "Testimonials",
-                    "href": "/testimonial"
+                    "label": "Get A Quote",
+                    "href": "/quote"
+                  },
+                  {
+                    "label": "Industry We Serve",
+                    "href": "/industry"
                   },
                   {
                     "label": "FAQ",
@@ -179,7 +183,7 @@
       "Footer": {
         "variants": {
           "ServiceFooter1": {
-            "logoImage": "/icon.png",
+            "logoImage": "/webicons.png",
             "desc": "Professional plumbing services you can trust. Available 24/7 for all your plumbing needs.",
             "ctaButton": {
               "label": "Call +1 (570) 365-379",
@@ -190,20 +194,20 @@
                 "title": "Company",
                 "links": [
                   {
-                    "label": "About Us",
-                    "href": "/about-us"
+                    "label": "Enquiry",
+                    "href": "/enquiry"
                   },
                   {
-                    "label": "Our Team",
-                    "href": "/team"
+                    "label": "Pricing",
+                    "href": "/pricing"
                   },
                   {
                     "label": "Careers",
                     "href": "/career"
                   },
                   {
-                    "label": "Contact",
-                    "href": "/contact-us"
+                    "label": "Testimonial",
+                    "href": "/testimonial"
                   }
                 ]
               },
@@ -387,6 +391,13 @@
             "sideImages": {
               "mainLeft": "/plumberImage/image6.jpg"
             },
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "About Us",
+              "title": "About Us",
+              "backgroundImage": "/plumberImage/image9.jpg",
+              "homeHref": "/"
+            },
             "badge": {
               "title": "Trusted by Thousands",
               "desc": "Delivering reliable service with complete satisfaction"
@@ -420,6 +431,96 @@
             "button": {
               "label": "About Us",
               "href": "/about-us"
+            },
+            "ourValues": {
+              "subTitle": "OUR VALUES",
+              "title": "The Principles That Drive Us",
+              "items": [
+                {
+                  "id": 1,
+                  "title": "Quality Workmanship",
+                  "desc": "We use the best tools and techniques to deliver long-lasting solutions.",
+                  "iconName": "wrench"
+                },
+                {
+                  "id": 2,
+                  "title": "Customer First",
+                  "desc": "Your satisfaction is our priority. We listen, we care, we deliver.",
+                  "iconName": "users"
+                },
+                {
+                  "id": 3,
+                  "title": "On-Time Service",
+                  "desc": "We value your time and always ensure timely arrival and project completion.",
+                  "iconName": "shield-check"
+                },
+                {
+                  "id": 4,
+                  "title": "Integrity & Transparency",
+                  "desc": "Honest pricing, clear communication, and no hidden charges.",
+                  "iconName": "user-check"
+                }
+              ]
+            },
+            "team": {
+              "subTitle": "MEET OUR TEAM",
+              "title": "Our Skilled Plumbing Experts",
+              "members": [
+                {
+                  "id": 1,
+                  "name": "Jason Miller",
+                  "role": "Founder & CEO",
+                  "image": "/personImage/men5.png",
+                  "slug": "jason-miller",
+                  "socials": {
+                    "facebook": "#",
+                    "twitter": "#",
+                    "linkedin": "#"
+                  }
+                },
+                {
+                  "id": 2,
+                  "name": "David Anderson",
+                  "role": "Head Plumber",
+                  "image": "/personImage/men4.png",
+                  "slug": "david-anderson",
+                  "socials": {
+                    "facebook": "#",
+                    "twitter": "#",
+                    "linkedin": "#"
+                  }
+                },
+                {
+                  "id": 3,
+                  "name": "Michael Brown",
+                  "role": "Senior Plumbing Specialist",
+                  "image": "/personImage/men2.png",
+                  "slug": "michael-brown",
+                  "socials": {
+                    "facebook": "#",
+                    "twitter": "#",
+                    "linkedin": "#"
+                  }
+                },
+                {
+                  "id": 4,
+                  "name": "Sarah Thompson",
+                  "role": "Customer Support Manager",
+                  "image": "/personImage/men3.png",
+                  "slug": "sarah-thompson",
+                  "socials": {
+                    "facebook": "#",
+                    "twitter": "#",
+                    "linkedin": "#"
+                  }
+                }
+              ]
+            },
+            "ctaBanner": {
+              "title": "Need a Reliable Plumber?",
+              "desc": "Whether it's an urgent repair or a planned installation, our team is ready to help.",
+              "phoneLabel": "Call Now: +91 123-233-4456",
+              "phoneHref": "tel:+911232334456"
             }
           }
         }
@@ -698,6 +799,13 @@
       "Testimonial": {
         "variants": {
           "ServiceTestimonial1": {
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Testimonials",
+              "title": "Testimonials",
+              "backgroundImage": "/plumberImage/image9.jpg",
+              "homeHref": "/"
+            },
             "badge": "TESTIMONIALS",
             "image": "/water.png",
             "image2": "/img1.png",
@@ -749,22 +857,6 @@
                 "role": "Commercial Director",
                 "image": "/personImage/women3.png",
                 "quote": "Quick turnaround times and top-notch craftsmanship. Their systematic process made scheduling large-scale jobs effortless for our business.",
-                "rating": 5
-              },
-              {
-                "id": 7,
-                "name": "Robert Wilson",
-                "role": "Site Supervisor",
-                "image": "/personImage/men4.png",
-                "quote": "Impressive service quality! Their technicians arrived fully equipped, identified the core issues immediately, and resolved everything seamlessly.",
-                "rating": 5
-              },
-              {
-                "id": 8,
-                "name": "Jessica Adams",
-                "role": "General Manager",
-                "image": "/personImage/women4.png",
-                "quote": "Outstanding experience working with them. From customer support to field service execution, everything was handled with extreme professionalism.",
                 "rating": 5
               }
             ]
@@ -824,7 +916,59 @@
       "ContactSection": {
         "variants": {
           "ServiceContactSection1": {
-            "title": "Get in Touch",
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Contact Us",
+              "title": "Contact Us",
+              "backgroundImage": "/plumberImage/image9.jpg",
+              "homeHref": "/"
+            },
+            "tagline": "CONTACT US",
+            "title": "Contact Us",
+            "description": "We're here to help! Reach out to us for any questions, support, or plumbing services.",
+            "topCards": [
+              {
+                "iconName": "mail",
+                "title": "Email Us",
+                "description": "Have a question or need assistance? Email us anytime.",
+                "value": "info@aquafix.com"
+              },
+              {
+                "iconName": "phone",
+                "title": "Call Us",
+                "description": "Speak with our friendly team\nMon - Sun: 7:00 AM - 7:00 PM",
+                "value": "(555) 123-4567"
+              },
+              {
+                "iconName": "map-pin",
+                "title": "Our Address",
+                "description": "Visit our office or send us your inquiries.",
+                "value": "123 Plumbing Way\nAustin, TX 78701"
+              }
+            ],
+            "formSection": {
+              "tagline": "SEND US A MESSAGE",
+              "title": "How Can We Help You?",
+              "description": "Fill out the form and our team will get back to you as soon as possible.",
+              "features": [
+                {
+                  "iconName": "shield-check",
+                  "title": "Quick Response",
+                  "description": "We respond to all inquiries within one business day."
+                },
+                {
+                  "iconName": "users",
+                  "title": "Expert Team",
+                  "description": "Our experienced plumbers are ready to assist you."
+                },
+                {
+                  "iconName": "award",
+                  "title": "Quality Service",
+                  "description": "We're committed to providing reliable and efficient solutions."
+                }
+              ],
+              "submitButtonText": "Send Message"
+            },
             "contactItems": [
               {
                 "iconTitle": "Phone",
@@ -846,11 +990,482 @@
               }
             ],
             "map": {
-              "title": "Find Us",
-              "address": "123 Plumbing Street, New York, NY 10001",
+              "title": "Our Location",
+              "address": "123 Plumbing Way\nAustin, TX 78701",
               "directionsText": "Get Directions",
-              "directionsUrl": "https://maps.google.com/?q=123+Plumbing+Street,+New+York,+NY+10001",
-              "embedUrl": "https://www.google.com/maps?q=123+Plumbing+Street,+New+York,+NY+10001&output=embed"
+              "directionsUrl": "https://maps.google.com/?q=123+Plumbing+Way,+Austin,+TX+78701",
+              "embedUrl": "https://www.google.com/maps?q=123+Plumbing+Way,+Austin,+TX+78701&output=embed"
+            }
+          }
+        }
+      },
+      "VisionMissionPage": {
+        "variants": {
+          "ServiceVisionMissionPage1": {
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Vision & Mission",
+              "title": "Vision & Mission",
+              "backgroundImage": "/plumberImage/image9.jpg",
+              "homeHref": "/"
+            },
+            "visionMission": {
+              "subTitle": "WHAT DRIVES US",
+              "title": "Our Vision & Mission",
+              "cards": [
+                {
+                  "id": 1,
+                  "title": "Our Vision",
+                  "desc": "To be the most trusted plumbing service provider, recognized for our commitment to quality, innovation, and customer satisfaction. We envision a world where every home and business has access to safe, efficient, and sustainable plumbing solutions.",
+                  "image": "/plumberImage/image2.jpg",
+                  "iconName": "eye"
+                },
+                {
+                  "id": 2,
+                  "title": "Our Mission",
+                  "desc": "To deliver top-notch plumbing services with honesty, professionalism, and efficiency. We strive to exceed customer expectations by using advanced technology, skilled expertise, and a customer-first approach in every project we undertake.",
+                  "image": "/plumberImage/image7.jpg",
+                  "iconName": "target"
+                }
+              ],
+              "values": [
+                {
+                  "id": 1,
+                  "title": "Customer Commitment",
+                  "desc": "We are dedicated to providing solutions that truly meet our customers' needs.",
+                  "iconName": "users"
+                },
+                {
+                  "id": 2,
+                  "title": "Quality Assurance",
+                  "desc": "We never compromise on quality and ensure every job is done right.",
+                  "iconName": "shield-check"
+                },
+                {
+                  "id": 3,
+                  "title": "Innovation",
+                  "desc": "We embrace new technology and smarter methods to deliver better results.",
+                  "iconName": "lightbulb"
+                },
+                {
+                  "id": 4,
+                  "title": "Sustainability",
+                  "desc": "We care for the environment and promote responsible plumbing practices.",
+                  "iconName": "leaf"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "FaqSection": {
+        "variants": {
+          "ServiceFaqSection1": {
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "FAQs",
+              "title": "FAQs",
+              "backgroundImage": "/plumberImage/image9.jpg",
+              "homeHref": "/"
+            },
+            "tagline": "FAQS",
+            "title": "Frequently Asked Questions",
+            "description": "Find answers to common plumbing questions. If you need more help, our team is always here for you.",
+            "faqs": [
+              {
+                "question": "How quickly can you respond to a plumbing emergency?",
+                "answer": "We offer 24/7 emergency plumbing services and strive to respond as quickly as possible. In most cases, our team can arrive within 60 minutes, depending on your location."
+              },
+              {
+                "question": "Do you provide free estimates?",
+                "answer": "We offer 24/7 emergency plumbing services and strive to respond as quickly as possible. In most cases, our team can arrive within 60 minutes, depending on your location."
+              },
+              {
+                "question": "Are your plumbers licensed and insured?",
+                "answer": "We offer 24/7 emergency plumbing services and strive to respond as quickly as possible. In most cases, our team can arrive within 60 minutes, depending on your location."
+              },
+              {
+                "question": "What areas do you serve?",
+                "answer": "We offer 24/7 emergency plumbing services and strive to respond as quickly as possible. In most cases, our team can arrive within 60 minutes, depending on your location."
+              },
+              {
+                "question": "What payment methods do you accept?",
+                "answer": "We offer 24/7 emergency plumbing services and strive to respond as quickly as possible. In most cases, our team can arrive within 60 minutes, depending on your location."
+              },
+              {
+                "question": "Do you offer any warranties on your services?",
+                "answer": ""
+              },
+              {
+                "question": "How often should I get my drains cleaned?",
+                "answer": "We offer 24/7 emergency plumbing services and strive to respond as quickly as possible. In most cases, our team can arrive within 60 minutes, depending on your location."
+              },
+              {
+                "question": "Can you help with water heater installation?",
+                "answer": "We offer 24/7 emergency plumbing services and strive to respond as quickly as possible. In most cases, our team can arrive within 60 minutes, depending on your location."
+              }
+            ],
+            "contactCta": {
+              "title": "Still Have Questions?",
+              "description": "Our expert plumbers are here to help. Get in touch and we'll be happy to assist you.",
+              "buttonText": "Contact Us Now",
+              "buttonUrl": "contact-us"
+            }
+          }
+        }
+      },
+      "EnquirySection": {
+        "variants": {
+          "ServiceEnquirySection1": {
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Enquiry",
+              "title": "Enquiry",
+              "backgroundImage": "/plumberImage/image9.jpg",
+              "homeHref": "/"
+            },
+            "tagline": "ENQUIRY",
+            "title": "We're Here to Help",
+            "description": "Have a question or need more information about our plumbing services? Fill out the form and our team will get back to you as soon as possible.",
+            "features": [
+              {
+                "iconName": "clock",
+                "title": "Quick Response",
+                "description": "We aim to respond to all enquiries within one business day."
+              },
+              {
+                "iconName": "shield-check",
+                "title": "Trusted Service",
+                "description": "Reliable, professional and quality plumbing solutions you can trust."
+              },
+              {
+                "iconName": "headset",
+                "title": "Expert Support",
+                "description": "Our experienced team is here to answer your questions and provide the right solutions."
+              }
+            ],
+            "form": {
+              "title": "Send Us an Enquiry",
+              "submitButtonText": "Submit Enquiry"
+            }
+          }
+        }
+      },
+      "IndustrySection": {
+        "variants": {
+          "ServiceIndustrySection1": {
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Industries We Serve",
+              "title": "Industries We Serve",
+              "backgroundImage": "/plumberImage/image9.jpg",
+              "homeHref": "/"
+            },
+            "tagline": "WHO WE SERVE",
+            "title": "Industries We Proudly Serve",
+            "description": "We provide reliable, high-quality plumbing services tailored to meet the specific needs of a wide range of industries.",
+            "cards": [
+              {
+                "id": 1,
+                "title": "Residential Complexes",
+                "description": "Complete plumbing solutions for apartments, condos, and gated communities.",
+                "image": "/plumberImage/image2.jpg",
+                "iconName": "building-2",
+                "link": "/services/residential"
+              },
+              {
+                "id": 2,
+                "title": "Commercial Buildings",
+                "description": "Efficient plumbing systems for offices, retail spaces, and commercial facilities.",
+                "image": "/plumberImage/image7.jpg",
+                "iconName": "building",
+                "link": "/services/commercial"
+              },
+              {
+                "id": 3,
+                "title": "Hospitality Industry",
+                "description": "Reliable plumbing services for hotels, restaurants, cafeterias, and resorts.",
+                "image": "/plumberImage/image6.jpg",
+                "iconName": "utensils",
+                "link": "/services/hospitality"
+              },
+              {
+                "id": 4,
+                "title": "Healthcare Facilities",
+                "description": "Specialized plumbing solutions for hospitals, clinics, and healthcare centers.",
+                "image": "/plumberImage/image1.jpg",
+                "iconName": "cross",
+                "link": "/services/healthcare"
+              },
+              {
+                "id": 5,
+                "title": "Manufacturing Plants",
+                "description": "Durable plumbing systems for industrial operations and production facilities.",
+                "image": "/plumberImage/image5.jpg",
+                "iconName": "factory",
+                "link": "/services/manufacturing"
+              },
+              {
+                "id": 6,
+                "title": "Educational Institutions",
+                "description": "Safe and efficient plumbing solutions for schools, colleges, and universities.",
+                "image": "/plumberImage/image7.jpg",
+                "iconName": "graduation-cap",
+                "link": "/services/education"
+              },
+              {
+                "id": 7,
+                "title": "Warehouses & Logistics",
+                "description": "High-performance plumbing services for warehouses and distribution centers.",
+                "image": "/plumberImage/image4.jpg",
+                "iconName": "warehouse",
+                "link": "/services/warehouses"
+              },
+              {
+                "id": 8,
+                "title": "Shopping Malls & Retail Stores",
+                "description": "Complete plumbing support for malls, showrooms, and retail outlets.",
+                "image": "/plumberImage/image9.jpg",
+                "iconName": "shopping-bag",
+                "link": "/services/retail"
+              }
+            ]
+          }
+        }
+      },
+      "PricingSection": {
+        "variants": {
+          "ServicePricingSection1": {
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Pricing",
+              "title": "Pricing",
+              "backgroundImage": "/plumberImage/image9.jpg",
+              "homeHref": "/"
+            },
+            "tagline": "PRICING PLAN",
+            "title": "Simple, Transparent & Fair Pricing",
+            "description": "Expert and reliable plumbing solutions tailored to meet your home repair and maintenance needs, ensuring quality, efficiency, and complete customer satisfaction.",
+            "tabs": [
+              {
+                "id": "residential",
+                "label": "Residential Service",
+                "iconName": "home"
+              },
+              {
+                "id": "commercial",
+                "label": "Commercial Service",
+                "iconName": "building"
+              }
+            ],
+            "plans": {
+              "residential": [
+                {
+                  "id": "res-basic",
+                  "name": "BASIC PLAN",
+                  "price": "$50",
+                  "period": "/Hour",
+                  "billingInfo": "Billed per hour",
+                  "isRecommended": false,
+                  "badgeText": "",
+                  "iconName": "pipe",
+                  "includedTitle": "What's included",
+                  "features": [
+                    "10% off All Service",
+                    "Leaking Pipes",
+                    "Gas Line Repair",
+                    "Water Heater Repair",
+                    "Toilet Installation"
+                  ],
+                  "buttonText": "Get Started",
+                  "buttonLink": "/contact-us",
+                  "footerNote": "Standard service with quality you can trust.",
+                  "footerIcon": "shield-check"
+                },
+                {
+                  "id": "res-advanced",
+                  "name": "ADVANCED PLAN",
+                  "price": "$150",
+                  "period": "/Hour",
+                  "billingInfo": "Billed per hour",
+                  "isRecommended": true,
+                  "badgeText": "RECOMMENDED",
+                  "iconName": "faucet",
+                  "includedTitle": "What's included",
+                  "features": [
+                    "15% off All Service",
+                    "Leaking Pipes",
+                    "Gas Line Repair",
+                    "Water Heater Repair",
+                    "Toilet Installation",
+                    "Burst Pipes"
+                  ],
+                  "buttonText": "Get Started",
+                  "buttonLink": "/contact-us",
+                  "footerNote": "Our most popular plan with complete coverage and priority support.",
+                  "footerIcon": "shield-star"
+                },
+                {
+                  "id": "res-special",
+                  "name": "SPECIAL PLAN",
+                  "price": "$200",
+                  "period": "/Hour",
+                  "billingInfo": "Billed per hour",
+                  "isRecommended": false,
+                  "badgeText": "",
+                  "iconName": "toolbox",
+                  "includedTitle": "What's included",
+                  "features": [
+                    "All from Advanced",
+                    "Leaking Pipes",
+                    "Gas Line Repair & Installation",
+                    "Water Heater Installation",
+                    "Remodelling Washroom"
+                  ],
+                  "buttonText": "Get Started",
+                  "buttonLink": "/contact-us",
+                  "footerNote": "Complete solution for premium results.",
+                  "footerIcon": "shield-check"
+                }
+              ],
+              "commercial": [
+                {
+                  "id": "com-basic",
+                  "name": "COMMERCIAL BASIC",
+                  "price": "$120",
+                  "period": "/Hour",
+                  "billingInfo": "Billed per hour",
+                  "isRecommended": false,
+                  "badgeText": "",
+                  "iconName": "pipe",
+                  "includedTitle": "What's included",
+                  "features": [
+                    "Scheduled Pipe Inspection",
+                    "Drainage Maintenance",
+                    "Commercial Sink Repair",
+                    "Basic Water Line Audit",
+                    "24-Hour Callout Response"
+                  ],
+                  "buttonText": "Get Started",
+                  "buttonLink": "/contact-us",
+                  "footerNote": "Ideal for small offices and retail shops.",
+                  "footerIcon": "shield-check"
+                },
+                {
+                  "id": "com-advanced",
+                  "name": "COMMERCIAL PRO",
+                  "price": "$280",
+                  "period": "/Hour",
+                  "billingInfo": "Billed per hour",
+                  "isRecommended": true,
+                  "badgeText": "RECOMMENDED",
+                  "iconName": "faucet",
+                  "includedTitle": "What's included",
+                  "features": [
+                    "Priority Emergency Service",
+                    "Full System Backflow Testing",
+                    "Heavy Duty Drain Cleaning",
+                    "Commercial Boiler Repair",
+                    "Grease Trap Maintenance",
+                    "Dedicated Account Manager"
+                  ],
+                  "buttonText": "Get Started",
+                  "buttonLink": "/contact-us",
+                  "footerNote": "Best for restaurants, hotels, and office complexes.",
+                  "footerIcon": "shield-star"
+                },
+                {
+                  "id": "com-enterprise",
+                  "name": "ENTERPRISE PLAN",
+                  "price": "$450",
+                  "period": "/Hour",
+                  "billingInfo": "Billed per hour",
+                  "isRecommended": false,
+                  "badgeText": "",
+                  "iconName": "toolbox",
+                  "includedTitle": "What's included",
+                  "features": [
+                    "All from Commercial Pro",
+                    "24/7 On-Site Emergency Dispatch",
+                    "Full Industrial Plumbing Overhaul",
+                    "Monthly Compliance Certification",
+                    "Custom Preventative Strategy"
+                  ],
+                  "buttonText": "Get Started",
+                  "buttonLink": "/contac-us",
+                  "footerNote": "Tailored solution for enterprise facilities & complexes.",
+                  "footerIcon": "shield-check"
+                }
+              ]
+            },
+            "bottomFeatures": [
+              {
+                "iconName": "banknote",
+                "title": "No Hidden Charges",
+                "description": "Transparent pricing. What you see is what you pay."
+              },
+              {
+                "iconName": "clock",
+                "title": "On-Time Service",
+                "description": "We value your time and ensure on-time arrival."
+              },
+              {
+                "iconName": "award",
+                "title": "Satisfaction Guaranteed",
+                "description": "Quality service with 100% customer satisfaction."
+              },
+              {
+                "iconName": "headset",
+                "title": "24/7 Support",
+                "description": "We are always here when you need us."
+              }
+            ]
+          }
+        }
+      },
+      "GetQuoteSection": {
+        "variants": {
+          "GetQuoteSection1": {
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Get A Quote",
+              "title": "Get A Quote",
+              "backgroundImage": "/plumberImage/image9.jpg",
+              "homeHref": "/"
+            },
+            "tagline": "GET A QUOTE",
+            "title": "Get a Free Quote For Your Plumbing Needs",
+            "description": "Tell us about your plumbing needs and we'll provide you with a fast, accurate, and transparent quote.",
+            "features": [
+              {
+                "iconName": "clock",
+                "title": "Fast Response",
+                "description": "We respond quickly to all quote requests."
+              },
+              {
+                "iconName": "shield-check",
+                "title": "Trusted Experts",
+                "description": "Licensed plumbers you can rely on."
+              },
+              {
+                "iconName": "dollar-sign",
+                "title": "Upfront Pricing",
+                "description": "Transparent pricing with no hidden fees."
+              }
+            ],
+            "formTitle": "Request Your Quote",
+            "formFields": {
+              "namePlaceholder": "Enter your full name",
+              "emailPlaceholder": "Enter your email address",
+              "phonePlaceholder": "Enter your phone number",
+              "typeOptions": [
+                { "label": "Residential Service", "value": "residential" },
+                { "label": "Commercial Service", "value": "commercial" },
+                { "label": "Emergency Repair", "value": "emergency" },
+                { "label": "Maintenance", "value": "maintenance" }
+              ],
+              "requirementsPlaceholder": "Describe your plumbing requirements...",
+              "submitButtonText": "Submit"
             }
           }
         }

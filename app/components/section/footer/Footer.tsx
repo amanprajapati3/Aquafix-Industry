@@ -85,7 +85,7 @@ export default function Footer() {
               <div className="pt-2">
                 <a
                   href={footerContact.phoneHref || `tel:${footerContact.phone}`}
-                  className="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-transparent px-5 py-2 text-xs font-medium text-white transition-all hover:border-[#A3E635] hover:text-[#A3E635]"
+                  className="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-transparent px-5 py-2 text-sm font-medium text-white transition-all hover:border-[#A3E635] hover:text-[#A3E635]"
                 >
                   <Phone className="h-3.5 w-3.5 text-[#A3E635]" />
                   <span className="text-[#A3E635] hover:text-white">Call +{footerContact.phone}</span>
@@ -154,7 +154,7 @@ export default function Footer() {
 
       {/* Sub-Footer Bottom Bar */}
       <div className="border-t border-white/10 bg-[#061026]">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-5 text-xs text-gray-400 sm:flex-row sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-5 text-sm text-gray-400 sm:flex-row sm:px-6 lg:px-8">
           <p>
             {copyright ||
               `© 2026 Aquafix. All rights reserved. Designed by lestow`}
