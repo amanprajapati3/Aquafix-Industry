@@ -13,23 +13,21 @@ import {
   CheckCircle2,
   FileText,
 } from "lucide-react";
-import siteData from "@/data/site.json";
+import type {
+  ServiceBannerData,
+  ServiceFeatureCardsData,
+} from "@/data";
 
-export type ServiceBannerData =
-  typeof siteData.ServiceIndustries.sections.Banner.variants.ServiceBanner1;
+interface BannerProps {
+  data: ServiceBannerData;
+  featureCardsData: ServiceFeatureCardsData;
+}
 
-export type ServiceFeatureCardsData =
-  typeof siteData.ServiceIndustries.sections.FeatureCards.variants.ServiceFeatureCards1;
-
-const bannerData: ServiceBannerData =
-  siteData.ServiceIndustries.sections.Banner.variants.ServiceBanner1;
-
-const featureCardsData: ServiceFeatureCardsData =
-  siteData.ServiceIndustries.sections.FeatureCards.variants
-    .ServiceFeatureCards1;
-
-export default function Banner() {
-  const slides = bannerData || [];
+export default function Banner({
+  data,
+  featureCardsData,
+}: BannerProps) {
+  const slides = data || [];
   const cards = featureCardsData || [];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -60,8 +58,7 @@ export default function Banner() {
   };
 
   return (
-    /* Pull section under absolute/fixed mobile header (-mt-[80px] sm:mt-0) */
-    <section className="relative w-full overflow-hidden bg-[#F4F8FD] -mt-[80px] sm:mt-0">
+    <section className="relative -mt-[80px] w-full overflow-hidden bg-[#F4F8FD] sm:mt-0">
       <div className="mx-auto max-w-[1400px]">
         {/* HERO AREA SLIDER CONTAINER */}
         <div className="relative overflow-hidden">
@@ -76,19 +73,19 @@ export default function Banner() {
                 key={slideIdx}
                 className="relative grid min-h-[580px] w-full flex-shrink-0 grid-cols-1 sm:min-h-[600px] sm:grid-cols-12 sm:gap-4 lg:min-h-[650px] xl:min-h-[680px]"
               >
-                {/* MOBILE BG IMAGE OVERLAY (Extends to absolute top-0 on mobile) */}
+                {/* MOBILE BACKGROUND IMAGE */}
                 <div className="absolute inset-0 z-0 block sm:hidden">
                   <img
                     src={slide.bgImageUrl}
                     alt={slide.title || "Background"}
                     className="h-full w-full object-cover object-center"
                   />
-                  {/* Dark Gradient Overlay for text readability */}
+
                   <div className="absolute inset-0 bg-gradient-to-t from-[#09244A]/95 via-[#09244A]/80 to-[#09244A]/60" />
                 </div>
 
-                {/* LEFT CONTENT (Padded at top on mobile `pt-[100px]` so text doesn't hit header) */}
-                <div className="relative z-20 flex flex-col items-start justify-center md:w-[84%] px-5 pb-12 pt-[100px] sm:col-span-6 sm:ml-6 sm:px-0 sm:pb-20 sm:pt-12 lg:col-span-6 lg:ml-7 lg:pb-28 lg:pt-16 xl:col-span-6">
+                {/* LEFT CONTENT */}
+                <div className="relative z-20 flex flex-col items-start justify-center px-5 pb-12 pt-[100px] md:w-[84%] sm:col-span-6 sm:ml-6 sm:px-0 sm:pb-20 sm:pt-12 lg:col-span-6 lg:ml-7 lg:pb-28 lg:pt-16 xl:col-span-6">
                   {/* Badge */}
                   {slide.badge && (
                     <div className="inline-flex items-center gap-2 rounded-full bg-[#EAF2FF] px-4 py-1.5 text-[12px] font-semibold text-[#245BC1] sm:py-2 sm:text-[13px]">
@@ -127,7 +124,7 @@ export default function Banner() {
                           className={`inline-flex h-[42px] items-center justify-center gap-2 rounded-full px-5 text-[13px] font-bold transition-all duration-300 sm:h-[48px] sm:px-7 sm:text-[14px] ${
                             isPrimary
                               ? "bg-[#9BE500] text-[#09244A] shadow-[0_7px_18px_rgba(145,217,0,0.22)] hover:-translate-y-0.5 hover:bg-[#8DD300]"
-                              : "border-[1.5px] border-white/80 bg-transparent text-white sm:border-[#17355C] sm:text-[#09244A] hover:-translate-y-0.5 hover:bg-[#09244A] hover:text-white"
+                              : "border-[1.5px] border-white/80 bg-transparent text-white hover:-translate-y-0.5 hover:bg-[#09244A] hover:text-white sm:border-[#17355C] sm:text-[#09244A]"
                           }`}
                         >
                           {isPrimary && (
@@ -149,16 +146,18 @@ export default function Banner() {
                     <div className="mt-6 flex items-center gap-4 sm:mt-8">
                       {/* Avatars */}
                       <div className="flex items-center">
-                        {slide.socialProof.avatarImages?.map((imgUrl, aIdx) => (
-                          <img
-                            key={aIdx}
-                            src={imgUrl}
-                            alt="Satisfied client"
-                            className={`h-[42px] w-[42px] rounded-full border-[2px] border-white object-cover shadow-sm sm:h-[49px] sm:w-[49px] ${
-                              aIdx !== 0 ? "-ml-3" : ""
-                            }`}
-                          />
-                        ))}
+                        {slide.socialProof.avatarImages?.map(
+                          (imgUrl, aIdx) => (
+                            <img
+                              key={aIdx}
+                              src={imgUrl}
+                              alt="Satisfied client"
+                              className={`h-[42px] w-[42px] rounded-full border-[2px] border-white object-cover shadow-sm sm:h-[49px] sm:w-[49px] ${
+                                aIdx !== 0 ? "-ml-3" : ""
+                              }`}
+                            />
+                          ),
+                        )}
 
                         {slide.socialProof.ratingBadge && (
                           <div className="-ml-3 flex h-[45px] w-[45px] shrink-0 items-center justify-center rounded-full border-[2px] border-white bg-[#09244A] text-[12px] font-extrabold text-[#9BE500] shadow-md sm:h-[53px] sm:w-[53px] sm:text-[13px]">
@@ -184,9 +183,9 @@ export default function Banner() {
                   )}
                 </div>
 
-                {/* RIGHT IMAGE AREA - Tablet & Desktop Only */}
-                <div className="relative z-10 hidden sm:flex sm:col-span-6 sm:items-start sm:justify-end sm:-ml-12 lg:-ml-28 xl:-ml-36">
-                  <div className="relative h-full w-full min-h-[540px] md:min-h-[590px] lg:h-[590px] lg:w-[calc(100%+8rem)] xl:h-[620px] xl:w-[calc(100%+12rem)]">
+                {/* RIGHT IMAGE AREA - TABLET & DESKTOP */}
+                <div className="relative z-10 hidden sm:col-span-6 sm:flex sm:-ml-12 sm:items-start sm:justify-end lg:-ml-28 xl:-ml-36">
+                  <div className="relative h-full min-h-[540px] w-full md:min-h-[590px] lg:h-[590px] lg:w-[calc(100%+8rem)] xl:h-[620px] xl:w-[calc(100%+12rem)]">
                     <div className="absolute inset-0 overflow-hidden bg-[#D8E5F2] sm:[clip-path:ellipse(95%_78%_at_100%_50%)]">
                       <div className="absolute inset-0 overflow-hidden bg-white sm:inset-y-[8px] sm:left-[8px] sm:right-0 sm:[clip-path:ellipse(95%_78%_at_100%_50%)] lg:inset-y-[10px] lg:left-[10px]">
                         <img
@@ -202,14 +201,14 @@ export default function Banner() {
             ))}
           </div>
 
-          {/* SLIDER ARROWS - Hidden on Mobile */}
+          {/* SLIDER CONTROLS */}
           {slides.length > 1 && (
             <>
               <button
                 type="button"
                 onClick={() =>
                   setCurrentSlide((prev) =>
-                    prev === 0 ? slides.length - 1 : prev - 1
+                    prev === 0 ? slides.length - 1 : prev - 1,
                   )
                 }
                 className="absolute left-6 top-1/2 z-30 hidden -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-[#09244A]/60 p-2.5 text-white shadow-lg transition-all duration-300 hover:bg-[#9BE500] hover:text-[#09244A] sm:flex"
@@ -229,11 +228,12 @@ export default function Banner() {
                 <ChevronRight className="h-6 w-6" />
               </button>
 
-              {/* MOBILE PAGINATION DOTS */}
+              {/* MOBILE PAGINATION */}
               <div className="absolute bottom-4 left-1/2 z-30 flex -translate-x-1/2 items-center gap-2 sm:hidden">
                 {slides.map((_, dotIdx) => (
                   <button
                     key={dotIdx}
+                    type="button"
                     onClick={() => setCurrentSlide(dotIdx)}
                     className={`h-2 rounded-full transition-all duration-300 ${
                       currentSlide === dotIdx
@@ -248,9 +248,9 @@ export default function Banner() {
           )}
         </div>
 
-        {/* FEATURE CARDS - Hidden on Mobile */}
+        {/* FEATURE CARDS */}
         {cards.length > 0 && (
-          <div className="relative z-30 hidden w-full sm:block sm:mb-8 lg:absolute lg:bottom-0 lg:right-0 lg:mb-0 lg:mt-0 lg:w-[67%] xl:w-[64%]">
+          <div className="relative z-30 hidden w-full sm:mb-8 sm:block lg:absolute lg:bottom-0 lg:right-0 lg:mb-0 lg:mt-0 lg:w-[67%] xl:w-[64%]">
             <div className="overflow-hidden rounded-[18px] bg-[#062650] px-3 py-3 shadow-[0_12px_35px_rgba(3,27,61,0.28)] sm:px-4 sm:py-4 lg:rounded-[17px] lg:px-3 lg:py-3 xl:px-4 xl:py-4">
               <div className="grid grid-cols-2 lg:grid-cols-4">
                 {cards.slice(0, 4).map((card, idx) => (
@@ -258,7 +258,7 @@ export default function Banner() {
                     key={idx}
                     className={`flex min-h-[140px] flex-col items-center justify-center px-3 py-3 text-center sm:px-4 lg:min-h-[150px] lg:px-4 xl:px-5 ${
                       idx !== 0
-                        ? "border-t border-white/15 md:border-l sm:border-t-0"
+                        ? "border-t border-white/15 sm:border-t-0 md:border-l"
                         : ""
                     }`}
                   >

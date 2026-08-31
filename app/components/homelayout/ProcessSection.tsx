@@ -168,21 +168,7 @@ export default function ProcessSection({ processData }: ProcessSectionProps) {
 
   return (
     <section className="relative w-full overflow-hidden bg-[#EDF3FD] py-8 md:py-12">
-      {/* KEYFRAME ANIMATION INJECTION */}
-      <style jsx>{`
-        @keyframes subtleFloat {
-          0%, 100% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-4px);
-          }
-        }
-        .animate-subtle-float {
-          animation: subtleFloat 3s ease-in-out infinite;
-        }
-      `}</style>
-
+   
       {/* WATER SPLASH OVERLAY - TOP RIGHT */}
       <div className="pointer-events-none absolute right-0 top-0 z-10 select-none opacity-80 sm:opacity-100">
         <img src={data.image} alt="" />

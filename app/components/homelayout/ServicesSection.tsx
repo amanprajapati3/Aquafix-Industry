@@ -116,7 +116,7 @@ export default function ServicesSection({
                   </h3>
 
 
-                  <p className="mt-2 text-[13px] font-medium leading-relaxed text-[#64748B]">
+                  <p className="mt-2 text-sm font-medium leading-relaxed text-[#64748B]">
                     {item.description}
                   </p>
                 </div>
@@ -139,7 +139,7 @@ export default function ServicesSection({
           <div className="mt-10 flex flex-col  justify-between gap-6 rounded-2xl bg-[#EFF6FF] p-5 sm:p-6 md:flex-row border border-blue-50/50 shadow-sm">
             {/* Call Section */}
             {bottomBanner.callSection && (
-              <div className="flex gap-4 text-center md:text-left">
+              <div className="flex gap-4  md:text-left">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#1E40AF] text-white shadow-md">
                   <Phone className="h-5 w-5" />
                 </div>
@@ -162,7 +162,7 @@ export default function ServicesSection({
 
             {/* Emergency 24/7 Section */}
             {bottomBanner.emergencySection && (
-              <div className="flex items-center gap-4 text-center md:text-left">
+              <div className="flex items-center gap-4  md:text-left">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#1E40AF] text-white shadow-md">
                   <BsClockHistory className="h-5 md:w-8 md:h-8 w-5" />
                 </div>
