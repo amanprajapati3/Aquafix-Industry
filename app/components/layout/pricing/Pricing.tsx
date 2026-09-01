@@ -110,7 +110,7 @@ export default function Pricing({ pricingData }: PricingProps) {
 
             {/* Service Filter Tabs */}
             {data?.tabs && data.tabs.length > 0 && (
-              <div className="mt-8 flex items-center rounded-full bg-slate-100 p-1.5 shadow-inner">
+              <div className="mt-8 flex justify-center items-center ">
                 {data.tabs.map((tab) => {
                   const isActive = activeTab === tab.id;
                   return (
