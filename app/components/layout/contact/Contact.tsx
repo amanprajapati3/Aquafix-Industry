@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { ServiceContactSectionData, site } from "@/data";
 import PageBanner from "../../shared/PageBanner";
+import SectionHeader from "../../shared/SectionHeader";
 import {
   Mail,
   Phone,
@@ -82,19 +83,12 @@ export default function Contact({ contactData }: ContactProps) {
       <section className="bg-[#FAFBFD] py-8 md:py-12">
         <div className="mx-auto max-w-[1200px] px-4 sm:px-6">
           {/* Main Title & Description */}
-          <div className="text-center md:text-start">
-            {data?.title && (
-              <h2 className="text-3xl font-black tracking-tight text-[#0F172A] sm:text-4xl lg:text-5xl">
-                {data.title}
-              </h2>
-            )}
-            <div className="flex mt-4 justifyt-center md:justify-start mt-2 h-1 w-12 rounded bg-[#84CC16]" />
-            {data?.description && (
-              <p className="mt-4 text-sm font-medium text-[#64748B] sm:text-base">
-                {data.description}
-              </p>
-            )}
-          </div>
+          <SectionHeader
+            title={data?.title}
+            description={data?.description}
+            align="center"
+            className="md:items-start md:text-left"
+          />
 
           {/* Top 3 Info Cards */}
           {data?.topCards && data.topCards.length > 0 && (

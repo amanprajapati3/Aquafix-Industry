@@ -2,6 +2,7 @@ import { ServiceAboutPageData, site } from "@/data";
 import AboutSection from "../../homelayout/AboutSection";
 import Choose from "../../homelayout/Choose";
 import PageBanner from "../../shared/PageBanner";
+import SectionHeader from "../../shared/SectionHeader";
 import { Wrench, Users, ShieldCheck, UserCheck, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -45,7 +46,11 @@ export default function AboutUs({ aboutData }: AboutUsProps) {
       )}
 
       {/* ABOUT SECTION */}
-      <AboutSection aboutData={data} featureStripData={site.featureStrip} />
+      <AboutSection
+        aboutData={data}
+        featureStripData={site.featureStrip}
+        hideButton
+      />
 
       {/* WHY CHOOSE US SECTION */}
       <Choose chooseData={site.whyChooseUs} />
@@ -54,15 +59,11 @@ export default function AboutUs({ aboutData }: AboutUsProps) {
       {data?.ourValues && (
         <section className="bg-white pb-8  md:py-12">
           <div className="mx-auto max-w-[1200px] px-4 sm:px-6">
-            <div className="flex flex-col items-center text-center">
-              <span className="text-sm font-black uppercase tracking-widest text-[#2467EC] sm:text-sm">
-                {data.ourValues.subTitle}
-              </span>
-              <h2 className="mt-2 text-3xl font-black tracking-tight text-[#1E293B] sm:text-4xl lg:text-5xl">
-                {data.ourValues.title}
-              </h2>
-              <div className="mt-3 h-1 w-12 rounded bg-[#2467EC]" />
-            </div>
+            <SectionHeader
+              pretitle={data.ourValues.subTitle}
+              title={data.ourValues.title}
+              align="center"
+            />
 
             <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {data.ourValues.items?.map((item) => (
@@ -90,15 +91,11 @@ export default function AboutUs({ aboutData }: AboutUsProps) {
       {data?.team && (
         <section className="bg-white pb-8">
           <div className="mx-auto max-w-[1200px] px-4 sm:px-6">
-            <div className="flex flex-col items-center text-center">
-              <span className="text-sm font-black uppercase tracking-widest text-[#2467EC] sm:text-sm">
-                {data.team.subTitle}
-              </span>
-              <h2 className="mt-2 text-3xl font-black tracking-tight text-[#1E293B] sm:text-4xl lg:text-5xl">
-                {data.team.title}
-              </h2>
-              <div className="mt-3 h-1 w-12 rounded bg-[#2467EC]" />
-            </div>
+            <SectionHeader
+              pretitle={data.team.subTitle}
+              title={data.team.title}
+              align="center"
+            />
 
             <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {data.team.members?.map((member) => (
@@ -107,7 +104,7 @@ export default function AboutUs({ aboutData }: AboutUsProps) {
                   className="group flex flex-col overflow-hidden rounded-2xl bg-white p-4 shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)]"
                 >
                   <div className="relative h-[280px] w-full overflow-hidden rounded-xl bg-slate-100">
-                    <Link href={`/team/${member.slug}`}>
+                      <Link href={`/teams/${member.slug}`}>
                       <Image
                         src={member.image}
                         alt={member.name}
@@ -118,7 +115,7 @@ export default function AboutUs({ aboutData }: AboutUsProps) {
                   </div>
 
                   <div className="flex flex-col items-center pt-5 pb-2 text-center">
-                    <Link href={`/team/${member.slug}`}>
+                      <Link href={`/teams/${member.slug}`}>
                       <h3 className="text-lg font-bold text-[#1E293B] transition-colors hover:text-[#2467EC]">
                         {member.name}
                       </h3>

@@ -2,6 +2,7 @@
 
 import React from "react";
 import { ServicePartnersData, site } from "@/data";
+import SectionHeader from "../shared/SectionHeader";
 
 interface PartnersProps {
   partnersData?: ServicePartnersData;
@@ -17,27 +18,14 @@ export default function Partners({ partnersData }: PartnersProps) {
     <section className="w-full bg-white px-1 sm:px-6 lg:px-8">
       <div className="mx-auto overflow-hidden rounded-[24px] border border-slate-100 bg-white p-2 shadow-[0_4px_25px_rgba(0,0,0,0.03)] sm:p-10">
         {/* SECTION HEADER */}
-        <div className="mx-auto mb-6 max-w-2xl text-center">
-          <div className="mb-0 inline-flex items-center gap-3">
-            <span className="h-[2px] w-6 rounded-full bg-[#9BE500]" />
-
-            <span className="text-[12px] font-bold uppercase tracking-wider text-[#245BC1] sm:text-[13px]">
-              {data.badge}
-            </span>
-
-            <span className="h-[2px] w-6 rounded-full bg-[#9BE500]" />
-          </div>
-
-          <h2 className="mb-0 text-[22px] font-extrabold tracking-[-0.02em] text-[#09244A] sm:text-[32px] md:text-[36px]">
-            {data.title}
-          </h2>
-
-          {data.desc && (
-            <p className="text-[13px] font-medium leading-relaxed text-[#526174] sm:text-[15px]">
-              {data.desc}
-            </p>
-          )}
-        </div>
+        <SectionHeader
+          pretitle={data.badge}
+          title={data.title}
+          description={data.desc}
+          align="center"
+          descriptionMaxWidth="max-w-2xl"
+          className="mb-6"
+        />
 
         {/* AUTO-SCROLLING MARQUEE */}
         {partners.length > 0 && (

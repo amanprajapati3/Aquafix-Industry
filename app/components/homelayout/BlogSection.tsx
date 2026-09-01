@@ -4,17 +4,29 @@ import React from "react";
 import siteData from "@/data/site.json";
 import { Calendar, ArrowRight, PhoneCall, ShieldAlert } from "lucide-react";
 import { ServiceBlogData } from "@/data";
+import SectionHeader from "../shared/SectionHeader";
 
 interface BlogSectionProps {
   blogData: ServiceBlogData;
+  variant?: "home" | "blog";
 }
 // Access Data safely (Runtime)
 
-export default function BlogSection({ blogData }: BlogSectionProps) {
+export default function BlogSection({
+  blogData,
+  variant = "home",
+}: BlogSectionProps) {
   const data = blogData;
 
   // Fallback Blog Cards matching the reference image exactly
-  const posts = data?.posts;
+  const allPosts = data?.posts || [];
+
+  // Home: show 4 in a 4-column grid. Blog: show 6 in a 3-column grid (2 rows).
+  const isBlogPage = variant === "blog";
+  const posts = isBlogPage ? allPosts.slice(0, 6) : allPosts.slice(0, 4);
+  const gridClass = isBlogPage
+    ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+    : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4";
 
   // CTA Banner Fallback Data
   const cta = data?.CtaBanner;
@@ -23,17 +35,15 @@ export default function BlogSection({ blogData }: BlogSectionProps) {
     <section className="w-full bg-[#F8FAFC] py-8 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-[1320px]">
         {/* SECTION HEADER */}
-        <div className="mb-10 text-center">
-          <span className="text-[12px] font-bold uppercase tracking-widest text-[#1E40AF]">
-            {data.badge}
-          </span>
-          <h2 className="mt-0 text-[28px] font-extrabold text-[#0F172A] sm:text-[34px] lg:text-[38px]">
-            {data.title}
-          </h2>
-        </div>
+        <SectionHeader
+          pretitle={data.badge}
+          title={data.title}
+          align="center"
+          className="mb-10"
+        />
 
-        {/* BLOG CARDS GRID: 1 column mobile, 2 columns tablet, 4 columns desktop */}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {/* BLOG CARDS GRID: home 4 per row, blog page 3 per row */}
+        <div className={`grid gap-6 ${gridClass}`}>
           {posts.map((post: any) => (
             <article
               key={post.id}

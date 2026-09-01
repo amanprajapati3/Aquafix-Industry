@@ -116,9 +116,9 @@ export interface AboutValueItem {
   iconName: string;
 }
 export interface OurValuesData {
-    subTitle: string;
-    title: string;
-    items: AboutValueItem[];
+  subTitle: string;
+  title: string;
+  items: AboutValueItem[];
 }
 export interface TeamMember {
   id: number;
@@ -171,7 +171,7 @@ export interface AboutPageData {
     label: string;
     href: string;
   };
-  ourValues:OurValuesData;
+  ourValues: OurValuesData;
   team?: TeamSectionData;
   ctaBanner?: AboutCtaBannerData;
 }
@@ -189,16 +189,57 @@ export interface PartnersData {
   partners: PartnerItem[];
 }
 
+export interface ServiceBannerData {
+  breadcrumbHome: string;
+  breadcrumbCurrent: string;
+  title: string;
+  backgroundImage: string;
+  homeHref: string;
+}
+
+export interface ImageRef {
+  src: string;
+  alt: string;
+}
+
 export interface ServiceItem {
   id: string;
+  slug: string;
   iconName: string;
   title: string;
   description: string;
   image: ImageRef;
   href: string;
+  linkText?: string;
+}
+
+export interface ServiceFeatureItem {
+  id: string;
+  iconName: string;
+  title: string;
+  description: string;
+}
+
+export interface ServiceBottomBanner {
+  tagline: string;
+  title: {
+    normal: string;
+    highlighted: string;
+  };
+  description: string;
+  primaryButton: {
+    label: string;
+    href: string;
+  };
+  secondaryButton: {
+    label: string;
+    href: string;
+  };
+  features: ServiceFeatureItem[];
 }
 
 export interface ServiceData {
+  banner?: ServiceBannerData;
   badge: string;
   title: {
     normal: string;
@@ -206,21 +247,48 @@ export interface ServiceData {
   };
   description: string;
   services: ServiceItem[];
-  bottomBanner: {
-    callSection: {
-      title: string;
-      phone: string;
-      phoneHref: string;
-    };
-    emergencySection: {
-      title: string;
-      desc: string;
-    };
-    button: {
-      label: string;
-      href: string;
-    };
+  bottomBanner: ServiceBottomBanner;
+}
+
+export interface ServiceDetailBanner {
+  breadcrumbHome: string;
+  breadcrumbCurrent: string;
+  title: string;
+  backgroundImage: string;
+  homeHref: string;
+}
+
+export interface ServiceDetailHero {
+  title: {
+    normal: string;
+    highlighted: string;
   };
+  description: string;
+  checklist: string[];
+  image: {
+    src: string;
+    alt: string;
+  };
+}
+
+export interface ServiceDetailGridItem {
+  id: string;
+  iconName: string;
+  title: string;
+  description: string;
+}
+
+export interface ServiceDetailSection {
+  tagline: string;
+  title: string;
+  items: ServiceDetailGridItem[];
+}
+
+export interface ServiceDetailData {
+  slug: string;
+  banner?: ServiceDetailBanner;
+  hero: ServiceDetailHero;
+  featuresSection: ServiceDetailSection;
 }
 
 export interface WhyChooseUsFeature {
@@ -278,19 +346,77 @@ export interface TestimonialData {
   testimonialItems: TestimonialItem[];
 }
 
+export interface BlogBannerData {
+  breadcrumbHome: string;
+  breadcrumbCurrent: string;
+  title: string;
+  backgroundImage: string;
+  homeHref: string;
+}
+
 export interface BlogPost {
   id: number;
   slug: string;
   image: string;
   date: string;
   title: string;
+  description?: string;
   readMoreText: string;
 }
 
 export interface BlogData {
+  banner?: BlogBannerData;
   badge: string;
   title: string;
   posts: BlogPost[];
+  CtaBanner?: {
+    title: string;
+    desc: string;
+    button: {
+      label: string;
+      href: string;
+    };
+  };
+}
+
+export interface BlogDetailPoint {
+  step: number;
+  title: string;
+  description: string;
+}
+
+export interface BlogDetailPost {
+  id: number;
+  title: string;
+  intro: string;
+  image: string;
+  imageAlt: string;
+  date: string;
+  author: string;
+  points: BlogDetailPoint[];
+}
+
+export interface BlogCategory {
+  name: string;
+  count: number;
+  icon?: string;
+}
+
+export interface BlogSidebar {
+  categories: BlogCategory[];
+  cta: {
+    title: string;
+    description: string;
+    buttonLabel: string;
+    buttonHref: string;
+  };
+}
+
+export interface BlogDetailData {
+  slug: string;
+  banner: BlogBannerData;
+  post: BlogDetailPost;
+  sidebar: BlogSidebar;
 }
 
 export interface CtaBannerData {
@@ -578,4 +704,234 @@ export interface GetQuoteSectionData {
   features: QuoteFeatureItem[];
   formTitle: string;
   formFields: QuoteFormFields;
+}
+
+export interface AwardBannerData {
+  breadcrumbHome: string;
+  breadcrumbCurrent: string;
+  title: string;
+  backgroundImage: string;
+  homeHref: string;
+}
+
+export interface AwardCardItem {
+  id: string;
+  image: string;
+  iconName: string;
+  title: string;
+  description: string;
+}
+
+export interface AwardBottomCta {
+  iconName: string;
+  title: string;
+  description: string;
+  buttonText: string;
+  buttonLink: string;
+}
+
+export interface ServiceAwardsSectionData {
+  banner?: AwardBannerData;
+  tagline: string;
+  title: string;
+  description: string;
+  awards: AwardCardItem[];
+  bottomCta: AwardBottomCta;
+}
+
+export interface LegalBannerData {
+  breadcrumbHome: string;
+  breadcrumbCurrent: string;
+  title: string;
+  backgroundImage: string;
+  homeHref: string;
+}
+
+export interface LegalContactInfo {
+  email?: string;
+  phone?: string;
+  address?: string;
+}
+
+export interface LegalSectionItem {
+  id: string | number;
+  title: string;
+  content: string;
+  contactInfo?: LegalContactInfo;
+}
+
+export interface ServiceLegalPageData {
+  banner?: LegalBannerData;
+  title: string;
+  lastUpdated: string;
+  intro: string;
+  sections: LegalSectionItem[];
+}
+
+export interface Socials {
+  linkedin?: string;
+  email?: string;
+}
+
+export interface TeamPageMember {
+  id: number;
+  slug: string;
+  name: string;
+  designation: string;
+  description: string;
+  image: string;
+  socials: Socials;
+}
+
+export interface TeamHeading {
+  subTitle: string;
+  title: string;
+  description: string;
+}
+
+export interface TeamBanner {
+  title: string;
+  breadcrumbHome: string;
+  breadcrumbCurrent: string;
+  backgroundImage: string;
+  homeHref: string;
+}
+
+export interface TeamData {
+  banner: TeamBanner;
+  heading: TeamHeading;
+  members: TeamPageMember[];
+}
+
+export interface TeamDetailsBannerData {
+  title: string;
+  breadcrumbHome: string;
+  breadcrumbCurrent: string;
+  backgroundImage: string;
+  homeHref: string;
+}
+export interface TeamMemberQuickInfo {
+  joinedDate: string;
+  email: string;
+  phone: string;
+  location: string;
+}
+export interface TeamMemberHelpWidget {
+  title: string;
+  description: string;
+  buttonText: string;
+  buttonHref: string;
+}
+export interface TeamMemberStat {
+  id: number;
+  iconName: string;
+  value: string;
+  label: string;
+}
+export interface TeamMemberCertification {
+  id: number;
+  title: string;
+  subtitle: string;
+}
+export interface TeamMemberDetailData {
+  slug: string;
+  designation: string;
+  name: string;
+  image: string;
+  experienceBadge: string;
+  quickInfo: TeamMemberQuickInfo;
+  aboutTitle: string;
+  aboutParagraphs: string[];
+  areasOfExpertise: string[];
+  certifications: TeamMemberCertification[];
+  stats: TeamMemberStat[];
+  helpWidget: TeamMemberHelpWidget;
+}
+export interface TeamDetailsData {
+  banner: TeamDetailsBannerData;
+  members: Record<string, TeamMemberDetailData>;
+}
+
+export interface ProjectBannerData {
+  breadcrumbHome: string;
+  breadcrumbCurrent: string;
+  title: string;
+  backgroundImage: string;
+  homeHref: string;
+}
+export interface ProjectFilterCategory {
+  id: string;
+  label: string;
+}
+export interface ProjectItemData {
+  id: string;
+  slug: string;
+  title: string;
+  category: string;
+  categoryLabel: string;
+  location: string;
+  image: string;
+  linkText: string;
+}
+export interface ProjectSectionVariantData {
+  banner: ProjectBannerData;
+  tagline: string;
+  title: string;
+  description: string;
+  categories: ProjectFilterCategory[];
+  projects: ProjectItemData[];
+}
+export interface ProjectSectionData {
+  variants: { ProjectSection1: ProjectSectionVariantData };
+}
+
+export interface ProjectDetailStat {
+  id: string;
+  value: string;
+  label: string;
+  iconName: string;
+}
+
+export interface ProjectDetailMeta {
+  projectType: string;
+  location: string;
+  projectValue: string;
+  servicesProvided: string;
+  client: string;
+}
+
+export interface ProjectDetailScope {
+  id: string;
+  text: string;
+}
+
+export interface ProjectDetailItem {
+  slug: string;
+  badge: string;
+  title: string;
+  location: string;
+  description: string;
+  mainImage: string;
+  galleryThumbnails: string[];
+  moreImagesCount: number;
+  stats: ProjectDetailStat[];
+  overview: string;
+  metaInfo: ProjectDetailMeta;
+  galleryImages: string[];
+  scopeOfWork: ProjectDetailScope[];
+  scopeImage: string;
+  scopeBadgeText: string;
+  challenge: string;
+  solution: string;
+}
+
+export interface ProjectDetailsData {
+  banner: {
+    breadcrumbHome: string;
+    breadcrumbCurrent: string;
+    title: string;
+    backgroundImage: string;
+    homeHref: string;
+  };
+  projects: Record<string, ProjectDetailItem>;
 }

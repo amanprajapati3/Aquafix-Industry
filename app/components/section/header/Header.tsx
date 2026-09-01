@@ -118,7 +118,7 @@ export default function Header() {
           {/* Sign In */}
           {site.TopBar?.ctaButton && (
             <Link
-              href={site.TopBar.ctaButton.href || "/login"}
+              href={site.TopBar.ctaButton.href || "/contact-us"}
               className="flex items-center gap-2 rounded-full bg-[#A3E635] px-6 py-3 text-[15px] font-bold text-[#031B3D] shadow-sm transition-all duration-300 hover:bg-[#B5F34A] hover:shadow-[0_6px_20px_rgba(163,230,53,0.25)]"
             >
               <UserRound className="h-[18px] w-[18px]" />

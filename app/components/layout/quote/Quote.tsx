@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ServiceGetQuoteData, site } from "@/data";
 import PageBanner from "../../shared/PageBanner";
+import SectionHeader from "../../shared/SectionHeader";
 import { Clock, ShieldCheck, DollarSign } from "lucide-react";
 
 interface GetQuoteProps {
@@ -61,31 +62,19 @@ export default function GetQuote({ quoteData }: GetQuoteProps) {
       )}
 
       {/* GET A QUOTE SECTION */}
-      <section className="bg-[#FAFBFD] py-12 md:py-20">
+      <section className="bg-[#FAFBFD] py-8 md:py-12">
         <div className="mx-auto max-w-[1200px] px-4 sm:px-6">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
             
             {/* Left Content Area */}
             <div className="lg:col-span-6">
-              {data?.tagline && (
-                <div className="inline-flex items-center text-xs font-black uppercase tracking-widest text-[#84CC16]">
-                  {data.tagline}
-                </div>
-              )}
-
-              {data?.title && (
-                <h2 className="mt-3 text-3xl font-black tracking-tight text-[#051C42] sm:text-4xl lg:text-5xl lg:leading-tight">
-                  {data.title}
-                </h2>
-              )}
-
-              <div className="mt-3 h-1 w-12 rounded bg-[#84CC16]" />
-
-              {data?.description && (
-                <p className="mt-4 max-w-xl text-sm font-medium leading-relaxed text-[#64748B] sm:text-base">
-                  {data.description}
-                </p>
-              )}
+              <SectionHeader
+                pretitle={data?.tagline}
+                title={data?.title}
+                description={data?.description}
+                align="left"
+                descriptionMaxWidth="max-w-xl"
+              />
 
               {/* 3 Key Highlights Grid - Centered items across all screen sizes */}
               {data?.features && data.features.length > 0 && (

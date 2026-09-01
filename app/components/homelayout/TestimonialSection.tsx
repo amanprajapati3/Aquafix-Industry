@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Wrench, ArrowLeft, ArrowRight } from "lucide-react";
 import { ServiceTestimonialData, site } from "@/data";
+import SectionHeader from "../shared/SectionHeader";
 
 interface TestimonialSectionProps {
   testimonialData?: ServiceTestimonialData;
@@ -87,21 +88,11 @@ export default function TestimonialSection({
 
       <div className="relative z-20 mx-auto max-w-[1100px] px-4 sm:px-6">
         {/* HEADER */}
-        <div className="flex flex-col items-center text-center">
-          {data.badge && (
-            <div className="inline-flex items-center gap-2 text-sm font-black uppercase tracking-widest text-[#2467EC] sm:text-sm">
-              <Wrench className="h-4 w-4" />
-              <span>{data.badge}</span>
-              <Wrench className="h-4 w-4 -scale-x-100" />
-            </div>
-          )}
-
-          {data.title && (
-            <h2 className="mt-2 text-3xl font-black tracking-tight text-[#1E293B] sm:text-4xl lg:text-5xl">
-              {data.title}
-            </h2>
-          )}
-        </div>
+        <SectionHeader
+          pretitle={data.badge}
+          title={data.title}
+          align="center"
+        />
 
         {/* TESTIMONIAL DISPLAY */}
         <div className="relative mt-16 sm:mt-20">

@@ -12,12 +12,14 @@ import {
   Settings,
 } from "lucide-react";
 import { ServiceAboutPageData, ServiceFeatureStripData } from "@/data";
+import SectionHeader from "../shared/SectionHeader";
 import { IoShieldCheckmark } from "react-icons/io5";
 import { RiCustomerService2Line } from "react-icons/ri";
 
 interface AboutSectionProps {
   aboutData: ServiceAboutPageData;
   featureStripData: ServiceFeatureStripData;
+  hideButton?: boolean;
 }
 
 // Animated Counter component handling string/number values like "4.3K" or "18"
@@ -85,6 +87,7 @@ function AnimatedCounter({
 export default function AboutSection({
   aboutData,
   featureStripData,
+  hideButton = false,
 }: AboutSectionProps) {
   const data = aboutData;
   const featureStrip = featureStripData;
@@ -149,28 +152,17 @@ export default function AboutSection({
     <section className="relative w-full overflow-hidden bg-white py-8 md:py-12">
       <div className="mx-auto max-w-[1300px] px-2 sm:px-6 lg:px-8">
         {/* 1. TOP CENTERED HEADER SECTION */}
-        <div className="mx-auto flex max-w-[950px] flex-col items-center text-center">
-          {/* Pretitle Badge */}
-          {data.pretitle && (
-            <div className="flex flex-col items-center">
-              <span className="text-[14px] font-bold text-[#1E40AF] sm:text-[17px]">
-                {data.pretitle}
-              </span>
-
-              <div className="mt-1 h-[2.5px] w-10 bg-[#84CC16]" />
-            </div>
-          )}
-
-          {/* Top Title & Highlighted Text */}
-          {data.title && (
-            <h2 className="mt-0 text-[26px] font-extrabold leading-[1.25] tracking-tight text-[#0F172A] sm:text-[36px] md:text-[40px] lg:text-[42px]">
-              {data.title}{" "}
-              {data.highlightedTitle && (
-                <span className="text-[#2563EB]">{data.highlightedTitle}</span>
-              )}
-            </h2>
-          )}
-        </div>
+        <SectionHeader
+          pretitle={data.pretitle}
+          title={
+            data.title
+              ? { normal: data.title, highlighted: data.highlightedTitle }
+              : undefined
+          }
+          align="center"
+          className="mx-auto max-w-[950px]"
+          highlightClassName="text-[#2563EB]"
+        />
 
         {/* 2. BOTTOM 2-COLUMN GRID SECTION */}
         <div className="mt-10 grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-14">
@@ -291,7 +283,7 @@ export default function AboutSection({
             )}
 
             {/* Action Button */}
-            {data.button && (
+            {!hideButton && data.button && (
               <Link
                 href={data.button.href}
                 className="mt-8 inline-flex h-[46px] items-center justify-center gap-3 rounded-full border-[1.5px] border-[#1E40AF] px-7 text-[14px] font-bold text-[#1E40AF] transition-all duration-300 hover:bg-[#1E40AF] hover:text-white"

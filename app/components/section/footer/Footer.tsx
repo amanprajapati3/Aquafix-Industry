@@ -159,7 +159,7 @@ export default function Footer() {
             {copyright ||
               `© 2026 Aquafix. All rights reserved. Designed by lestow`}
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap justify-center md:justify-end items-center gap-3 md:gap-6">
             {legalLinks.map((link, lIdx) => (
               <Link
                 key={lIdx}

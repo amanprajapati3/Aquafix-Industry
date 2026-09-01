@@ -1,4 +1,5 @@
 import PageBanner from "../../shared/PageBanner";
+import SectionHeader from "../../shared/SectionHeader";
 import Image from "next/image";
 import { Star, Quote } from "lucide-react";
 import { TestimonialData } from "@/type/typeSection";
@@ -28,17 +29,11 @@ export default function Testimonials({ testimonialData }: TestimonialsProps) {
       <section className="bg-slate-50/50 py-8 md:py-12">
         <div className="mx-auto max-w-[1200px] px-4 sm:px-6">
           {/* Header */}
-          <div className="flex flex-col items-center text-center">
-            {data?.badge && (
-              <span className="text-sm font-black uppercase tracking-widest text-[#2467EC] sm:text-sm">
-                {data.badge}
-              </span>
-            )}
-            <h2 className="mt-2 text-3xl font-black tracking-tight text-[#1E293B] sm:text-4xl lg:text-5xl">
-              {data?.title}
-            </h2>
-            <div className="mt-3 h-1 w-12 rounded bg-[#2467EC]" />
-          </div>
+          <SectionHeader
+            pretitle={data?.badge}
+            title={data?.title}
+            align="center"
+          />
 
           {/* Testimonials Grid */}
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

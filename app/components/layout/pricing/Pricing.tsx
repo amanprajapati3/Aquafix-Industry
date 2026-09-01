@@ -4,8 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { ServicePricingSectionData, site } from "@/data";
 import PageBanner from "../../shared/PageBanner";
+import SectionHeader from "../../shared/SectionHeader";
 import {
-  Tag,
   Home,
   Building,
   CheckCircle2,
@@ -95,27 +95,18 @@ export default function Pricing({ pricingData }: PricingProps) {
       <section className="bg-[#FAFBFD] py-8 md:py-12">
         <div className="mx-auto max-w-[1200px] px-4 sm:px-6">
           {/* Header */}
-          <div className="flex flex-col items-center text-center">
-            {data?.tagline && (
-              <div className="inline-flex items-center gap-1.5 text-sm font-black uppercase tracking-widest text-[#0052CC]">
-                <Tag className="h-3.5 w-3.5" />
-                {data.tagline}
-              </div>
-            )}
-
-            {data?.title && (
-              <h2 className="mt-2 text-3xl font-black tracking-tight text-[#0F172A] sm:text-4xl lg:text-5xl">
-                Simple, Transparent & Fair <span className="text-[#0052CC]">Pricing</span>
-              </h2>
-            )}
-
-            <div className="mt-3 h-1 w-12 rounded bg-[#84CC16]" />
-
-            {data?.description && (
-              <p className="mt-4 max-w-2xl text-sm font-medium leading-relaxed text-[#64748B] sm:text-base">
-                {data.description}
-              </p>
-            )}
+          <SectionHeader
+            pretitle={data?.tagline}
+            title={
+              data?.title
+                ? { normal: "Simple, Transparent & Fair", highlighted: "Pricing" }
+                : undefined
+            }
+            description={data?.description}
+            align="center"
+            descriptionMaxWidth="max-w-2xl"
+            highlightClassName="text-[#0052CC]"
+          />
 
             {/* Service Filter Tabs */}
             {data?.tabs && data.tabs.length > 0 && (
@@ -143,7 +134,6 @@ export default function Pricing({ pricingData }: PricingProps) {
                 })}
               </div>
             )}
-          </div>
 
           {/* Pricing Cards Grid */}
           {currentPlans.length > 0 && (

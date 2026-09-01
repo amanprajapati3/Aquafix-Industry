@@ -4,6 +4,7 @@ import React from "react";
 import { Wrench } from "lucide-react";
 import siteData from "@/data/site.json";
 import Image from "next/image";
+import SectionHeader from "../shared/SectionHeader";
 
 export interface ProcessStep {
   id?: number;
@@ -176,21 +177,11 @@ export default function ProcessSection({ processData }: ProcessSectionProps) {
 
       <div className="relative z-20 mx-auto max-w-[1340px] px-4 sm:px-6 lg:px-8">
         {/* HEADER */}
-        <div className="flex flex-col items-center text-center">
-          {data.badge && (
-            <div className="inline-flex items-center gap-2 font-black uppercase tracking-widest text-[#2467EC] text-sm sm:text-sm">
-              <Wrench className="h-4 w-4" />
-              <span>{data.badge}</span>
-              <Wrench className="h-4 w-4 -scale-x-100" />
-            </div>
-          )}
-
-          {data.title && (
-            <h2 className="mt-2 text-3xl font-black tracking-tight text-[#1E293B] sm:text-4xl lg:text-5xl">
-              {data.title}
-            </h2>
-          )}
-        </div>
+        <SectionHeader
+          pretitle={data.badge}
+          title={data.title}
+          align="center"
+        />
 
         {/* CARDS GRID */}
         <div className="relative mt-20 grid grid-cols-1 gap-14 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">

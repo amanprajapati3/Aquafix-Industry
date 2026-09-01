@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ServiceEnquiryData, site } from "@/data";
 import PageBanner from "../../shared/PageBanner";
+import SectionHeader from "../../shared/SectionHeader";
 import { Clock, ShieldCheck, Headset, Send, User, Mail, Phone, ChevronDown } from "lucide-react";
 
 interface EnquiryProps {
@@ -66,26 +67,13 @@ export default function Enquiry({ enquiryData }: EnquiryProps) {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
             {/* Left Content Column */}
             <div className="lg:col-span-5">
-              {data?.tagline && (
-                <div className="flex items-center justify-center md:justify-start gap-2">
-                  <span className="text-xs font-black uppercase tracking-widest text-[#84CC16]">
-                    {data.tagline}
-                  </span>
-                  <div className="h-2 w-2 rounded-full bg-[#0052CC]" />
-                </div>
-              )}
-
-              {data?.title && (
-                <h2 className="mt-3 text-3xl text-center md:text-start font-black tracking-tight text-[#0F172A] sm:text-4xl lg:text-5xl">
-                  {data.title}
-                </h2>
-              )}
-
-              {data?.description && (
-                <p className="mt-4 text-sm text-center md:text-start font-medium leading-relaxed text-[#64748B] sm:text-base">
-                  {data.description}
-                </p>
-              )}
+              <SectionHeader
+                pretitle={data?.tagline}
+                title={data?.title}
+                description={data?.description}
+                align="center"
+                className="md:items-start md:text-left"
+              />
 
               {/* Feature List */}
               {data?.features && data.features.length > 0 && (

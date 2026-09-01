@@ -4,7 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { ServiceFaqData, site } from "@/data";
 import PageBanner from "../../shared/PageBanner";
-import { Plus, Minus, Headset, ArrowRight, Droplet } from "lucide-react";
+import SectionHeader from "../../shared/SectionHeader";
+import { Plus, Minus, Headset, ArrowRight } from "lucide-react";
 
 interface FaqProps {
   FaqData?: ServiceFaqData;
@@ -38,31 +39,13 @@ export default function Faq({ FaqData }: FaqProps) {
       <section className="bg-[#F8FAFC] py-8 md:py-12">
         <div className="mx-auto max-w-[1000px] px-4 sm:px-6">
           {/* Section Header */}
-          <div className="flex flex-col items-center text-center">
-            {data?.tagline && (
-              <span className="text-sm font-black uppercase tracking-widest text-[#0052CC] sm:text-sm">
-                {data.tagline}
-              </span>
-            )}
-            {data?.title && (
-              <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-[#0F172A] sm:text-4xl lg:text-5xl">
-                {data.title}
-              </h2>
-            )}
-
-            {/* Decorative Divider */}
-            <div className="mt-4 flex items-center justify-center gap-2">
-              <div className="h-[2px] w-8 bg-[#84CC16]" />
-              <Droplet className="h-4 w-4 fill-[#0052CC] text-[#0052CC]" />
-              <div className="h-[2px] w-8 bg-[#84CC16]" />
-            </div>
-
-            {data?.description && (
-              <p className="mt-4 max-w-xl text-sm font-medium leading-relaxed text-[#64748B] sm:text-base">
-                {data.description}
-              </p>
-            )}
-          </div>
+          <SectionHeader
+            pretitle={data?.tagline}
+            title={data?.title}
+            description={data?.description}
+            align="center"
+            descriptionMaxWidth="max-w-xl"
+          />
 
           {/* FAQ Accordion List */}
           {data?.faqs && data.faqs.length > 0 && (

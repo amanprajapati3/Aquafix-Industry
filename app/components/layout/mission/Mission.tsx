@@ -1,5 +1,6 @@
 import { ServiceVisionMissionData, site } from "@/data";
 import PageBanner from "../../shared/PageBanner";
+import SectionHeader from "../../shared/SectionHeader";
 import Image from "next/image";
 import { Eye, Target, Users, ShieldCheck, Lightbulb, Leaf } from "lucide-react";
 
@@ -50,15 +51,11 @@ export default function Mission({ visionMissionData }: MissionProps) {
         <section className="bg-slate-50/50 py-8 md:py-12">
           <div className="mx-auto max-w-[1200px] px-2 sm:px-6">
             {/* Header */}
-            <div className="flex flex-col items-center text-center">
-              <span className="text-sm font-black uppercase tracking-widest text-[#2467EC] sm:text-sm">
-                {sectionData.subTitle}
-              </span>
-              <h2 className="mt-2 text-3xl font-black tracking-tight text-[#1E293B] sm:text-4xl lg:text-5xl">
-                {sectionData.title}
-              </h2>
-              <div className="mt-3 h-1 w-12 rounded bg-[#2467EC]" />
-            </div>
+            <SectionHeader
+              pretitle={sectionData.subTitle}
+              title={sectionData.title}
+              align="center"
+            />
 
             {/* Vision & Mission Cards Grid */}
             <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">

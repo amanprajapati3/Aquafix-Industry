@@ -18,7 +18,7 @@ export default function PageBanner({
   homeHref = "/",
 }: PageBannerProps) {
   return (
-    <section className="relative -mt-20 flex min-h-[380px] w-full items-center overflow-hidden bg-[#062536] pt-20 md:-mt-24 md:min-h-[440px] md:pt-24">
+    <section className="relative -mt-20 flex min-h-[380px] w-full items-center overflow-hidden bg-[#062536] pt-20 sm:-mt-24 md:min-h-[440px] sm:pt-24">
       {/* Background Image */}
       <Image
         src={backgroundImage}

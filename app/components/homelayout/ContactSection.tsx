@@ -3,6 +3,7 @@
 import React from "react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { ServiceContactSectionData } from "@/data";
+import SectionHeader from "../shared/SectionHeader";
 
 interface ContactSectionProps {
   contactData: ServiceContactSectionData;
@@ -42,15 +43,11 @@ export default function ContactSection({
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:col-span-6 lg:gap-6">
             {/* Left Column */}
             <div className="flex flex-col items-center justify-start pb-6 text-center sm:items-start sm:pb-0 sm:text-left">
-              <span className="text-[12px] font-bold uppercase tracking-widest text-[#1E40AF]">
-                CONTACT US
-              </span>
-
-              {data.title && (
-                <h2 className="mt-0 text-[32px] font-extrabold text-[#1E293B] sm:text-[36px] lg:text-[40px]">
-                  {data.title}
-                </h2>
-              )}
+              <SectionHeader
+              pretitle="CONTACT US"
+              title={data.title}
+              align="left"
+            />
 
               {mapData?.directionsUrl && (
                 <div className="mt-6 sm:mt-8">

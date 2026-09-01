@@ -10,6 +10,7 @@ import {
   Home,
 } from "lucide-react";
 import type { ServiceWhyChooseUsData } from "@/data";
+import SectionHeader from "../shared/SectionHeader";
 
 interface ChooseProps {
   chooseData: ServiceWhyChooseUsData;
@@ -73,26 +74,14 @@ export default function Choose({ chooseData }: ChooseProps) {
 
           <div className="order-1 flex flex-col justify-center bg-white px-5 pb-5 sm:px-8 md:order-none md:col-span-9 md:my-8 md:py-10 md:pl-20 md:pr-8 md:[clip-path:polygon(12%_0,_100%_0,_100%_100%,_0_100%)] lg:col-span-8 lg:my-10 lg:py-14 lg:pl-36 lg:pr-16 lg:[clip-path:polygon(15%_0,_100%_0,_100%_100%,_0_100%)]">
 
-            <div className="mb-3 flex flex-col items-center text-center md:items-start md:text-left">
-              <span className="text-[12px] font-bold uppercase tracking-wider text-[#1E40AF] md:text-[12px] lg:text-[13px]">
-                {badge}
-              </span>
-
-              <div className="mt-1.5 h-[2px] w-8 bg-[#1E40AF]" />
-            </div>
-
-            <h2 className="mb-4 text-center text-[24px] font-extrabold leading-[1.18] text-[#0F172A] sm:text-[30px] md:text-left md:text-[30px] lg:text-[42px]">
-              {title.normal}{" "}
-              <span className="text-[#1E40AF]">
-                {title.highlighted}
-              </span>
-            </h2>
-
-            {description && (
-              <p className="mx-auto mb-6 max-w-2xl text-center text-[15px] font-medium leading-relaxed text-[#64748B] sm:text-[14px] md:mx-0 md:text-left lg:mb-8 lg:text-[15px]">
-                {description}
-              </p>
-            )}
+            <SectionHeader
+              pretitle={badge}
+              title={{ normal: title.normal, highlighted: title.highlighted }}
+              description={description}
+              align="left"
+              descriptionMaxWidth="max-w-2xl"
+              className="mb-6"
+            />
 
             <div className="mb-6 h-[1px] w-full bg-gray-100 lg:mb-8" />
 

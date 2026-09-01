@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { site } from "@/data";
+import SectionHeader from "../shared/SectionHeader";
 import {
   Wrench,
   Droplets,
@@ -67,30 +68,15 @@ export default function ServicesSection({
     <section className="w-full bg-white md:py-12 py-8 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-[1320px]">
         {/* SECTION HEADER */}
-        <div className="mx-auto max-w-2xl text-center mb-10">
-          <div className="inline-flex items-center gap-2 mb-0">
-            <span className="h-[2px] w-8 bg-[#1E40AF]" />
-            <span className="h-1.5 w-1.5 rounded-full bg-[#1E40AF]" />
-            <span className="text-[13px] font-bold tracking-wider text-[#1E40AF] uppercase">
-              {badge}
-            </span>
-            <span className="h-1.5 w-1.5 rounded-full bg-[#1E40AF]" />
-            <span className="h-[2px] w-8 bg-[#1E40AF]" />
-          </div>
-
-          <h2 className="text-[30px] sm:text-[38px] md:text-[42px] font-black text-[#0F172A] tracking-tight leading-tight mb-1">
-            {title.normal}{" "}
-            <span className="text-[#1E40AF]">{title.highlighted}</span>
-          </h2>
-
-          {description && (
-            <p className="text-[14px] sm:text-[15px] font-medium text-[#64748B] leading-relaxed max-w-xl mx-auto">
-              {description}
-            </p>
-          )}
-
-          <div className="h-[3px] w-12 bg-[#1E40AF] mx-auto mt-4 rounded-full" />
-        </div>
+        <SectionHeader
+          pretitle={badge}
+          title={{ normal: title.normal, highlighted: title.highlighted }}
+          description={description}
+          align="center"
+          descriptionMaxWidth="max-w-xl"
+          className="mx-auto mb-10 max-w-2xl"
+          highlightClassName="text-[#1E40AF]"
+        />
 
         {/* SERVICES GRID */}
         {/* Mobile: 1 col (stacked top img / bottom text) | Tablet: 2 cols | Desktop: 3 cols */}
