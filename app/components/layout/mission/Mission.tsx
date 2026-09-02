@@ -1,6 +1,7 @@
 import { ServiceVisionMissionData, site } from "@/data";
 import PageBanner from "../../shared/PageBanner";
 import SectionHeader from "../../shared/SectionHeader";
+import ScrollReveal from "../../shared/ScrollReveal";
 import Image from "next/image";
 import { Eye, Target, Users, ShieldCheck, Lightbulb, Leaf } from "lucide-react";
 
@@ -58,6 +59,7 @@ export default function Mission({ visionMissionData }: MissionProps) {
             />
 
             {/* Vision & Mission Cards Grid */}
+            <ScrollReveal direction="up">
             <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
               {sectionData.cards?.map((card) => (
                 <div
@@ -84,15 +86,18 @@ export default function Mission({ visionMissionData }: MissionProps) {
                       src={card.image}
                       alt={card.title}
                       fill
+                      sizes="(min-width: 768px) 560px, 100vw"
                       className="object-cover transition-transform duration-500 hover:scale-105"
                     />
                   </div>
                 </div>
               ))}
             </div>
+            </ScrollReveal>
 
             {/* Core Values Strip */}
             {sectionData.values && sectionData.values.length > 0 && (
+              <ScrollReveal direction="up" delay={0.2}>
               <div className="mt-12 grid grid-cols-1 gap-6 rounded-2xl bg-white p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] sm:grid-cols-2 lg:grid-cols-4">
                 {sectionData.values.map((val) => (
                   <div key={val.id} className="flex flex-col items-start">
@@ -108,6 +113,7 @@ export default function Mission({ visionMissionData }: MissionProps) {
                   </div>
                 ))}
               </div>
+              </ScrollReveal>
             )}
           </div>
         </section>

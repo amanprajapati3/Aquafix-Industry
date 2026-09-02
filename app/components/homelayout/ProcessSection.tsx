@@ -5,6 +5,7 @@ import { Wrench } from "lucide-react";
 import siteData from "@/data/site.json";
 import Image from "next/image";
 import SectionHeader from "../shared/SectionHeader";
+import ScrollReveal from "../shared/ScrollReveal";
 
 export interface ProcessStep {
   id?: number;
@@ -184,6 +185,7 @@ export default function ProcessSection({ processData }: ProcessSectionProps) {
         />
 
         {/* CARDS GRID */}
+        <ScrollReveal direction="up">
         <div className="relative mt-20 grid grid-cols-1 gap-14 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
           {steps?.map((step, index) => {
             const num = step.number || step.stepNumber || `0${index + 1}`;
@@ -271,6 +273,7 @@ export default function ProcessSection({ processData }: ProcessSectionProps) {
             );
           })}
         </div>
+        </ScrollReveal>
       </div>
     </section>
   );

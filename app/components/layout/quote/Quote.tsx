@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ServiceGetQuoteData, site } from "@/data";
 import PageBanner from "../../shared/PageBanner";
 import SectionHeader from "../../shared/SectionHeader";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { Clock, ShieldCheck, DollarSign } from "lucide-react";
 
 interface GetQuoteProps {
@@ -67,6 +68,7 @@ export default function GetQuote({ quoteData }: GetQuoteProps) {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
             
             {/* Left Content Area */}
+            <ScrollReveal direction="left" className="lg:col-span-6">
             <div className="lg:col-span-6">
               <SectionHeader
                 pretitle={data?.tagline}
@@ -95,8 +97,10 @@ export default function GetQuote({ quoteData }: GetQuoteProps) {
                 </div>
               )}
             </div>
+            </ScrollReveal>
 
             {/* Right Form Card */}
+            <ScrollReveal direction="right" className="lg:col-span-6">
             <div className="lg:col-span-6">
               <div className="rounded-3xl bg-white p-6 shadow-[0_10px_40px_rgba(0,0,0,0.05)] sm:p-10">
                 <div className="text-center">
@@ -204,6 +208,7 @@ export default function GetQuote({ quoteData }: GetQuoteProps) {
                 </form>
               </div>
             </div>
+            </ScrollReveal>
 
           </div>
         </div>

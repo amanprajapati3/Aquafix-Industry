@@ -15,6 +15,7 @@ import { ServiceAboutPageData, ServiceFeatureStripData } from "@/data";
 import SectionHeader from "../shared/SectionHeader";
 import { IoShieldCheckmark } from "react-icons/io5";
 import { RiCustomerService2Line } from "react-icons/ri";
+import ScrollReveal from "../shared/ScrollReveal";
 
 interface AboutSectionProps {
   aboutData: ServiceAboutPageData;
@@ -167,6 +168,7 @@ export default function AboutSection({
         {/* 2. BOTTOM 2-COLUMN GRID SECTION */}
         <div className="mt-10 grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-14">
           {/* LEFT SIDE */}
+          <ScrollReveal direction="left" className="order-2 lg:order-1 lg:col-span-6">
           <div className="order-2 flex justify-center lg:order-1 lg:col-span-6">
             <div className="relative w-full max-w-[540px] pb-10 pl-6 pr-4 pt-8">
               {/* Top-Left Blue Dot Grid Accent */}
@@ -214,8 +216,10 @@ export default function AboutSection({
               )}
             </div>
           </div>
+          </ScrollReveal>
 
           {/* RIGHT SIDE */}
+          <ScrollReveal direction="right" className="order-1 lg:order-2 lg:col-span-6">
           <div className="order-1 flex flex-col items-center text-center lg:order-2 lg:col-span-6 lg:items-start lg:text-left">
             {/* Subtitle Badge */}
             {data.subTitle && (
@@ -293,10 +297,12 @@ export default function AboutSection({
               </Link>
             )}
           </div>
+          </ScrollReveal>
         </div>
 
         {/* 3. FEATURE STRIP */}
         {featureStrip.length > 0 && (
+          <ScrollReveal direction="up">
           <div className="mt-8 w-full rounded-2xl border border-gray-100 bg-white px-6 py-6 shadow-[0_10px_30px_rgba(0,0,0,0.04)] sm:px-8 sm:py-7">
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0">
               {featureStrip.map((item, index) => (
@@ -327,6 +333,7 @@ export default function AboutSection({
               ))}
             </div>
           </div>
+          </ScrollReveal>
         )}
       </div>
     </section>

@@ -3,6 +3,7 @@
 import React from "react";
 import { ServicePartnersData, site } from "@/data";
 import SectionHeader from "../shared/SectionHeader";
+import ScrollReveal from "../shared/ScrollReveal";
 
 interface PartnersProps {
   partnersData?: ServicePartnersData;
@@ -16,6 +17,7 @@ export default function Partners({ partnersData }: PartnersProps) {
 
   return (
     <section className="w-full bg-white px-1 sm:px-6 lg:px-8">
+      <ScrollReveal direction="up">
       <div className="mx-auto overflow-hidden rounded-[24px] border border-slate-100 bg-white p-2 shadow-[0_4px_25px_rgba(0,0,0,0.03)] sm:p-10">
         {/* SECTION HEADER */}
         <SectionHeader
@@ -49,6 +51,7 @@ export default function Partners({ partnersData }: PartnersProps) {
           </div>
         )}
       </div>
+      </ScrollReveal>
     </section>
   );
 }

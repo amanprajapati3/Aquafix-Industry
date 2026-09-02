@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import PageBanner from "../../shared/PageBanner";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { ProjectDetailItem, ProjectDetailsData } from "@/type/typeSection";
 import {
   Calendar,
@@ -250,7 +251,7 @@ export default function ProjectDetails({
           {/* ============================================================ */}
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-stretch">
             {/* Left content column */}
-            <div className="flex h-full flex-col justify-between lg:col-span-5">
+            <ScrollReveal direction="left" className="flex h-full flex-col justify-between lg:col-span-5">
               <div>
                 <div
                   className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold"
@@ -297,10 +298,10 @@ export default function ProjectDetails({
                   <span>Back to Projects</span>
                 </Link>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Right media column — fills exactly the same height as the left */}
-            <div className="flex h-full flex-col gap-3 lg:col-span-7">
+            <ScrollReveal direction="right" className="flex h-full flex-col gap-3 lg:col-span-7">
               <div
                 className="group relative w-full flex-1 min-h-[260px] cursor-pointer overflow-hidden rounded-[26px] bg-slate-100 shadow-sm"
                 onClick={() => openLightbox(fullHeroGallery, 0)}
@@ -366,7 +367,7 @@ export default function ProjectDetails({
                   </button>
                 )}
               </div>
-            </div>
+            </ScrollReveal>
           </div>
 
           {/* "+N More" drawer — exactly the next 4 images */}
@@ -414,6 +415,7 @@ export default function ProjectDetails({
           {/* ============================================================ */}
           {/* STATS BAR                                                     */}
           {/* ============================================================ */}
+          <ScrollReveal direction="up">
           <div className="mt-10 rounded-3xl border border-slate-100 bg-white p-6 shadow-[0_4px_25px_rgba(0,0,0,0.03)] sm:p-7">
             <div className="grid grid-cols-2 gap-6 divide-y divide-slate-100 sm:grid-cols-3 sm:divide-y-0 lg:grid-cols-5 lg:divide-x">
               {detailData.stats?.map((stat, idx) => (
@@ -432,19 +434,20 @@ export default function ProjectDetails({
               ))}
             </div>
           </div>
+          </ScrollReveal>
 
           {/* ============================================================ */}
           {/* OVERVIEW + META INFO                                          */}
           {/* ============================================================ */}
           <div className="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-start">
-            <div className="lg:col-span-7">
+            <ScrollReveal direction="left" className="lg:col-span-7">
               <SectionLabel>Project Overview</SectionLabel>
               <p className="mt-4 text-[15px] max-w-[400px] font-medium leading-[1.9]" style={{ color: MUTED }}>
                 {detailData.overview}
               </p>
-            </div>
+            </ScrollReveal>
 
-            <div className="lg:col-span-5 ">
+            <ScrollReveal direction="right" className="lg:col-span-5 ">
               <div className="space-y-4 rounded-3xl p-7 sm:p-8" style={{ backgroundColor: "#EEF3FE" }}>
                 {[
                   { icon: Tag, label: "Project Type", value: detailData.metaInfo?.projectType },
@@ -467,7 +470,7 @@ export default function ProjectDetails({
                   </div>
                 ))}
               </div>
-            </div>
+            </ScrollReveal>
           </div>
 
           {/* ============================================================ */}
@@ -494,6 +497,7 @@ export default function ProjectDetails({
                         src={img}
                         alt={`${detailData.title} gallery ${realIndex + 1}`}
                         fill
+                        sizes="(min-width: 1024px) 288px, (min-width: 640px) 560px, 100vw"
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
@@ -528,7 +532,7 @@ export default function ProjectDetails({
           {/* SCOPE OF WORK                                                 */}
           {/* ============================================================ */}
           <div className="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-12">
-            <div className="lg:col-span-7">
+            <ScrollReveal direction="left" className="lg:col-span-7">
               <SectionLabel>Project Work</SectionLabel>
 
               <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -539,14 +543,15 @@ export default function ProjectDetails({
                   </div>
                 ))}
               </div>
-            </div>
+            </ScrollReveal>
 
-            <div className="relative lg:col-span-5">
+            <ScrollReveal direction="right" className="relative lg:col-span-5">
               <div className="relative aspect-[4/3] w-full  rounded-[26px] bg-slate-100 shadow-md">
                 <Image
                   src={detailData.scopeImage || detailData.mainImage}
                   alt="Scope of work details"
                   fill
+                  sizes="(min-width: 1024px) 464px, 100vw"
                   className="object-cover"
                 />
                 {/* Badge sits INSIDE the image bounds, bottom-left */}
@@ -563,12 +568,13 @@ export default function ProjectDetails({
                   </p>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
 
           {/* ============================================================ */}
           {/* CHALLENGE & SOLUTION — one unified card, center divider       */}
           {/* ============================================================ */}
+          <ScrollReveal direction="up">
           <div className="mt-16 rounded-3xl p-3 sm:p-9" style={{ backgroundColor: "#EEF2FC" }}>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 ">
               <div className="flex flex-col  sm:flex-row items-start gap-4">
@@ -600,6 +606,7 @@ export default function ProjectDetails({
               </div>
             </div>
           </div>
+          </ScrollReveal>
         </div>
       </section>
 

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ServicePricingSectionData, site } from "@/data";
 import PageBanner from "../../shared/PageBanner";
 import SectionHeader from "../../shared/SectionHeader";
+import ScrollReveal from "../../shared/ScrollReveal";
 import {
   Home,
   Building,
@@ -137,6 +138,7 @@ export default function Pricing({ pricingData }: PricingProps) {
 
           {/* Pricing Cards Grid */}
           {currentPlans.length > 0 && (
+            <ScrollReveal direction="up">
             <div className="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:items-center">
               {currentPlans.map((plan) => {
                 const isActive = activePlan === plan.id;
@@ -277,10 +279,12 @@ export default function Pricing({ pricingData }: PricingProps) {
                 );
               })}
             </div>
+            </ScrollReveal>
           )}
 
           {/* Bottom Highlights Strip */}
           {data?.bottomFeatures && data.bottomFeatures.length > 0 && (
+            <ScrollReveal direction="up" delay={0.2}>
             <div className="mt-16 grid grid-cols-1 gap-6 rounded-2xl bg-white p-6 shadow-sm sm:grid-cols-2 lg:grid-cols-4">
               {data.bottomFeatures.map((item, idx) => (
                 <div key={idx} className="flex items-center gap-4 border-slate-300 last:border-0 sm:[&:nth-child(even)]:border-l sm:pl-4 lg:border-l lg:pl-6">
@@ -298,6 +302,7 @@ export default function Pricing({ pricingData }: PricingProps) {
                 </div>
               ))}
             </div>
+            </ScrollReveal>
           )}
         </div>
       </section>

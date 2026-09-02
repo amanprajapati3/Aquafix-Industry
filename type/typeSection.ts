@@ -935,3 +935,114 @@ export interface ProjectDetailsData {
   };
   projects: Record<string, ProjectDetailItem>;
 }
+
+export interface CareerBannerData {
+  title: string;
+  breadcrumbHome: string;
+  breadcrumbCurrent: string;
+  backgroundImage: string;
+  homeHref?: string;
+}
+
+export interface CareerBenefitItem {
+  id: string;
+  title: string;
+  description: string;
+  iconName: string; // e.g., 'shield', 'heart', 'graduation-cap', 'calendar', 'users'
+}
+
+export interface OpenPositionItem {
+  id: string;
+  title: string;
+  location: string;
+  jobType: string; // e.g., 'Full-time'
+  experience: string; // e.g., '3-5 Years Experience'
+  applyLink?: string;
+}
+
+export interface LifeAtCompanyItem {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  iconName: string; // e.g., 'users-group', 'wrench', 'trending-up', 'heart-smile'
+}
+
+export interface CareerPageData {
+  banner: CareerBannerData;
+  whyJoinSection: {
+    title: string;
+    benefits: CareerBenefitItem[];
+  };
+  openPositionsSection: {
+    title: string;
+    viewAllJobsText: string;
+    viewAllJobsHref: string;
+    positions: OpenPositionItem[];
+  };
+  lifeAtCompanySection: {
+    title: string;
+    items: LifeAtCompanyItem[];
+  };
+}
+
+export interface JObDetailsBannerData {
+  title: string;
+  breadcrumbHome: string;
+  breadcrumbCurrent: string;
+  backgroundImage: string;
+  homeHref?: string;
+}
+
+export interface JobDetailItem {
+  id: string;
+  slug: string;
+  title: string;
+  location: string;
+  jobType: string;
+  experience: string;
+  description: string;
+  keyResponsibilities: string[];
+  requirements: string[];
+  preferredQualifications: string[];
+}
+
+export interface JobDetailsData {
+  banner: JObDetailsBannerData;
+  jobs: JobDetailItem[];
+}
+
+export interface SitemapBannerData {
+  title: string;
+  breadcrumbHome: string;
+  breadcrumbCurrent: string;
+  backgroundImage: string;
+  homeHref: string;
+}
+
+export interface SitemapLink {
+  label: string;
+  href: string;
+}
+
+export interface SitemapGroup {
+  category: string;
+  links: SitemapLink[];
+}
+
+export interface SitemapContentData {
+  title: string;
+  subtitle: string;
+  groups: SitemapGroup[];
+}
+
+export interface ServiceSitemapData {
+  banner: SitemapBannerData;
+  sitemap: SitemapContentData;
+}
+
+export interface SitemapData {
+  variants: {
+    ServiceSitemap1: ServiceSitemapData;
+  };
+}

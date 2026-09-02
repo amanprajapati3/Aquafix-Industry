@@ -3,6 +3,7 @@
 import { ServiceBlogData, site } from "@/data";
 import PageBanner from "../../shared/PageBanner";
 import BlogSection from "../../homelayout/BlogSection";
+import ScrollReveal from "../../shared/ScrollReveal";
 
 interface BlogProps {
   blogData?: ServiceBlogData;
@@ -25,7 +26,9 @@ export default function Blog({ blogData }: BlogProps) {
       )}
 
       {/* BLOG SECTION */}
-      <BlogSection blogData={data} variant="blog" />
+      <ScrollReveal direction="up">
+        <BlogSection blogData={data} variant="blog" />
+      </ScrollReveal>
     </>
   );
 }

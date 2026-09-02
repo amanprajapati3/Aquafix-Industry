@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ServiceServiceData, site } from "@/data";
 import PageBanner from "../../shared/PageBanner";
 import SectionHeader from "../../shared/SectionHeader";
+import ScrollReveal from "../../shared/ScrollReveal";
 import {
   Wrench,
   RotateCw,
@@ -93,6 +94,7 @@ export default function Services({ servicesData }: ServicesProps) {
 
           {/* 4-Column Grid for Services */}
           {data?.services && data.services.length > 0 && (
+            <ScrollReveal direction="up">
             <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {data.services.map((item) => (
                 <div
@@ -106,6 +108,7 @@ export default function Services({ servicesData }: ServicesProps) {
                         src={item.image.src}
                         alt={item.image.alt}
                         fill
+                        sizes="(min-width: 1024px) 288px, (min-width: 640px) 560px, 100vw"
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
@@ -137,6 +140,7 @@ export default function Services({ servicesData }: ServicesProps) {
                 </div>
               ))}
             </div>
+            </ScrollReveal>
           )}
 
           {/* Bottom Banner CTA Section */}
@@ -144,6 +148,7 @@ export default function Services({ servicesData }: ServicesProps) {
             <div className="mt-10 rounded-3xl bg-blue-50/50 p-3 sm:p-10 lg:p-12">
               <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-center">
                 {/* Left Text & Actions */}
+                <ScrollReveal direction="left" className="lg:col-span-6">
                 <div className="lg:col-span-6">
                   <span className="text-sm font-black uppercase tracking-widest text-[#0052CC]">
                     {data.bottomBanner.tagline}
@@ -174,8 +179,10 @@ export default function Services({ servicesData }: ServicesProps) {
                     </Link>
                   </div>
                 </div>
+                </ScrollReveal>
 
                 {/* Right 2x2 Feature Highlights */}
+                <ScrollReveal direction="right" className="lg:col-span-6">
                 <div className="lg:col-span-6">
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     {data.bottomBanner.features.map((feat) => (
@@ -198,6 +205,7 @@ export default function Services({ servicesData }: ServicesProps) {
                     ))}
                   </div>
                 </div>
+                </ScrollReveal>
               </div>
             </div>
           )}

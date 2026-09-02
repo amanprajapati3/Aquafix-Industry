@@ -276,8 +276,8 @@
                 "href": "/refund"
               },
               {
-                "label": "Site Map",
-                "href": "/sitemap"
+                "label": "SiteMap",
+                "href": "sitemap"
               }
             ]
           }
@@ -2467,7 +2467,7 @@
                     "Custom Preventative Strategy"
                   ],
                   "buttonText": "Get Started",
-                  "buttonLink": "/contac-us",
+                  "buttonLink": "/contact-us",
                   "footerNote": "Tailored solution for enterprise facilities & complexes.",
                   "footerIcon": "shield-check"
                 }
@@ -4448,6 +4448,316 @@
                 "challenge": "Preventing heavy cooking fats and oils from food court kitchens from clogging municipal main sewers.",
                 "solution": "Installed centralized automatic grease recovery units with automated skimming mechanisms."
               }
+            }
+          }
+        }
+      },
+      "Career": {
+        "variants": {
+          "ServiceCareer1": {
+            "banner": {
+              "title": "Career",
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Career",
+              "backgroundImage": "/plumberImage/image9.jpg",
+              "homeHref": "/"
+            },
+            "whyJoinSection": {
+              "title": "Why Join Aquafix?",
+              "benefits": [
+                {
+                  "id": "benefit-1",
+                  "title": "Competitive Pay",
+                  "description": "We offer competitive salaries with performance bonuses.",
+                  "iconName": "shield"
+                },
+                {
+                  "id": "benefit-2",
+                  "title": "Health & Wellness",
+                  "description": "Medical, dental, and vision insurance to keep you and your family covered.",
+                  "iconName": "heart"
+                },
+                {
+                  "id": "benefit-3",
+                  "title": "Growth Opportunities",
+                  "description": "Training programs and career advancement pathways.",
+                  "iconName": "graduation-cap"
+                },
+                {
+                  "id": "benefit-4",
+                  "title": "Work-Life Balance",
+                  "description": "Flexible schedules and paid time off to support your lifestyle.",
+                  "iconName": "calendar"
+                },
+                {
+                  "id": "benefit-5",
+                  "title": "Great Team Culture",
+                  "description": "A supportive and collaborative environment where you belong.",
+                  "iconName": "users"
+                }
+              ]
+            },
+            "openPositionsSection": {
+              "title": "Open Positions",
+              "viewAllJobsText": "View All Jobs",
+              "viewAllJobsHref": "/career",
+              "positions": [
+                {
+                  "id": "pos-1",
+                  "title": "Licensed Plumber",
+                  "location": "Austin, TX",
+                  "jobType": "Full-time",
+                  "experience": "3-5 Years Experience",
+                  "applyLink": "/jobs/licensed-plumber"
+                },
+                {
+                  "id": "pos-2",
+                  "title": "Plumbing Technician",
+                  "location": "Austin, TX",
+                  "jobType": "Full-time",
+                  "experience": "1-3 Years Experience",
+                  "applyLink": "/jobs/plumbing-technician"
+                },
+                {
+                  "id": "pos-3",
+                  "title": "Service Plumber",
+                  "location": "Austin, TX",
+                  "jobType": "Full-time",
+                  "experience": "3-5 Years Experience",
+                  "applyLink": "/jobs/service-plumber"
+                },
+                {
+                  "id": "pos-4",
+                  "title": "Customer Service Representative",
+                  "location": "Austin, TX",
+                  "jobType": "Full-time",
+                  "experience": "1-2 Years Experience",
+                  "applyLink": "/jobs/customer-service"
+                }
+              ]
+            },
+            "lifeAtCompanySection": {
+              "title": "Life at Aquafix",
+              "items": [
+                {
+                  "id": "life-1",
+                  "title": "Team First",
+                  "description": "We work together, support each other, and celebrate every success.",
+                  "image": "/plumberImage/image7.jpg",
+                  "iconName": "users-group"
+                },
+                {
+                  "id": "life-2",
+                  "title": "Make an Impact",
+                  "description": "Every day, you'll help customers and make a real difference in their lives.",
+                  "image": "/plumberImage/image8.jpg",
+                  "iconName": "wrench"
+                },
+                {
+                  "id": "life-3",
+                  "title": "Keep Growing",
+                  "description": "We invest in your skills and help you build a long-term, successful career.",
+                  "image": "/plumberImage/image5.jpg",
+                  "iconName": "trending-up"
+                },
+                {
+                  "id": "life-4",
+                  "title": "Have Fun",
+                  "description": "From team outings to company events, we know how to have a good time.",
+                  "image": "/plumberImage/image9.jpg",
+                  "iconName": "heart-smile"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "JobDetails": {
+        "variants": {
+          "ServiceJobDetails1": {
+            "banner": {
+              "title": "Job Detail",
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Job Detail",
+              "backgroundImage": "/plumberImage/image9.jpg",
+              "homeHref": "/"
+            },
+            "jobs": [
+              {
+                "id": "job-1",
+                "slug": "licensed-plumber",
+                "title": "Licensed Plumber",
+                "location": "Austin, TX",
+                "jobType": "Full-time",
+                "experience": "3-5 Years Experience",
+                "description": "As a Licensed Plumber at Aquafix, you will play a key role in delivering high-quality plumbing solutions. You'll work on a variety of projects, from routine maintenance to complex installations, ensuring all work meets code, safety, and our high standards.",
+                "keyResponsibilities": [
+                  "Install, repair, and maintain plumbing systems and fixtures.",
+                  "Diagnose and troubleshoot plumbing issues and provide effective solutions.",
+                  "Read and interpret blueprints, plans, and specifications.",
+                  "Ensure all work complies with local plumbing codes and regulations.",
+                  "Provide excellent customer service and communicate clearly with clients.",
+                  "Maintain accurate records of work performed and materials used."
+                ],
+                "requirements": [
+                  "Valid plumbing license in the state of Texas.",
+                  "3-5 years of hands-on plumbing experience.",
+                  "Strong knowledge of plumbing systems, codes, and best practices.",
+                  "Ability to work independently and as part of a team.",
+                  "Excellent problem-solving and communication skills.",
+                  "Valid driver's license and reliable transportation."
+                ],
+                "preferredQualifications": [
+                  "Experience with commercial plumbing systems.",
+                  "Backflow certification.",
+                  "OSHA 10 or 30 certification."
+                ]
+              },
+              {
+                "id": "job-2",
+                "slug": "plumbing-technician",
+                "title": "Plumbing Technician",
+                "location": "Austin, TX",
+                "jobType": "Full-time",
+                "experience": "1-3 Years Experience",
+                "description": "As a Plumbing Technician at Aquafix, you will assist senior plumbers and handle routine installation, inspection, and maintenance tasks across residential and commercial properties.",
+                "keyResponsibilities": [
+                  "Assist lead plumbers on complex installation and repair jobs.",
+                  "Perform basic plumbing inspections and preventative maintenance.",
+                  "Prepare tools, equipment, and job sites before service calls.",
+                  "Maintain clean and safe work environments at all times."
+                ],
+                "requirements": [
+                  "1-3 years of technical or field experience in plumbing.",
+                  "Basic understanding of piping materials and hand tools.",
+                  "Strong work ethic and eagerness to learn.",
+                  "Valid driver's license."
+                ],
+                "preferredQualifications": [
+                  "Completion of a trade school program.",
+                  "Apprenticeship hours logged."
+                ]
+              },
+              {
+                "id": "job-3",
+                "slug": "service-plumber",
+                "title": "Service Plumber",
+                "location": "Austin, TX",
+                "jobType": "Full-time",
+                "experience": "3-5 Years Experience",
+                "description": "Our Service Plumbers specialize in rapid-response troubleshooting, drain clearing, fixture replacements, and emergency plumbing solutions for residential customers.",
+                "keyResponsibilities": [
+                  "Respond to residential service calls and emergency requests.",
+                  "Diagnose leaks, clogs, and mechanical failures efficiently.",
+                  "Provide transparent quotes and explain solutions to homeowners.",
+                  "Operate drain clearing machinery and diagnostic cameras."
+                ],
+                "requirements": [
+                  "3-5 years of residential service plumbing experience.",
+                  "Strong interpersonal and customer care skills.",
+                  "Ability to handle emergency callouts on rotation."
+                ],
+                "preferredQualifications": [
+                  "Experience with water heater installations and tankless conversions."
+                ]
+              },
+              {
+                "id": "job-4",
+                "slug": "customer-service",
+                "title": "Customer Service Representative",
+                "location": "Austin, TX",
+                "jobType": "Full-time",
+                "experience": "1-2 Years Experience",
+                "description": "We are looking for a friendly and organized Customer Service Representative to manage client calls, schedule service appointments, and support our field technicians.",
+                "keyResponsibilities": [
+                  "Answer incoming phone calls and schedule service appointments.",
+                  "Dispatch technicians based on location and priority.",
+                  "Follow up with customers to ensure satisfaction after job completion.",
+                  "Maintain accurate client records in our CRM system."
+                ],
+                "requirements": [
+                  "1-2 years of experience in customer service or dispatching.",
+                  "Excellent verbal and written communication skills.",
+                  "Proficiency with scheduling software and computer systems."
+                ],
+                "preferredQualifications": [
+                  "Prior experience in trade services or dispatching environments."
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "Sitemap": {
+        "variants": {
+          "ServiceSitemap1": {
+            "banner": {
+              "title": "Sitemap",
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Sitemap",
+              "backgroundImage": "/plumberImage/image9.jpg",
+              "homeHref": "/"
+            },
+            "sitemap": {
+              "title": "Sitemap",
+              "subtitle": "Explore all pages of Aquafix Plumbing Solutions website.",
+              "groups": [
+                {
+                  "category": "Company",
+                  "links": [
+                    { "label": "Home", "href": "/" },
+                    { "label": "About Us", "href": "/about-us" },
+                    { "label": "Vision & Mission", "href": "/mission" },
+                    { "label": "Teams", "href": "/team" },
+                    { "label": "Awards", "href": "/award" },
+                    { "label": "Testimonials", "href": "/testimonial" },
+                    { "label": "FAQs", "href": "/faq" }
+                  ]
+                },
+                {
+                  "category": "Services",
+                  "links": [
+                    { "label": "Services", "href": "/service" },
+                    { "label": "Industries We Serve", "href": "/industry" },
+                    { "label": "Pricing / Packages", "href": "/pricing" }
+                  ]
+                },
+                {
+                  "category": "Projects",
+                  "links": [
+                    { "label": "Projects / Portfolio", "href": "/project" }
+                  ]
+                },
+                {
+                  "category": "Blog / News",
+                  "links": [
+                    { "label": "Blog / News", "href": "/blog" }                  ]
+                },
+                {
+                  "category": "Careers",
+                  "links": [
+                    { "label": "Career", "href": "/career" }
+                  ]
+                },
+                {
+                  "category": "Enquiries",
+                  "links": [
+                    { "label": "Get a quotes", "href": "/quote" },
+                    { "label": "Enquiry", "href": "/enquiry" },
+                    { "label": "Contact Us", "href": "/contact-us" }
+                  ]
+                },
+                {
+                  "category": "Policies",
+                  "links": [
+                    { "label": "Terms & Conditions", "href": "/terms" },
+                    { "label": "Privacy Policy", "href": "/privacy" },
+                    { "label": "Disclaimer", "href": "/disclaimer" },
+                    { "label": "Refund Policy", "href": "/refund-policy" },
+                    { "label": "Cookies Policy", "href": "/cookies-policy" }
+                  ]
+                }
+              ]
             }
           }
         }

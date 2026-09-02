@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ServiceContactSectionData, site } from "@/data";
 import PageBanner from "../../shared/PageBanner";
 import SectionHeader from "../../shared/SectionHeader";
+import ScrollReveal from "../../shared/ScrollReveal";
 import {
   Mail,
   Phone,
@@ -92,6 +93,7 @@ export default function Contact({ contactData }: ContactProps) {
 
           {/* Top 3 Info Cards */}
           {data?.topCards && data.topCards.length > 0 && (
+            <ScrollReveal direction="up">
             <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
               {data.topCards.map((card, idx) => (
                 <div
@@ -115,13 +117,14 @@ export default function Contact({ contactData }: ContactProps) {
                 </div>
               ))}
             </div>
+            </ScrollReveal>
           )}
 
           {/* Form & Features Container */}
           {data?.formSection && (
             <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-start">
               {/* Left Column - Form Features */}
-              <div className="lg:col-span-5">
+              <ScrollReveal direction="left" className="lg:col-span-5">
                 <span className="text-sm font-extrabold uppercase tracking-widest text-[#84CC16]">
                   {data.formSection.tagline}
                 </span>
@@ -150,10 +153,10 @@ export default function Contact({ contactData }: ContactProps) {
                     </div>
                   ))}
                 </div>
-              </div>
+              </ScrollReveal>
 
               {/* Right Column - Contact Form */}
-              <div className="lg:col-span-7">
+              <ScrollReveal direction="right" className="lg:col-span-7">
                 <form
                   onSubmit={handleSubmit}
                   className="flex flex-col gap-5 rounded-2xl bg-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.03)] sm:p-8"
@@ -263,13 +266,14 @@ export default function Contact({ contactData }: ContactProps) {
                     {data.formSection.submitButtonText}
                   </button>
                 </form>
-              </div>
+              </ScrollReveal>
             </div>
           )}
         </div>
 
         {/* Map Section */}
         {data?.map && (
+          <ScrollReveal direction="up">
           <div className="relative mt-20 h-[450px] w-full bg-slate-100">
             <iframe
               title="Location Map"
@@ -302,6 +306,7 @@ export default function Contact({ contactData }: ContactProps) {
               </Link>
             </div>
           </div>
+          </ScrollReveal>
         )}
       </section>
     </>

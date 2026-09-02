@@ -28,7 +28,9 @@ import {
   TeamData,
   TeamDetailsData,
   ProjectSectionData,
-  ProjectDetailsData
+  ProjectDetailsData,
+  CareerPageData,
+  JobDetailsData
 } from "@/type/typeSection";
 const sec = siteData.ServiceIndustries.sections;
 const headerData = sec.Header.variants.ServiceHeader1;
@@ -50,19 +52,36 @@ export const pageData = {
   howWeWork: sec.HowWeWork.variants.ServiceHowWeWork1 as HowWeWorkData,
   Testimonial: sec.Testimonial.variants.ServiceTestimonial1 as TestimonialData,
   blog: sec.Blog.variants.ServiceBlog1 as BlogData,
-  contactSection: sec.ContactSection.variants.ServiceContactSection1 as ContactSectionData,
+  contactSection: sec.ContactSection.variants
+    .ServiceContactSection1 as ContactSectionData,
 
-  visionMissionPage: sec.VisionMissionPage.variants.ServiceVisionMissionPage1 as ServiceVisionMissionVariant,
+  visionMissionPage: sec.VisionMissionPage.variants
+    .ServiceVisionMissionPage1 as ServiceVisionMissionVariant,
   faqPage: sec.FaqSection.variants.ServiceFaqSection1 as ServiceFaqSection1Data,
-  enquiryPage: sec.EnquirySection.variants.ServiceEnquirySection1 as ServiceEnquiryData,
-  industryPage: sec.IndustrySection.variants.ServiceIndustrySection1 as ServiceIndustryData,
-  pricingPage: sec.PricingSection.variants.ServicePricingSection1 as ServicePricingSectionData,
-  quotePage: sec.GetQuoteSection.variants.GetQuoteSection1 as GetQuoteSectionData,
-  awards: sec.AwardsSection.variants.ServiceAwardsSection1 as ServiceAwardsSectionData,
+  enquiryPage: sec.EnquirySection.variants
+    .ServiceEnquirySection1 as ServiceEnquiryData,
+  industryPage: sec.IndustrySection.variants
+    .ServiceIndustrySection1 as ServiceIndustryData,
+  pricingPage: sec.PricingSection.variants
+    .ServicePricingSection1 as ServicePricingSectionData,
+  quotePage: sec.GetQuoteSection.variants
+    .GetQuoteSection1 as GetQuoteSectionData,
+  awards: sec.AwardsSection.variants
+    .ServiceAwardsSection1 as ServiceAwardsSectionData,
   team: sec.Team.variants.ServiceTeam1 as TeamData,
-  serviceDetails: sec.serviceDetails.variants.serviceDetails1 as Record<string, ServiceDetailData>,
-  blogDetails: ((sec as any).BlogDetails?.variants || (siteData as any).blogDetails) as Record<string, BlogDetailData>,
+  serviceDetails: sec.serviceDetails.variants.serviceDetails1 as Record<
+    string,
+    ServiceDetailData
+  >,
+  blogDetails: ((sec as any).BlogDetails?.variants ||
+    (siteData as any).blogDetails) as Record<string, BlogDetailData>,
   teamDetails: sec.TeamDetails.variants.ServiceTeamDetails1 as TeamDetailsData,
-  projectsPage: (sec as any).ProjectSection?.variants?.ProjectSection1 as ProjectSectionData["variants"]["ProjectSection1"],
-  projectDetails: (sec as any).ProjectDetails?.variants?.ServiceProjectDetails1 as ProjectDetailsData,
+  projectsPage: (sec as any).ProjectSection?.variants
+    ?.ProjectSection1 as ProjectSectionData["variants"]["ProjectSection1"],
+  projectDetails: (sec as any).ProjectDetails?.variants
+    ?.ServiceProjectDetails1 as ProjectDetailsData,
+  career: sec.Career.variants.ServiceCareer1 as CareerPageData,
+  jobDetails: (sec as any).JobDetails?.variants
+    ?.ServiceJobDetails1 as JobDetailsData,
+    sitemap: (sec as any)?.Sitemap?.variants?.ServiceSitemap1,
 };

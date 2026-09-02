@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BlogDetailData, BlogPost } from "@/type/typeSection";
 import PageBanner from "../../shared/PageBanner";
+import ScrollReveal from "../../shared/ScrollReveal";
 import {
   Wrench,
   Settings,
@@ -57,6 +58,7 @@ export default function BlogDetailsPage({
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
 
             {/* Main Blog Post Content */}
+            <ScrollReveal direction="left" className="lg:col-span-2">
             <article className="lg:col-span-2 space-y-8">
                  <h1 className="text-3xl md:text-5xl font-semibold text-[#081a46]">{post.title}</h1>
               <p className="text-lg leading-relaxed text-[#64748B]">{post.intro}</p>
@@ -65,6 +67,7 @@ export default function BlogDetailsPage({
                   src={post.image}
                   alt={post.imageAlt || post.title}
                   fill
+                  sizes="(min-width: 1024px) 752px, 100vw"
                   className="object-cover"
                   priority
                 />
@@ -94,8 +97,10 @@ export default function BlogDetailsPage({
                 ))}
               </div>
             </article>
+            </ScrollReveal>
 
             {/* Sidebar */}
+            <ScrollReveal direction="right">
             <aside className="space-y-8">
               {/* Categories List */}
               {sidebar?.categories && (
@@ -136,6 +141,7 @@ export default function BlogDetailsPage({
                             src={item.image}
                             alt={item.title}
                             fill
+                            sizes="64px"
                             className="object-cover"
                           />
                         </div>
@@ -173,6 +179,7 @@ export default function BlogDetailsPage({
                 </div>
               )}
             </aside>
+            </ScrollReveal>
 
           </div>
         </div>

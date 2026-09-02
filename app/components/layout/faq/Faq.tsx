@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { ServiceFaqData, site } from "@/data";
 import PageBanner from "../../shared/PageBanner";
 import SectionHeader from "../../shared/SectionHeader";
-import { Plus, Minus, Headset, ArrowRight } from "lucide-react";
+import ScrollReveal from "../../shared/ScrollReveal";
+import CtaBanner from "../../shared/CtaBanner";
+import { Plus, Minus, Headset } from "lucide-react";
 
 interface FaqProps {
   FaqData?: ServiceFaqData;
@@ -49,6 +50,7 @@ export default function Faq({ FaqData }: FaqProps) {
 
           {/* FAQ Accordion List */}
           {data?.faqs && data.faqs.length > 0 && (
+            <ScrollReveal direction="up">
             <div className="mt-10 flex flex-col gap-4">
               {data.faqs.map((faq, index) => {
                 const isOpen = openIndex === index;
@@ -96,35 +98,22 @@ export default function Faq({ FaqData }: FaqProps) {
                 );
               })}
             </div>
+            </ScrollReveal>
           )}
 
           {/* Contact CTA Box */}
           {data?.contactCta && (
-            <div className="mt-12 flex flex-col items-center justify-between gap-6 rounded-2xl bg-[#EEF2FF] p-6 text-center sm:flex-row sm:p-8 sm:text-left">
-              <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:gap-5">
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#DBEAFE] text-[#0052CC]">
-                  <Headset className="h-8 w-8" />
-                </div>
-
-                <div className="flex flex-col items-center sm:items-start">
-                  <h3 className="text-xl font-bold text-[#0F172A]">
-                    {data.contactCta.title}
-                  </h3>
-
-                  <p className="mt-1 text-sm font-medium text-[#64748B]">
-                    {data.contactCta.description}
-                  </p>
-                </div>
-              </div>
-
-              <Link
-                href={data.contactCta.buttonUrl || "#"}
-                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#0052CC] px-6 py-3.5 text-sm font-bold text-white transition-colors duration-200 hover:bg-[#0041A3]"
-              >
-                {data.contactCta.buttonText}
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
+            <CtaBanner
+              variant="faq"
+              title={data.contactCta.title}
+              description={data.contactCta.description}
+              buttonLabel={data.contactCta.buttonText}
+              buttonHref={data.contactCta.buttonUrl || "#"}
+              media={{
+                type: "icon",
+                icon: <Headset className="h-8 w-8" />,
+              }}
+            />
           )}
         </div>
       </section>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Phone, Mail, MapPin} from "lucide-react";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import siteData from "@/data/site.json";
+import ScrollReveal from "../../shared/ScrollReveal";
 
 export type ServiceFooterData = typeof siteData.ServiceIndustries.sections.Footer.variants.ServiceFooter1;
 
@@ -24,6 +25,7 @@ export default function Footer() {
   return (
     <footer className="w-full bg-[#091736] text-white">
       {/* Main Footer Container */}
+      <ScrollReveal direction="up">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           
@@ -151,6 +153,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      </ScrollReveal>
 
       {/* Sub-Footer Bottom Bar */}
       <div className="border-t border-white/10 bg-[#061026]">

@@ -17,6 +17,7 @@ import type {
   ServiceBannerData,
   ServiceFeatureCardsData,
 } from "@/data";
+import ScrollReveal from "../shared/ScrollReveal";
 
 interface BannerProps {
   data: ServiceBannerData;
@@ -252,6 +253,7 @@ export default function Banner({
         {cards.length > 0 && (
           <div className="relative z-30 hidden w-full sm:mb-8 sm:block lg:absolute lg:bottom-0 lg:right-0 lg:mb-0 lg:mt-0 lg:w-[67%] xl:w-[64%]">
             <div className="overflow-hidden rounded-[18px] bg-[#062650] px-3 py-3 shadow-[0_12px_35px_rgba(3,27,61,0.28)] sm:px-4 sm:py-4 lg:rounded-[17px] lg:px-3 lg:py-3 xl:px-4 xl:py-4">
+              <ScrollReveal direction="up">
               <div className="grid grid-cols-2 lg:grid-cols-4">
                 {cards.slice(0, 4).map((card, idx) => (
                   <div
@@ -278,6 +280,7 @@ export default function Banner({
                   </div>
                 ))}
               </div>
+              </ScrollReveal>
             </div>
           </div>
         )}

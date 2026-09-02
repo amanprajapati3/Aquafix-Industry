@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Wrench, ArrowLeft, ArrowRight } from "lucide-react";
 import { ServiceTestimonialData, site } from "@/data";
 import SectionHeader from "../shared/SectionHeader";
+import ScrollReveal from "../shared/ScrollReveal";
 
 interface TestimonialSectionProps {
   testimonialData?: ServiceTestimonialData;
@@ -86,6 +87,7 @@ export default function TestimonialSection({
         </div>
       )}
 
+      <ScrollReveal direction="up">
       <div className="relative z-20 mx-auto max-w-[1100px] px-4 sm:px-6">
         {/* HEADER */}
         <SectionHeader
@@ -188,6 +190,7 @@ export default function TestimonialSection({
           )}
         </div>
       </div>
+      </ScrollReveal>
     </section>
   );
 }

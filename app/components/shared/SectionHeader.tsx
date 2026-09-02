@@ -1,4 +1,5 @@
 import { Droplet } from "lucide-react";
+import ScrollReveal from "./ScrollReveal";
 
 interface SectionHeaderProps {
   pretitle?: string;
@@ -37,11 +38,12 @@ export default function SectionHeader({
   const TitleTag = titleAs;
 
   return (
-    <div
-      className={`flex flex-col ${
-        isCenter ? "items-center text-center" : "items-start text-left"
-      } ${className}`}
-    >
+    <ScrollReveal direction="up">
+      <div
+        className={`flex flex-col ${
+          isCenter ? "items-center text-center" : "items-start text-left"
+        } ${className}`}
+      >
       {pretitle && (
         <>
           <span className="text-sm font-black uppercase tracking-widest text-[#0052CC]">
@@ -74,6 +76,7 @@ export default function SectionHeader({
           {description}
         </p>
       )}
-    </div>
+      </div>
+    </ScrollReveal>
   );
 }

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import PageBanner from "../../shared/PageBanner";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { site } from "@/data";
 import { TeamMemberDetailData } from "@/type/typeSection";
 import {
@@ -67,6 +68,7 @@ export default function TeamDetails({ detailData }: TeamDetailsProps) {
           {/* Main Content Layout: 12-Column Grid */}
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-start">
             {/* Left Area: Photo + Details + About Section (8 Cols) */}
+            <ScrollReveal direction="left" className="lg:col-span-8">
             <div className="space-y-12 lg:col-span-8">
               {/* Top Profile Header (Photo + Quick Details) */}
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-12 sm:items-center">
@@ -77,6 +79,7 @@ export default function TeamDetails({ detailData }: TeamDetailsProps) {
                       src={data.image}
                       alt={data.name}
                       fill
+                      sizes="(min-width: 1024px) 384px, (min-width: 640px) 50vw, 100vw"
                       className="object-cover"
                       priority
                     />
@@ -159,8 +162,10 @@ export default function TeamDetails({ detailData }: TeamDetailsProps) {
                 </div>
               </div>
             </div>
+            </ScrollReveal>
 
             {/* Right Column: Dark Blue Help Card + Stacked Stats Box (4 Cols) */}
+            <ScrollReveal direction="right" className="lg:col-span-4">
             <div className="space-y-6 lg:col-span-4">
               {/* Top Dark Blue Widget */}
               {data.helpWidget && (
@@ -207,11 +212,13 @@ export default function TeamDetails({ detailData }: TeamDetailsProps) {
                 </div>
               )}
             </div>
+            </ScrollReveal>
           </div>
 
           {/* Bottom Grid: Areas of Expertise & Certifications */}
           <div className="mt-16 grid grid-cols-1 lg:gap-8 gap-3 sm:grid-cols-2">
             {/* Areas of Expertise Card */}
+            <ScrollReveal direction="left">
             <div className="relative overflow-hidden rounded-[1.75rem] border border-slate-100 bg-white p-4 sm:p-10 shadow-[0_4px_30px_rgba(0,0,0,0.03)]">
               <h3 className="text-xl font-extrabold text-[#0f172a]">
                 Areas of Expertise
@@ -235,8 +242,10 @@ export default function TeamDetails({ detailData }: TeamDetailsProps) {
                 <Wrench className="h-40 w-40 text-[#3b82f6]" />
               </div>
             </div>
+            </ScrollReveal>
 
             {/* Certifications Card */}
+            <ScrollReveal direction="right">
             <div className="rounded-[1.75rem] border border-slate-100 bg-white p-4 sm:p-10 shadow-[0_4px_30px_rgba(0,0,0,0.03)]">
               <h3 className="text-xl font-extrabold text-[#0f172a]">
                 Certifications
@@ -261,6 +270,7 @@ export default function TeamDetails({ detailData }: TeamDetailsProps) {
                 ))}
               </div>
             </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>

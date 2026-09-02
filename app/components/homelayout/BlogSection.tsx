@@ -2,9 +2,11 @@
 
 import React from "react";
 import siteData from "@/data/site.json";
-import { Calendar, ArrowRight, PhoneCall, ShieldAlert } from "lucide-react";
+import { Calendar, ArrowRight, ShieldAlert } from "lucide-react";
 import { ServiceBlogData } from "@/data";
 import SectionHeader from "../shared/SectionHeader";
+import ScrollReveal from "../shared/ScrollReveal";
+import CtaBanner from "../shared/CtaBanner";
 
 interface BlogSectionProps {
   blogData: ServiceBlogData;
@@ -43,6 +45,7 @@ export default function BlogSection({
         />
 
         {/* BLOG CARDS GRID: home 4 per row, blog page 3 per row */}
+        <ScrollReveal direction="up">
         <div className={`grid gap-6 ${gridClass}`}>
           {posts.map((post: any) => (
             <article
@@ -87,35 +90,22 @@ export default function BlogSection({
             </article>
           ))}
         </div>
+        </ScrollReveal>
 
         {/* CTA BANNER BELOW BLOGS */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-6 rounded-2xl bg-[#0047FF] px-6 py-6 text-white shadow-lg sm:px-10 md:flex-row">
-          {/* Left Side: Icon + Headline & Subtitle */}
-          <div className="flex items-center gap-4 text-center md:text-left">
-            <div className="hidden sm:flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm">
-              <ShieldAlert className="h-6 w-6 text-white" />
-            </div>
-            <div>
-              <h3 className="text-[20px] font-extrabold leading-snug text-white sm:text-[22px]">
-                {cta.title}
-              </h3>
-              <p className="mt-0.5 text-[13px] font-medium text-white/80 sm:text-[14px]">
-                {cta.desc}
-              </p>
-            </div>
-          </div>
-
-          {/* Right Side: Call Button */}
-          <div className="shrink-0">
-            <a
-              href={`tel:${cta.button.href.replace(/\s+/g, "")}`}
-              className="inline-flex items-center gap-2.5 rounded-full bg-white sm:px-7 px-3 py-3 text-[14px] font-extrabold text-[#0047FF] shadow-sm transition-all duration-300 hover:bg-slate-50 hover:shadow-md"
-            >
-              <PhoneCall className="h-4 w-4 fill-current text-[#0047FF]" />
-              <span>{cta.button.label}</span>
-            </a>
-          </div>
-        </div>
+        <ScrollReveal direction="up">
+          <CtaBanner
+            variant="blog"
+            title={cta.title}
+            description={cta.desc}
+            buttonLabel={cta.button.label}
+            buttonHref={cta.button.href}
+            media={{
+              type: "icon",
+              icon: <ShieldAlert className="h-6 w-6 text-white" />,
+            }}
+          />
+        </ScrollReveal>
       </div>
     </section>
   );

@@ -5,6 +5,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { ServiceTeamData, site } from "@/data";
 import PageBanner from "../../shared/PageBanner";
 import SectionHeader from "../../shared/SectionHeader";
+import ScrollReveal from "../../shared/ScrollReveal";
 
 interface TeamProps {
   teamData?: ServiceTeamData;
@@ -42,6 +43,7 @@ export default function Team({ teamData }: TeamProps) {
 
           {/* Team Members Grid */}
           {data?.members?.length > 0 && (
+            <ScrollReveal direction="up">
             <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {data.members.map((member) => (
                 <div
@@ -56,6 +58,7 @@ export default function Team({ teamData }: TeamProps) {
                           src={member.image}
                           alt={member.name}
                           fill
+                          sizes="(min-width: 1024px) 288px, (min-width: 640px) 560px, 100vw"
                           className="object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                       </Link>
@@ -102,6 +105,7 @@ export default function Team({ teamData }: TeamProps) {
                 </div>
               ))}
             </div>
+            </ScrollReveal>
           )}
         </div>
       </section>

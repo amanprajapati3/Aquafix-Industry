@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ServiceLegalPageData } from "@/type/typeSection";
 import PageBanner from "../../shared/PageBanner";
 import SectionHeader from "../../shared/SectionHeader";
+import ScrollReveal from "../../shared/ScrollReveal";
 
 interface LegalProps {
   legalData?: ServiceLegalPageData;
@@ -28,6 +29,7 @@ export default function Legal({ legalData }: LegalProps) {
       {/* LEGAL CONTENT SECTION */}
       <section className="bg-[#FAFBFD] py-8 md:py-12">
         <div className="mx-auto max-w-[1200px] px-4 sm:px-6">
+          <ScrollReveal direction="up">
           <div className="rounded-3xl border border-slate-100 bg-white p-6 shadow-[0_4px_25px_rgba(0,0,0,0.02)] sm:p-12">
             
             {/* Main Title & Last Updated */}
@@ -96,6 +98,7 @@ export default function Legal({ legalData }: LegalProps) {
               </div>
             )}
           </div>
+          </ScrollReveal>
         </div>
       </section>
     </>

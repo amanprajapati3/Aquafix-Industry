@@ -4,6 +4,7 @@ import React from "react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { ServiceContactSectionData } from "@/data";
 import SectionHeader from "../shared/SectionHeader";
+import ScrollReveal from "../shared/ScrollReveal";
 
 interface ContactSectionProps {
   contactData: ServiceContactSectionData;
@@ -40,6 +41,7 @@ export default function ContactSection({
       <div className="mx-auto max-w-[1350px]">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-center">
           {/* LEFT SIDE: Heading, Badge Button & Info List */}
+          <ScrollReveal direction="left" className="lg:col-span-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:col-span-6 lg:gap-6">
             {/* Left Column */}
             <div className="flex flex-col items-center justify-start pb-6 text-center sm:items-start sm:pb-0 sm:text-left">
@@ -100,8 +102,10 @@ export default function ContactSection({
               </div>
             )}
           </div>
+          </ScrollReveal>
 
           {/* RIGHT SIDE: Map View */}
+          <ScrollReveal direction="right" className="lg:col-span-6">
           <div className="relative h-[320px] w-full overflow-hidden rounded-2xl bg-slate-200 shadow-sm lg:col-span-6 lg:h-[360px]">
             {mapData?.embedUrl ? (
               <iframe
@@ -118,6 +122,7 @@ export default function ContactSection({
               </div>
             )}
           </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

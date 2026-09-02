@@ -4,6 +4,9 @@ import {
   BlogDetailData,
   TeamDetailsData,
   ProjectDetailsData,
+  CareerPageData,
+  JobDetailsData,
+  JobDetailItem
 } from "@/type/typeSection";
 
 export type RawSiteData = typeof siteData;
@@ -74,6 +77,8 @@ export type BlogDetailsMap =
 export type ServiceTeamDetailsData =
   typeof siteData.ServiceIndustries.sections.TeamDetails.variants.ServiceTeamDetails1;
 
+export type ServiceSitemapData = typeof siteData.ServiceIndustries.sections.Sitemap.variants.ServiceSitemap1;
+
 const sec = siteData.ServiceIndustries.sections;
 
 const serviceDetailsMap = sec.serviceDetails.variants.serviceDetails1 as Record<
@@ -89,6 +94,12 @@ const teamDetailsData = sec.TeamDetails.variants
 
 const projectDetailsData = sec.ProjectDetails.variants
   .ServiceProjectDetails1 as ProjectDetailsData;
+
+const careerData =
+sec.Career.variants.ServiceCareer1 as CareerPageData;
+
+const jobDetailsData = (sec as any)?.JobDetails?.variants
+  ?.ServiceJobDetails1 as JobDetailsData;
 
 export const site = {
   header: sec.Header.variants.ServiceHeader1,
@@ -119,6 +130,9 @@ export const site = {
   blogDetails: blogDetailsMap,
   teamDetails: teamDetailsData,
   projectDetails: projectDetailsData,
+  career: careerData,
+  jobDetails: jobDetailsData,
+  sitemap: sec.Sitemap.variants.ServiceSitemap1,
 };
 
 export function getServiceBySlug(slug: string): ServiceDetailData | null {
@@ -139,6 +153,11 @@ export function getProjectBySlug(
   slug: string,
 ): ProjectDetailsData["projects"][string] | null {
   return projectDetailsData.projects[slug] || null;
+}
+
+export function getJobBySlug(slug: string): JobDetailItem | null {
+  if (!jobDetailsData || !jobDetailsData.jobs) return null;
+  return jobDetailsData.jobs.find((job) => job.slug === slug) || null;
 }
 
 export default siteData;

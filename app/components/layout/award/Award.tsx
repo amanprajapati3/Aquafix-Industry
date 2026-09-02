@@ -1,11 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { ServiceAwardsData, site } from "@/data";
 import PageBanner from "../../shared/PageBanner";
 import SectionHeader from "../../shared/SectionHeader";
-import { Trophy, ShieldCheck, HardHat, Leaf, ArrowRight } from "lucide-react";
+import ScrollReveal from "../../shared/ScrollReveal";
+import CtaBanner from "../../shared/CtaBanner";
+import { Trophy, ShieldCheck, HardHat, Leaf } from "lucide-react";
 import { LiaAwardSolid } from "react-icons/lia";
 
 
@@ -60,6 +61,7 @@ export default function Awards({ awardsData }: AwardsProps) {
 
           {/* Awards Cards Grid */}
           {data?.awards && data.awards.length > 0 && (
+            <ScrollReveal direction="up">
             <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {data.awards.map((award) => (
                 <div
@@ -72,6 +74,7 @@ export default function Awards({ awardsData }: AwardsProps) {
                       src={award.image}
                       alt={award.title}
                       fill
+                      sizes="(min-width: 1024px) 288px, (min-width: 640px) 560px, 100vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
@@ -91,33 +94,24 @@ export default function Awards({ awardsData }: AwardsProps) {
                 </div>
               ))}
             </div>
+            </ScrollReveal>
           )}
 
           {/* Bottom Banner CTA Strip */}
           {data?.bottomCta && (
-            <div className="mt-12 flex flex-col items-center justify-between gap-6 rounded-2xl bg-blue-50/60 p-6 sm:flex-row sm:p-8">
-              <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-                <div className="h-14 sm:w-28 sm:h-28 w-14 shrink-0 items-center justify-center rounded-full  text-[#0052CC]  sm:flex">
+            <CtaBanner
+              variant="award"
+              title={data.bottomCta.title}
+              description={data.bottomCta.description}
+              buttonLabel={data.bottomCta.buttonText}
+              buttonHref={data.bottomCta.buttonLink}
+              media={{
+                type: "icon",
+                icon: (
                   <LiaAwardSolid className="h-10 sm:w-24 sm:h-24 w-10" />
-                </div>
-                <div>
-                  <h4 className="text-base font-bold text-[#0F172A] sm:text-lg">
-                    {data.bottomCta.title}
-                  </h4>
-                  <p className="mt-1 max-w-xl text-xs font-medium text-[#64748B] sm:text-sm">
-                    {data.bottomCta.description}
-                  </p>
-                </div>
-              </div>
-
-              <Link
-                href={data.bottomCta.buttonLink}
-                className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-[#0052CC] px-6 py-3 text-xs font-bold text-white transition-all hover:bg-[#0043A8] active:scale-[0.98] sm:text-sm"
-              >
-                {data.bottomCta.buttonText}
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
+                ),
+              }}
+            />
           )}
         </div>
       </section>

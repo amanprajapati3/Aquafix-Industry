@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ServiceIndustrySectionData, site } from "@/data";
 import PageBanner from "../../shared/PageBanner";
 import SectionHeader from "../../shared/SectionHeader";
+import ScrollReveal from "../../shared/ScrollReveal";
 import {
   Building2,
   Building,
@@ -76,6 +77,7 @@ export default function Industry({ industryData }: IndustryProps) {
 
           {/* Grid of Industry Cards */}
           {data?.cards && data.cards.length > 0 && (
+            <ScrollReveal direction="up">
             <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {data.cards.map((card) => (
                 <div
@@ -88,6 +90,7 @@ export default function Industry({ industryData }: IndustryProps) {
                       src={card.image}
                       alt={card.title}
                       fill
+                      sizes="(min-width: 1024px) 288px, (min-width: 640px) 560px, 100vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     
@@ -120,6 +123,7 @@ export default function Industry({ industryData }: IndustryProps) {
                 </div>
               ))}
             </div>
+            </ScrollReveal>
           )}
         </div>
       </section>

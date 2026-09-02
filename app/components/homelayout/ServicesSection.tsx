@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { site } from "@/data";
 import SectionHeader from "../shared/SectionHeader";
+import ScrollReveal from "../shared/ScrollReveal";
 import {
   Wrench,
   Droplets,
@@ -98,8 +99,9 @@ export default function ServicesSection({
 
         {/* SERVICES GRID */}
         {/* Mobile: 1 col (stacked top img / bottom text) | Tablet: 2 cols | Desktop: 3 cols */}
+        <ScrollReveal direction="up">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((item: any) => (
+          {services.slice(0, 6).map((item: any) => (
             <Link
               key={item.id}
               href={item.href || "/service-details"}
@@ -137,12 +139,14 @@ export default function ServicesSection({
             </Link>
           ))}
         </div>
+        </ScrollReveal>
 
         {/* BOTTOM CALL TO ACTION BANNER */}
         {bottomBanner && (
           <div className="mt-10 rounded-3xl bg-blue-50/50 p-3 sm:p-10 lg:p-12">
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-center">
               {/* Left Text & Actions */}
+              <ScrollReveal direction="left" className="lg:col-span-6">
               <div className="lg:col-span-6">
                 <span className="text-sm font-black uppercase tracking-widest text-[#0052CC]">
                   {bottomBanner.tagline}
@@ -173,8 +177,10 @@ export default function ServicesSection({
                   </Link>
                 </div>
               </div>
+              </ScrollReveal>
 
               {/* Right 2x2 Feature Highlights */}
+              <ScrollReveal direction="right" className="lg:col-span-6">
               <div className="lg:col-span-6">
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   {bottomBanner.features.map((feat: any) => (
@@ -197,6 +203,7 @@ export default function ServicesSection({
                   ))}
                 </div>
               </div>
+              </ScrollReveal>
             </div>
           </div>
         )}

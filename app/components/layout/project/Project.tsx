@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PageBanner from "../../shared/PageBanner";
 import SectionHeader from "../../shared/SectionHeader";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { ProjectSectionVariantData } from "@/type/typeSection";
 import { MapPin, ArrowRight } from "lucide-react";
 
@@ -71,6 +72,7 @@ export default function Project({ projectData }: ProjectProps) {
           </div>
 
           {/* Projects Card Grid */}
+          <ScrollReveal direction="up">
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {filteredProjects?.map((project) => (
               <div
@@ -83,6 +85,7 @@ export default function Project({ projectData }: ProjectProps) {
                     src={project.image}
                     alt={project.title}
                     fill
+                    sizes="(min-width: 1024px) 288px, (min-width: 640px) 600px, 100vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
@@ -121,6 +124,7 @@ export default function Project({ projectData }: ProjectProps) {
               </div>
             ))}
           </div>
+          </ScrollReveal>
         </div>
       </section>
     </>

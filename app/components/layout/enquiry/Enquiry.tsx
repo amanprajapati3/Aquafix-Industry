@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ServiceEnquiryData, site } from "@/data";
 import PageBanner from "../../shared/PageBanner";
 import SectionHeader from "../../shared/SectionHeader";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { Clock, ShieldCheck, Headset, Send, User, Mail, Phone, ChevronDown } from "lucide-react";
 
 interface EnquiryProps {
@@ -66,6 +67,7 @@ export default function Enquiry({ enquiryData }: EnquiryProps) {
         <div className="mx-auto max-w-[1200px] px-4 sm:px-6">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
             {/* Left Content Column */}
+            <ScrollReveal direction="left" className="lg:col-span-5">
             <div className="lg:col-span-5">
               <SectionHeader
                 pretitle={data?.tagline}
@@ -99,8 +101,10 @@ export default function Enquiry({ enquiryData }: EnquiryProps) {
                 </div>
               )}
             </div>
+            </ScrollReveal>
 
             {/* Right Form Card Column */}
+            <ScrollReveal direction="right" className="lg:col-span-7">
             <div className="lg:col-span-7">
               <div className="rounded-2xl bg-white p-6 shadow-[0_4px_25px_rgba(0,0,0,0.04)] sm:p-10">
                 {data?.form?.title && (
@@ -224,6 +228,7 @@ export default function Enquiry({ enquiryData }: EnquiryProps) {
                 </form>
               </div>
             </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>

@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import type { ServiceWhyChooseUsData } from "@/data";
 import SectionHeader from "../shared/SectionHeader";
+import ScrollReveal from "../shared/ScrollReveal";
 
 interface ChooseProps {
   chooseData: ServiceWhyChooseUsData;
@@ -70,8 +71,11 @@ export default function Choose({ chooseData }: ChooseProps) {
 
         <div className="relative z-10 grid grid-cols-1 md:min-h-[600px] md:grid-cols-12 lg:min-h-[700px]">
 
+          <ScrollReveal direction="left" className="hidden md:col-span-3 md:block lg:col-span-4">
           <div className="hidden md:col-span-3 md:block lg:col-span-4" />
+          </ScrollReveal>
 
+          <ScrollReveal direction="right" className="order-1 md:order-none md:col-span-9 lg:col-span-8">
           <div className="order-1 flex flex-col justify-center bg-white px-5 pb-5 sm:px-8 md:order-none md:col-span-9 md:my-8 md:py-10 md:pl-20 md:pr-8 md:[clip-path:polygon(12%_0,_100%_0,_100%_100%,_0_100%)] lg:col-span-8 lg:my-10 lg:py-14 lg:pl-36 lg:pr-16 lg:[clip-path:polygon(15%_0,_100%_0,_100%_100%,_0_100%)]">
 
             <SectionHeader
@@ -108,6 +112,7 @@ export default function Choose({ chooseData }: ChooseProps) {
             </div>
 
           </div>
+          </ScrollReveal>
         </div>
 
         <div className="relative mt-0 h-[280px] w-full sm:h-[330px] md:absolute md:inset-0 md:z-0 md:mt-0 md:h-full md:w-[78%] md:[clip-path:polygon(0_0,58%_0,43%_100%,0_100%)] lg:w-[83%] lg:[clip-path:polygon(0_0,60%_0,45%_100%,0_100%)]">
