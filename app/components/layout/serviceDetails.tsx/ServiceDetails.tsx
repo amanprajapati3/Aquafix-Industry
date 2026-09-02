@@ -75,7 +75,7 @@ export default function ServiceDetails({ detailData }: ServiceDetailsProps) {
                 </span>
               </h1>
 
-              <p className="mt-4 text-xs font-medium leading-relaxed text-[#64748B] sm:text-sm">
+              <p className="mt-4 text-sm font-medium leading-relaxed text-[#64748B] sm:text-base">
                 {detailData.hero.description}
               </p>
 
@@ -87,7 +87,7 @@ export default function ServiceDetails({ detailData }: ServiceDetailsProps) {
                       <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#84CC16]/10 text-[#84CC16]">
                         <CheckCircle2 className="h-4 w-4 fill-[#84CC16] text-white" />
                       </div>
-                      <span className="text-xs font-semibold text-[#0F172A] sm:text-sm">
+                      <span className="text-sm font-semibold text-[#0F172A] sm:text-base">
                         {item}
                       </span>
                     </div>
@@ -118,7 +118,7 @@ export default function ServiceDetails({ detailData }: ServiceDetailsProps) {
 
       {/* COMMON REPAIRS / FEATURES GRID SECTION */}
       {detailData.featuresSection && (
-        <section className="bg-[#FAFBFD] py-8">
+        <section className="bg-white pb-8">
           <div className="mx-auto max-w-[1200px] px-4 sm:px-6">
             
             {/* Header */}
@@ -130,11 +130,11 @@ export default function ServiceDetails({ detailData }: ServiceDetailsProps) {
 
             {/* 3-Column Features Grid */}
             <ScrollReveal direction="up">
-            <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {detailData.featuresSection.items.map((item) => (
                 <div
                   key={item.id}
-                  className="flex flex-col items-center rounded-3xl border border-slate-100 bg-white p-8 text-center shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                  className="flex flex-col items-center rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
                   <div className="flex h-14 sm:w-20 sm:h-20 w-14 items-center justify-center rounded-2xl bg-blue-50">
                     {renderIcon(item.iconName)}
@@ -142,7 +142,7 @@ export default function ServiceDetails({ detailData }: ServiceDetailsProps) {
                   <h3 className="mt-5 text-base font-bold text-[#0F172A]">
                     {item.title}
                   </h3>
-                  <p className="mt-2 text-xs font-medium leading-relaxed text-[#64748B]">
+                  <p className="mt-2 text-sm font-medium leading-relaxed text-[#64748B]">
                     {item.description}
                   </p>
                 </div>

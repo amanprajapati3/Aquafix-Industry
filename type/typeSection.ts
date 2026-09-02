@@ -238,6 +238,24 @@ export interface ServiceBottomBanner {
   features: ServiceFeatureItem[];
 }
 
+export interface ServiceHomeCta {
+  call: {
+    iconName: string;
+    label: string;
+    number: string;
+    href: string;
+  };
+  service: {
+    iconName: string;
+    title: string;
+    description: string;
+  };
+  button: {
+    label: string;
+    href: string;
+  };
+}
+
 export interface ServiceData {
   banner?: ServiceBannerData;
   badge: string;
@@ -248,6 +266,7 @@ export interface ServiceData {
   description: string;
   services: ServiceItem[];
   bottomBanner: ServiceBottomBanner;
+  homeCta?: ServiceHomeCta;
 }
 
 export interface ServiceDetailBanner {

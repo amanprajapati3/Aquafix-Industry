@@ -216,7 +216,7 @@ export default function JobDetailsClient({
                   Job Description
                 </h3>
                 <div className="mt-2 h-1 w-10 bg-[#84CC16] rounded-full mx-auto lg:mx-0" />
-                <p className="mt-4 text-sm font-medium leading-relaxed text-[#64748B]">
+                <p className="mt-4 text-sm sm:text-base font-medium leading-relaxed text-[#64748B]">
                   {jobData.description}
                 </p>
               </div>
@@ -237,7 +237,7 @@ export default function JobDetailsClient({
                         <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#ECF8D8] text-[#84CC16]">
                           <Check className="h-3.5 w-3.5 stroke-[4]" />
                         </div>
-                        <span className="text-sm font-semibold leading-relaxed text-[#334155]">
+                        <span className="text-sm sm:text-base font-semibold leading-relaxed text-[#334155]">
                           {item}
                         </span>
                       </li>
@@ -262,7 +262,7 @@ export default function JobDetailsClient({
                         <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#ECF8D8] text-[#84CC16]">
                           <Check className="h-3.5 w-3.5 stroke-[4]" />
                         </div>
-                        <span className="text-sm font-semibold leading-relaxed text-[#334155]">
+                        <span className="text-sm sm:text-base font-semibold leading-relaxed text-[#334155]">
                           {item}
                         </span>
                       </li>
@@ -287,7 +287,7 @@ export default function JobDetailsClient({
                         <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#ECF8D8] text-[#84CC16]">
                           <Check className="h-3.5 w-3.5 stroke-[4]" />
                         </div>
-                        <span className="text-sm font-semibold leading-relaxed text-[#334155]">
+                        <span className="text-sm sm:text-base font-semibold leading-relaxed text-[#334155]">
                           {item}
                         </span>
                       </li>

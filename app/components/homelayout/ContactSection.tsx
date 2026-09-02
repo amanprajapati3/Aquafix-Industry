@@ -37,7 +37,7 @@ export default function ContactSection({
   const mapData = data.map;
 
   return (
-    <section className="w-full bg-[#EFF6FF]/60 px-4 py-8 sm:px-8 lg:px-12 lg:py-16">
+    <section className="w-full bg-[#EFF6FF]/60 px-4 py-8 sm:px-8 lg:px-12 lg:py-12">
       <div className="mx-auto max-w-[1350px]">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-center">
           {/* LEFT SIDE: Heading, Badge Button & Info List */}

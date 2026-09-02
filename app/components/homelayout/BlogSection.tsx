@@ -34,7 +34,7 @@ export default function BlogSection({
   const cta = data?.CtaBanner;
 
   return (
-    <section className="w-full bg-[#F8FAFC] py-8 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-whitex py-8 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-[1320px]">
         {/* SECTION HEADER */}
         <SectionHeader

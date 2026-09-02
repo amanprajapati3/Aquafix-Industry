@@ -795,6 +795,23 @@
                   "description": "Proudly serving our local community with care."
                 }
               ]
+            },
+            "homeCta": {
+              "call": {
+                "iconName": "phone",
+                "label": "Need Help? Call Us",
+                "number": "+91 98766 54321",
+                "href": "tel:+919876654321"
+              },
+              "service": {
+                "iconName": "clock-history",
+                "title": "24/7 Emergency Service",
+                "description": "We are available anytime you need us!"
+              },
+              "button": {
+                "label": "BOOK A SERVICE",
+                "href": "/contact-us"
+              }
             }
           }
         }

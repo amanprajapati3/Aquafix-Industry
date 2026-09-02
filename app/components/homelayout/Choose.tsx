@@ -66,7 +66,7 @@ export default function Choose({ chooseData }: ChooseProps) {
   const imageSrc = chooseData.sideImage?.src || "";
 
   return (
-    <section className="relative w-full overflow-hidden bg-white py-8">
+    <section className="relative w-full overflow-hidden bg-white pb-8">
       <div className="relative mx-auto max-w-[1400px] md:min-h-[600px] lg:min-h-[700px]">
 
         <div className="relative z-10 grid grid-cols-1 md:min-h-[600px] md:grid-cols-12 lg:min-h-[700px]">

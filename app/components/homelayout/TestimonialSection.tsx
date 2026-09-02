@@ -62,12 +62,12 @@ export default function TestimonialSection({
   }
 
   return (
-    <section className="relative w-full overflow-hidden bg-white py-12 md:py-12">
+    <section className="relative w-full overflow-hidden bg-white py-8 md:py-12">
       {/* PURE X-AXIS (HORIZONTAL) FLOAT WITH DYNAMIC SHADOW */}
 
       {/* WATER DROP OVERLAY - TOP RIGHT */}
       {data.image && (
-        <div className="pointer-events-none absolute right-0 top-0 z-10 w-36 select-none sm:w-48 lg:w-64">
+        <div className="pointer-events-none absolute right-0 top-0  w-36 select-none sm:w-48 lg:w-64">
           <img
             src={data.image}
             alt=""
@@ -78,7 +78,7 @@ export default function TestimonialSection({
 
       {/* WORKER ILLUSTRATION OVERLAY - BOTTOM LEFT */}
       {data.image2 && (
-        <div className="pointer-events-none absolute bottom-0 left-0 z-10 w-44 select-none sm:w-60 lg:w-72">
+        <div className="pointer-events-none absolute bottom-0 left-0  w-44 select-none sm:w-60 lg:w-72">
           <img
             src={data.image2}
             alt=""
