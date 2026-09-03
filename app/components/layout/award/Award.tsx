@@ -88,7 +88,7 @@ export default function Awards({ awardsData }: AwardsProps) {
                   <h3 className="mt-4 text-base font-bold text-[#0F172A]">
                     {award.title}
                   </h3>
-                  <p className="mt-2 text-xs font-medium leading-relaxed text-[#64748B]">
+                  <p className="mt-2 text-sm font-medium leading-relaxed text-[#64748B]">
                     {award.description}
                   </p>
                 </div>

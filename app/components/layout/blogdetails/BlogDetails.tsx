@@ -118,7 +118,7 @@ export default function BlogDetailsPage({
                           {cat.icon && iconMap[cat.icon]}
                           {cat.name}
                         </span>
-                        <span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs">
+                        <span className="rounded-full bg-slate-100 px-2.5 py-1 text-sm">
                           {cat.count}
                         </span>
                       </li>
@@ -152,7 +152,7 @@ export default function BlogDetailsPage({
                           >
                             {item.title}
                           </Link>
-                          <div className="mt-1 flex items-center gap-1.5 text-xs text-[#94A3B8]">
+                          <div className="mt-1 flex items-center gap-1.5 text-sm text-[#94A3B8]">
                             <Calendar className="h-3 w-3" />
                             <span>{item.date}</span>
                           </div>

@@ -95,13 +95,13 @@ const themes: Record<CtaBannerVariant, CtaBannerTheme> = {
     left: "flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left",
     textBlock: "",
     title: "text-base font-bold text-[#0F172A] sm:text-lg",
-    desc: "mt-1 max-w-xl text-xs font-medium text-[#64748B] sm:text-sm",
+    desc: "mt-1 max-w-xl text-sm font-medium text-[#64748B] sm:text-sm",
     mediaWrapper:
       "h-14 sm:w-28 sm:h-28 w-14 shrink-0 items-center justify-center rounded-full text-[#0052CC] sm:flex",
     imageClassName: "object-cover",
     buttonWrap: "",
     button:
-      "inline-flex shrink-0 items-center gap-2 rounded-xl bg-[#0052CC] px-6 py-3 text-xs font-bold text-white transition-all hover:bg-[#0043A8] active:scale-[0.98] sm:text-sm",
+      "inline-flex shrink-0 items-center gap-2 rounded-xl bg-[#0052CC] px-6 py-3 text-sm font-bold text-white transition-all hover:bg-[#0043A8] active:scale-[0.98] sm:text-sm",
     buttonIcon: <ArrowRight className="h-4 w-4" />,
     isPhoneCall: false,
   },

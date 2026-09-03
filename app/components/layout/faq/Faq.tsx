@@ -16,7 +16,6 @@ export default function Faq({ FaqData }: FaqProps) {
   // Fallback to static site data if props are not provided
   const data = FaqData ?? site.faq;
 
-  // Track expanded accordion item index (0 is open by default as per UI design)
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleAccordion = (index: number) => {

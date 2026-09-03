@@ -32,7 +32,6 @@ export default function Enquiry({ enquiryData }: EnquiryProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Action logic for submitting enquiry
   };
 
   // Lucide Icon mapper for features
@@ -92,7 +91,7 @@ export default function Enquiry({ enquiryData }: EnquiryProps) {
                         <h4 className="text-base font-bold text-[#0F172A]">
                           {feature.title}
                         </h4>
-                        <p className="mt-1 text-xs font-medium leading-relaxed text-[#64748B]">
+                        <p className="mt-1 text-sm font-medium leading-relaxed text-[#64748B]">
                           {feature.description}
                         </p>
                       </div>
@@ -119,7 +118,7 @@ export default function Enquiry({ enquiryData }: EnquiryProps) {
                 <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-5">
                   {/* Name */}
                   <div>
-                    <label className="text-xs font-bold text-[#0F172A]">
+                    <label className="text-sm font-bold text-[#0F172A]">
                       Name <span className="text-red-500">*</span>
                     </label>
                     <div className="relative mt-2">
@@ -138,7 +137,7 @@ export default function Enquiry({ enquiryData }: EnquiryProps) {
 
                   {/* Email */}
                   <div>
-                    <label className="text-xs font-bold text-[#0F172A]">
+                    <label className="text-sm font-bold text-[#0F172A]">
                       Email <span className="text-red-500">*</span>
                     </label>
                     <div className="relative mt-2">
@@ -157,7 +156,7 @@ export default function Enquiry({ enquiryData }: EnquiryProps) {
 
                   {/* Phone */}
                   <div>
-                    <label className="text-xs font-bold text-[#0F172A]">
+                    <label className="text-sm font-bold text-[#0F172A]">
                       Phone <span className="text-red-500">*</span>
                     </label>
                     <div className="relative mt-2">
@@ -176,7 +175,7 @@ export default function Enquiry({ enquiryData }: EnquiryProps) {
 
                   {/* Type Select */}
                   <div>
-                    <label className="text-xs font-bold text-[#0F172A]">
+                    <label className="text-sm font-bold text-[#0F172A]">
                       Type <span className="text-red-500">*</span>
                     </label>
                     <div className="relative mt-2">
@@ -201,7 +200,7 @@ export default function Enquiry({ enquiryData }: EnquiryProps) {
 
                   {/* Requirements Textarea */}
                   <div>
-                    <label className="text-xs font-bold text-[#0F172A]">
+                    <label className="text-sm font-bold text-[#0F172A]">
                       Requirements <span className="text-red-500">*</span>
                     </label>
                     <div className="relative mt-2">

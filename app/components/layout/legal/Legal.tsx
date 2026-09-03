@@ -36,7 +36,7 @@ export default function Legal({ legalData }: LegalProps) {
             <SectionHeader title={legalData.title} align="left" titleAs="h1" />
 
             {legalData.lastUpdated && (
-              <p className="mt-4 text-xs font-bold uppercase tracking-wider text-[#64748B]">
+              <p className="mt-4 text-sm font-bold uppercase tracking-wider text-[#64748B]">
                 Last Updated: <span className="text-[#0052CC]">{legalData.lastUpdated}</span>
               </p>
             )}

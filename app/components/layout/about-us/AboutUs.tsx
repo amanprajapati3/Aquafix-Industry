@@ -10,7 +10,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa6";
 
-// Plumber Line Art SVG component matching the image design
 
 interface AboutUsProps {
   aboutData?: ServiceAboutPageData;

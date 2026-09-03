@@ -59,7 +59,7 @@ export default function Project({ projectData }: ProjectProps) {
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`rounded-full cursor-pointer px-5 py-2 text-xs font-bold transition-all ${
+                  className={`rounded-full cursor-pointer px-5 py-2 text-sm font-bold transition-all ${
                     isActive
                       ? "bg-[#0052CC] text-white shadow-md shadow-blue-500/20"
                       : "border border-slate-200 bg-white text-[#0052CC] hover:border-[#0052CC] hover:text-[#0052CC]"

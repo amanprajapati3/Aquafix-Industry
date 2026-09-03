@@ -88,7 +88,6 @@ export default function ServicesSection({
         />
 
         {/* SERVICES GRID */}
-        {/* Mobile: 1 col (stacked top img / bottom text) | Tablet: 2 cols | Desktop: 3 cols */}
         <ScrollReveal direction="up">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.slice(0, 6).map((item: any) => (
@@ -97,7 +96,7 @@ export default function ServicesSection({
                 href={item.href || "/service-details"}
                 className="group flex flex-col-reverse sm:flex-row overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(0,0,0,0.08)]"
               >
-                {/* CONTENT AREA (Left on Desktop/Tablet, Bottom on Mobile) */}
+                {/* CONTENT AREA */}
                 <div className="flex flex-1 flex-col justify-between p-6 sm:p-5 lg:p-6">
                   <div>
                     {/* Icon Circle */}
@@ -116,7 +115,7 @@ export default function ServicesSection({
                   </div>
                 </div>
 
-                {/* IMAGE AREA (Right on Desktop/Tablet, Top on Mobile) */}
+                {/* IMAGE AREA  */}
                 <div className="relative h-48 w-full sm:h-auto sm:w-[45%] shrink-0 overflow-hidden bg-slate-100">
                   <img
                     src={item.image?.src}
@@ -139,7 +138,7 @@ export default function ServicesSection({
                   {renderCtaIcon(homeCta.call.iconName)}
                 </div>
                 <div>
-                  <span className="block text-xs font-semibold text-slate-500">
+                  <span className="block text-sm font-semibold text-slate-500">
                     {homeCta.call.label}
                   </span>
                   <a
@@ -163,7 +162,7 @@ export default function ServicesSection({
                   <h4 className="text-base font-bold text-[#0F172A]">
                     {homeCta.service.title}
                   </h4>
-                  <p className="text-xs font-medium text-slate-500">
+                  <p className="text-sm font-medium text-slate-500">
                     {homeCta.service.description}
                   </p>
                 </div>
@@ -173,7 +172,7 @@ export default function ServicesSection({
               <div className="w-full shrink-0 md:w-auto">
                 <Link
                   href={homeCta.button.href}
-                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#0052CC] px-7 py-3.5 text-xs font-bold uppercase tracking-wider text-white shadow-md shadow-blue-500/20 transition-all duration-300 hover:bg-[#0041A3] hover:shadow-lg active:scale-[0.98] sm:w-auto"
+                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#0052CC] px-7 py-3.5 text-sm font-bold uppercase tracking-wider text-white shadow-md shadow-blue-500/20 transition-all duration-300 hover:bg-[#0041A3] hover:shadow-lg active:scale-[0.98] sm:w-auto"
                 >
                   <span>{homeCta.button.label}</span>
                   <ArrowRight className="h-4 w-4" />

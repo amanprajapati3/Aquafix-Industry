@@ -46,14 +46,14 @@ const LIME = "#8FD40E";
 /* ------------------------------------------------------------------ */
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex flex-col items-start">
+    <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
       <span
-        className="text-sm font-black uppercase tracking-widest"
+        className="text-xs font-black uppercase tracking-widest sm:text-sm"
         style={{ color: BRAND_BLUE }}
       >
         {children}
       </span>
-      <div className="mt-4 flex items-center justify-start">
+      <div className="mt-4 flex items-center justify-center lg:justify-start">
         <div className="h-[2px] w-8 bg-[#84CC16]" />
         <Droplet className="mx-2 h-4 w-4 fill-[#0052CC] text-[#0052CC]" />
         <div className="h-[2px] w-8 bg-[#84CC16]" />
@@ -79,7 +79,7 @@ function AnimatedCounter({ value }: { value: string }) {
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated) setHasAnimated(true);
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
@@ -125,8 +125,6 @@ export default function ProjectDetails({
   /* "+N More" drawer — reveals the next 4 thumbnails only */
   const [showMoreBelowMain, setShowMoreBelowMain] = useState(false);
 
-  /* Dynamically selected main image (defaults to the first/main image).
-     Selecting any thumbnail below updates this and fills the main slot. */
   const [activeMainImg, setActiveMainImg] = useState<string>("");
 
   /* Project gallery — true smooth-scroll, infinitely looping carousel */
@@ -136,7 +134,7 @@ export default function ProjectDetails({
   if (!detailData) return null;
 
   const renderStatIcon = (iconName: string) => {
-    const iconClass = "h-7 w-7";
+    const iconClass = "h-6 w-6 sm:h-7 sm:w-7";
     const style = { color: BRAND_BLUE };
     switch (iconName) {
       case "calendar":
@@ -163,7 +161,8 @@ export default function ProjectDetails({
     setLightboxIndex((prev) => (prev + 1) % activeGalleryList.length);
   const handlePrev = () =>
     setLightboxIndex(
-      (prev) => (prev - 1 + activeGalleryList.length) % activeGalleryList.length
+      (prev) =>
+        (prev - 1 + activeGalleryList.length) % activeGalleryList.length,
     );
 
   /* Master gallery arrays */
@@ -176,15 +175,12 @@ export default function ProjectDetails({
   const activeMainImage = activeMainImg || detailData.mainImage;
 
   const projectGallery = detailData.galleryImages || [];
-  // Triple the set so the carousel always has room to glide into, creating
-  // a seamless, repeating loop in both directions.
+
   const loopedGallery =
     projectGallery.length > 0
       ? [...projectGallery, ...projectGallery, ...projectGallery]
       : [];
 
-  /* Center the scroller on the middle copy once on mount, so the user can
-     scroll/slide either direction and the loop feels infinite. */
   useEffect(() => {
     const el = scrollerRef.current;
     if (!el || projectGallery.length === 0) return;
@@ -195,9 +191,6 @@ export default function ProjectDetails({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [projectGallery.length]);
 
-  /* When a smooth scroll settles near either edge of the tripled strip,
-     silently (no animation) snap back to the equivalent spot in the middle
-     copy — this is what makes the loop feel endless. */
   const handleScrollSettle = useCallback(() => {
     const el = scrollerRef.current;
     if (!el || projectGallery.length === 0 || isResettingRef.current) return;
@@ -244,17 +237,17 @@ export default function ProjectDetails({
         />
       )}
 
-      <section className="bg-[#FAFBFD] py-14 md:py-20 text-[#0F172A]">
-        <div className="mx-auto max-w-[1180px] px-4 sm:px-6">
-          {/* ============================================================ */}
-          {/* TOP HERO — left/right columns stretch to equal height         */}
-          {/* ============================================================ */}
+      <section className="bg-[#FAFBFD] py-12 text-[#0F172A] sm:py-14 md:py-20">
+        <div className="mx-auto max-w-[1250px] px-4 sm:px-6">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-stretch">
             {/* Left content column */}
-            <ScrollReveal direction="left" className="flex h-full flex-col justify-between lg:col-span-5">
+            <ScrollReveal
+              direction="left"
+              className="flex h-full flex-col items-center text-center justify-between lg:items-start lg:text-left lg:col-span-5"
+            >
               <div>
                 <div
-                  className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold"
+                  className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold sm:text-sm"
                   style={{ backgroundColor: "#EAF0FE", color: BRAND_BLUE }}
                 >
                   <Building2 className="h-4 w-4" />
@@ -264,26 +257,35 @@ export default function ProjectDetails({
                 </div>
 
                 <h1
-                  className="mt-4 text-[36px] font-black leading-[1.12] sm:text-[40px] lg:text-[46px]"
+                  className="mt-4 text-[28px] font-black leading-[1.15] sm:text-[36px] lg:text-[46px] lg:leading-[1.12]"
                   style={{ color: NAVY }}
                 >
                   {detailData.title}
                 </h1>
 
-                <div className="mt-3 flex items-center gap-2 text-sm font-bold" style={{ color: NAVY }}>
-                  <MapPin className="h-[18px] w-[18px]" style={{ color: BRAND_BLUE }} />
+                <div
+                  className="mt-3 flex items-center justify-center gap-2 text-sm font-bold lg:justify-start"
+                  style={{ color: NAVY }}
+                >
+                  <MapPin
+                    className="h-[18px] w-[18px] shrink-0"
+                    style={{ color: BRAND_BLUE }}
+                  />
                   <span>{detailData.location}</span>
                 </div>
 
-                <p className="mt-4 max-w-md text-[15px] font-medium leading-[1.9]" style={{ color: MUTED }}>
+                <p
+                  className="mt-4 max-w-full text-[14px] font-medium leading-[1.8] sm:max-w-md sm:text-[15px] sm:leading-[1.9]"
+                  style={{ color: MUTED }}
+                >
                   {detailData.description}
                 </p>
               </div>
 
-              <div className="mt-8 flex flex-wrap items-center gap-3">
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
                 <Link
                   href="/contact-us"
-                  className="inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-bold text-[#0F2010] transition-transform hover:scale-[1.02]"
+                  className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-bold text-[#0F2010] transition-transform hover:scale-[1.02] sm:px-6 sm:py-3.5"
                   style={{ backgroundColor: LIME }}
                 >
                   <FileText className="h-[18px] w-[18px]" />
@@ -291,7 +293,7 @@ export default function ProjectDetails({
                 </Link>
                 <Link
                   href="/project"
-                  className="inline-flex items-center gap-2 rounded-full border-2 bg-white px-6 py-3.5 text-sm font-bold transition-colors hover:bg-slate-50"
+                  className="inline-flex items-center gap-2 rounded-full border-2 bg-white px-5 py-3 text-sm font-bold transition-colors hover:bg-slate-50 sm:px-6 sm:py-3.5"
                   style={{ borderColor: "#C9D8FB", color: BRAND_BLUE }}
                 >
                   <ArrowLeft className="h-[18px] w-[18px]" />
@@ -301,9 +303,12 @@ export default function ProjectDetails({
             </ScrollReveal>
 
             {/* Right media column — fills exactly the same height as the left */}
-            <ScrollReveal direction="right" className="flex h-full flex-col gap-3 lg:col-span-7">
+            <ScrollReveal
+              direction="right"
+              className="flex h-full flex-col gap-3 lg:col-span-7"
+            >
               <div
-                className="group relative w-full flex-1 min-h-[260px] cursor-pointer overflow-hidden rounded-[26px] bg-slate-100 shadow-sm"
+                className="group relative w-full flex-1 min-h-[220px] cursor-pointer overflow-hidden rounded-[20px] bg-slate-100 shadow-sm sm:min-h-[280px] sm:rounded-[26px]"
                 onClick={() => openLightbox(fullHeroGallery, 0)}
               >
                 <Image
@@ -317,25 +322,31 @@ export default function ProjectDetails({
                 />
                 <button
                   aria-label="Expand Image"
-                  className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-lg bg-white/80 text-slate-700 backdrop-blur-sm transition-colors hover:bg-white"
+                  className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-lg bg-white/80 text-slate-700 backdrop-blur-sm transition-colors hover:bg-white sm:right-4 sm:top-4 sm:h-9 sm:w-9"
                 >
                   <Maximize2 className="h-4 w-4" />
                 </button>
               </div>
 
-              <div className="grid grid-cols-5 gap-2 sm:gap-3">
+              <div className="grid grid-cols-5 gap-1.5 sm:gap-3">
                 {visibleThumbnails.map((img, idx) => {
                   const isActive = img === activeMainImage;
                   return (
                     <div
                       key={idx}
                       onClick={() => setActiveMainImg(img)}
-                      className={`group relative aspect-square w-full cursor-pointer overflow-hidden rounded-2xl bg-slate-100 ${
+                      className={`group relative aspect-square w-full cursor-pointer overflow-hidden rounded-xl sm:rounded-2xl bg-slate-100 ${
                         isActive
                           ? "ring-2 ring-offset-1"
                           : "border border-slate-100"
                       }`}
-                      style={isActive ? ({ "--tw-ring-color": BRAND_BLUE } as React.CSSProperties) : undefined}
+                      style={
+                        isActive
+                          ? ({
+                              "--tw-ring-color": BRAND_BLUE,
+                            } as React.CSSProperties)
+                          : undefined
+                      }
                     >
                       <Image
                         src={img}
@@ -352,15 +363,15 @@ export default function ProjectDetails({
                   <button
                     type="button"
                     aria-expanded={showMoreBelowMain}
-                    className="relative flex aspect-square w-full cursor-pointer items-center justify-center rounded-2xl text-white transition-opacity hover:opacity-90"
+                    className="relative flex aspect-square w-full cursor-pointer items-center justify-center rounded-xl sm:rounded-2xl text-white transition-opacity hover:opacity-90"
                     style={{ backgroundColor: BRAND_BLUE_SOLID }}
                     onClick={() => setShowMoreBelowMain((prev) => !prev)}
                   >
                     <div className="text-center leading-tight">
-                      <span className="block text-lg font-black">
+                      <span className="block text-sm sm:text-lg font-black">
                         +{detailData.moreImagesCount || extraThumbnails.length}
                       </span>
-                      <span className="text-xs font-bold">
+                      <span className="text-[10px] sm:text-sm font-bold">
                         {showMoreBelowMain ? "Hide" : "More"}
                       </span>
                     </div>
@@ -374,7 +385,10 @@ export default function ProjectDetails({
           {showMoreBelowMain && extraThumbnails.length > 0 && (
             <div className="mt-5 rounded-3xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6">
               <div className="flex items-center justify-between pb-4">
-                <span className="text-sm font-black uppercase tracking-widest" style={{ color: BRAND_BLUE }}>
+                <span
+                  className="text-xs font-black uppercase tracking-widest sm:text-sm"
+                  style={{ color: BRAND_BLUE }}
+                >
                   Additional Project Photos
                 </span>
                 <button
@@ -396,7 +410,13 @@ export default function ProjectDetails({
                           ? "ring-2 ring-offset-2 ring-offset-blue-50"
                           : "border border-slate-200"
                       }`}
-                      style={isActive ? ({ "--tw-ring-color": BRAND_BLUE } as React.CSSProperties) : undefined}
+                      style={
+                        isActive
+                          ? ({
+                              "--tw-ring-color": BRAND_BLUE,
+                            } as React.CSSProperties)
+                          : undefined
+                      }
                     >
                       <Image
                         src={img}
@@ -412,70 +432,108 @@ export default function ProjectDetails({
             </div>
           )}
 
-          {/* ============================================================ */}
-          {/* STATS BAR                                                     */}
-          {/* ============================================================ */}
           <ScrollReveal direction="up">
-          <div className="mt-10 rounded-3xl border border-slate-100 bg-white p-6 shadow-[0_4px_25px_rgba(0,0,0,0.03)] sm:p-7">
-            <div className="grid grid-cols-2 gap-6 divide-y divide-slate-100 sm:grid-cols-3 sm:divide-y-0 lg:grid-cols-5 lg:divide-x">
-              {detailData.stats?.map((stat, idx) => (
-                <div
-                  key={stat.id || idx}
-                  className={`flex flex-col items-center text-center ${idx !== 0 ? "pt-5 sm:pt-0 lg:pl-5" : ""}`}
-                >
-                  <div className="flex h-14 w-14 items-center justify-center rounded-xl" style={{ backgroundColor: "#EAF0FE" }}>
-                    {renderStatIcon(stat.iconName)}
+            <div className="mt-10 rounded-3xl border border-slate-100 bg-white p-5 shadow-[0_4px_25px_rgba(0,0,0,0.03)] sm:p-7">
+              <div className="flex flex-wrap items-stretch justify-center gap-x-6 gap-y-6  lg:flex-nowrap sm:gap-x-4">
+                {detailData.stats?.map((stat, idx) => (
+                  <div
+                    key={stat.id || idx}
+                    className="flex w-[40%] min-w-[120px] flex-1 flex-col items-center justify-start text-center sm:w-[28%] lg:w-auto lg:border-l lg:border-slate-100 lg:px-4 lg:first:border-l-0 lg:first:pl-0"
+                  >
+                    <div
+                      className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl sm:h-14 sm:w-14"
+                      style={{ backgroundColor: "#EAF0FE" }}
+                    >
+                      {renderStatIcon(stat.iconName)}
+                    </div>
+                    <span
+                      className="mt-3 text-[22px] font-black leading-none sm:text-[26px] lg:text-[30px]"
+                      style={{ color: BRAND_BLUE_SOLID }}
+                    >
+                      <AnimatedCounter value={stat.value} />
+                    </span>
+                    <span className="mt-1.5 text-xs font-bold leading-snug text-[#64748B] sm:text-sm">
+                      {stat.label}
+                    </span>
                   </div>
-                  <span className="mt-3 text-[30px] font-black" style={{ color: BRAND_BLUE_SOLID }}>
-                    <AnimatedCounter value={stat.value} />
-                  </span>
-                  <span className="mt-0.5 text-sm font-bold text-[#64748B]">{stat.label}</span>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
           </ScrollReveal>
 
-          {/* ============================================================ */}
-          {/* OVERVIEW + META INFO                                          */}
-          {/* ============================================================ */}
-          <div className="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-start">
+          <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-start lg:gap-10">
             <ScrollReveal direction="left" className="lg:col-span-7">
               <SectionLabel>Project Overview</SectionLabel>
-              <p className="mt-4 text-[15px] max-w-[400px] font-medium leading-[1.9]" style={{ color: MUTED }}>
+              <p
+                className="mx-auto mt-4 max-w-full text-center text-[14px] font-medium leading-[1.8] sm:max-w-[400px] sm:text-[15px] sm:leading-[1.9] lg:mx-0 lg:text-left"
+                style={{ color: MUTED }}
+              >
                 {detailData.overview}
               </p>
             </ScrollReveal>
 
-            <ScrollReveal direction="right" className="lg:col-span-5 ">
-              <div className="space-y-4 rounded-3xl p-7 sm:p-8" style={{ backgroundColor: "#EEF3FE" }}>
+            <ScrollReveal direction="right" className="lg:col-span-5">
+              <div
+                className="space-y-4 rounded-3xl p-3 sm:p-7 lg:p-8"
+                style={{ backgroundColor: "#EEF3FE" }}
+              >
                 {[
-                  { icon: Tag, label: "Project Type", value: detailData.metaInfo?.projectType },
-                  { icon: MapPin, label: "Location", value: detailData.metaInfo?.location },
-                  { icon: DollarSign, label: "Project Value", value: detailData.metaInfo?.projectValue },
-                  { icon: Wrench, label: "Services Provided", value: detailData.metaInfo?.servicesProvided },
-                  { icon: UserCheck, label: "Client", value: detailData.metaInfo?.client },
+                  {
+                    icon: Tag,
+                    label: "Project Type",
+                    value: detailData.metaInfo?.projectType,
+                  },
+                  {
+                    icon: MapPin,
+                    label: "Location",
+                    value: detailData.metaInfo?.location,
+                  },
+                  {
+                    icon: DollarSign,
+                    label: "Project Value",
+                    value: detailData.metaInfo?.projectValue,
+                  },
+                  {
+                    icon: Wrench,
+                    label: "Services Provided",
+                    value: detailData.metaInfo?.servicesProvided,
+                  },
+                  {
+                    icon: UserCheck,
+                    label: "Client",
+                    value: detailData.metaInfo?.client,
+                  },
                 ].map((row, i) => (
-                  <div key={i} className="grid grid-cols-[32px_1fr] items-start gap-x-3 sm:grid-cols-[36px_130px_1fr]">
+                  <div
+                    key={i}
+                    className="grid items-center justify-items-center text-center gap-x-3 gap-y-0.5 sm:items-start sm:justify-items-start sm:text-left sm:grid-cols-[36px_130px_1fr] sm:gap-y-0"
+                  >
                     <div
                       className="flex h-9 w-9 items-center justify-center rounded-full"
                       style={{ backgroundColor: "#DDE7FD" }}
                     >
-                      <row.icon className="h-[18px] w-[18px]" style={{ color: BRAND_BLUE }} />
+                      <row.icon
+                        className="h-[18px] w-[18px]"
+                        style={{ color: BRAND_BLUE }}
+                      />
                     </div>
-                    <span className="pt-1 text-sm font-bold" style={{ color: NAVY }}>
+
+                    <span
+                      className="pt-1.5 text-sm font-bold lg:pt-1"
+                      style={{ color: NAVY }}
+                    >
                       {row.label}
                     </span>
-                    <span className="pt-1 text-sm font-medium text-[#5A6B85]">{row.value}</span>
+
+                    <span className="pb-1.5 text-sm font-medium text-[#5A6B85] lg:pb-0 lg:pt-1">
+                      {row.value}
+                    </span>
                   </div>
                 ))}
               </div>
             </ScrollReveal>
           </div>
 
-          {/* ============================================================ */}
-          {/* PROJECT GALLERY — smooth infinite-scroll carousel            */}
-          {/* ============================================================ */}
           <div className="mt-12">
             <SectionLabel>Project Gallery</SectionLabel>
 
@@ -483,21 +541,21 @@ export default function ProjectDetails({
               <div
                 ref={scrollerRef}
                 onScroll={onScroll}
-                className="flex gap-5 overflow-x-auto scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                className="flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
               >
                 {loopedGallery.map((img, i) => {
                   const realIndex = i % projectGallery.length;
                   return (
                     <div
                       key={i}
-                      className="group relative aspect-[4/3] w-[calc(100%-1.25rem)] shrink-0 cursor-pointer overflow-hidden rounded-2xl bg-slate-100 shadow-sm sm:w-[calc(50%-0.65rem)] lg:w-[calc(25%-0.95rem)]"
+                      className="group relative aspect-[4/3] w-full shrink-0 snap-start cursor-pointer overflow-hidden rounded-2xl bg-slate-100 shadow-sm sm:w-[calc(50%-10px)] lg:w-[calc(25%-15px)]"
                       onClick={() => openLightbox(projectGallery, realIndex)}
                     >
                       <Image
                         src={img}
                         alt={`${detailData.title} gallery ${realIndex + 1}`}
                         fill
-                        sizes="(min-width: 1024px) 288px, (min-width: 640px) 560px, 100vw"
+                        sizes="(min-width: 1024px) 288px, (min-width: 640px) 50vw, 100vw"
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
@@ -509,36 +567,41 @@ export default function ProjectDetails({
                 <>
                   <button
                     onClick={() => slideBy(-1)}
-                    className="absolute -left-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full text-white shadow-lg transition-transform hover:scale-110"
+                    className="absolute -left-3 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full text-white shadow-lg transition-transform hover:scale-110 sm:-left-4 sm:h-11 sm:w-11"
                     style={{ backgroundColor: BRAND_BLUE_SOLID }}
                     aria-label="Slide Left"
                   >
-                    <ChevronLeft className="h-6 w-6" />
+                    <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
                   </button>
                   <button
                     onClick={() => slideBy(1)}
-                    className="absolute -right-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full text-white shadow-lg transition-transform hover:scale-110"
+                    className="absolute -right-3 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full text-white shadow-lg transition-transform hover:scale-110 sm:-right-4 sm:h-11 sm:w-11"
                     style={{ backgroundColor: BRAND_BLUE_SOLID }}
                     aria-label="Slide Right"
                   >
-                    <ChevronRight className="h-6 w-6" />
+                    <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
                   </button>
                 </>
               )}
             </div>
           </div>
 
-          {/* ============================================================ */}
-          {/* SCOPE OF WORK                                                 */}
-          {/* ============================================================ */}
-          <div className="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-12">
+          <div className="mt-14 grid grid-cols-1 gap-8 lg:mt-16 lg:grid-cols-12 lg:gap-10">
             <ScrollReveal direction="left" className="lg:col-span-7">
               <SectionLabel>Project Work</SectionLabel>
 
-              <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div className="mt-6 grid grid-cols-1 gap-3.5 sm:grid-cols-2 sm:gap-4">
                 {detailData.scopeOfWork?.map((item) => (
-                  <div key={item.id} className="flex items-start gap-2.5 text-sm font-bold" style={{ color: "#334155" }}>
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0" style={{ color: "#65A30D" }} strokeWidth={2} />
+                  <div
+                    key={item.id}
+                    className="flex items-start  gap-2.5 text-sm font-bold lg:justify-start"
+                    style={{ color: "#334155" }}
+                  >
+                    <CheckCircle2
+                      className="mt-0.5 h-5 w-5 shrink-0"
+                      style={{ color: "#65A30D" }}
+                      strokeWidth={2}
+                    />
                     <span>{item.text}</span>
                   </div>
                 ))}
@@ -546,7 +609,7 @@ export default function ProjectDetails({
             </ScrollReveal>
 
             <ScrollReveal direction="right" className="relative lg:col-span-5">
-              <div className="relative aspect-[4/3] w-full  rounded-[26px] bg-slate-100 shadow-md">
+              <div className="relative mx-2 aspect-[4/3] w-auto rounded-[20px] bg-slate-100 shadow-md sm:mx-0 sm:w-full sm:rounded-[26px]">
                 <Image
                   src={detailData.scopeImage || detailData.mainImage}
                   alt="Scope of work details"
@@ -556,13 +619,16 @@ export default function ProjectDetails({
                 />
                 {/* Badge sits INSIDE the image bounds, bottom-left */}
                 <div
-                  className="absolute -bottom-4 max-w-[300px] -left-4 right-14 flex items-center gap-3 rounded-2xl p-4 text-white shadow-xl"
+                  className="absolute -bottom-4 left-2 right-2 flex items-center gap-3 rounded-2xl p-3.5 text-white shadow-xl sm:left-0 sm:right-14 sm:max-w-[300px] sm:p-4"
                   style={{ backgroundColor: BRAND_BLUE_SOLID }}
                 >
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white">
-                    <ShieldCheck className="h-7 w-7" style={{ color: BRAND_BLUE_SOLID }} />
+                    <ShieldCheck
+                      className="h-6 w-6 sm:h-7 sm:w-7"
+                      style={{ color: BRAND_BLUE_SOLID }}
+                    />
                   </div>
-                  <p className="text-sm font-semibold leading-tight">
+                  <p className="text-[13px] font-semibold leading-tight sm:text-sm">
                     {detailData.scopeBadgeText ||
                       "All systems tested for safety, efficiency & long-term reliability."}
                   </p>
@@ -570,49 +636,66 @@ export default function ProjectDetails({
               </div>
             </ScrollReveal>
           </div>
-
-          {/* ============================================================ */}
-          {/* CHALLENGE & SOLUTION — one unified card, center divider       */}
-          {/* ============================================================ */}
           <ScrollReveal direction="up">
-          <div className="mt-16 rounded-3xl p-3 sm:p-9" style={{ backgroundColor: "#EEF2FC" }}>
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 ">
-              <div className="flex flex-col  sm:flex-row items-start gap-4">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl" style={{ backgroundColor: "#DCE6FD" }}>
-                  <AlertTriangle className="h-[22px] w-[22px]" style={{ color: BRAND_BLUE }} />
+            <div
+              className="mt-16 rounded-3xl p-5 sm:p-9"
+              style={{ backgroundColor: "#EEF2FC" }}
+            >
+              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 ">
+                <div className="flex flex-col items-center gap-4 text-center lg:flex-row lg:items-start lg:text-left">
+                  <div
+                    className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl"
+                    style={{ backgroundColor: "#DCE6FD" }}
+                  >
+                    <AlertTriangle
+                      className="h-[22px] w-[22px]"
+                      style={{ color: BRAND_BLUE }}
+                    />
+                  </div>
+                  <div>
+                    <span
+                      className="text-xs font-black uppercase tracking-widest sm:text-sm"
+                      style={{ color: BRAND_BLUE }}
+                    >
+                      The Challenge
+                    </span>
+                    <p
+                      className="mt-2.5 text-[14px] font-medium leading-relaxed sm:text-[15px]"
+                      style={{ color: MUTED }}
+                    >
+                      {detailData.challenge}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <span className="text-sm font-black uppercase tracking-widest" style={{ color: BRAND_BLUE }}>
-                    The Challenge
-                  </span>
-                  <p className="mt-2.5 text-[15px] font-medium leading-relaxed" style={{ color: MUTED }}>
-                    {detailData.challenge}
-                  </p>
-                </div>
-              </div>
 
-              <div className="flex flex-col sm:flex-row sm:border-l-[0.5px] border-l-gray-300 sm:items-start gap-4 sm:pl-8">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-lime-100">
-                  <Lightbulb className="h-[22px] w-[22px]" style={{ color: "#65A30D" }} />
-                </div>
-                <div>
-                  <span className="text-sm font-black uppercase tracking-widest" style={{ color: "#65A30D" }}>
-                    Our Solution
-                  </span>
-                  <p className="mt-2.5 text-[15px] font-medium leading-relaxed" style={{ color: MUTED }}>
-                    {detailData.solution}
-                  </p>
+                <div className="flex flex-col items-center gap-4 text-center lg:flex-row lg:border-l-[0.5px] border-l-gray-300 lg:items-start lg:pl-8 lg:text-left">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-lime-100">
+                    <Lightbulb
+                      className="h-[22px] w-[22px]"
+                      style={{ color: "#65A30D" }}
+                    />
+                  </div>
+                  <div>
+                    <span
+                      className="text-xs font-black uppercase tracking-widest sm:text-sm"
+                      style={{ color: "#65A30D" }}
+                    >
+                      Our Solution
+                    </span>
+                    <p
+                      className="mt-2.5 text-[14px] font-medium leading-relaxed sm:text-[15px]"
+                      style={{ color: MUTED }}
+                    >
+                      {detailData.solution}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* LIGHTBOX MODAL                                                */}
-      {/* ============================================================ */}
       {lightboxOpen && activeGalleryList.length > 0 && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 p-4 backdrop-blur-sm">
           <button

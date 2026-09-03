@@ -29,6 +29,11 @@ export default function Header() {
     setOpenDropdown(openDropdown === label ? null : label);
   };
 
+  const closeMenu = () => {
+    setMobileMenuOpen(false);
+    setOpenDropdown(null);
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full px-2 pt-2 sm:px-3 sm:pt-3">
       <div className="mx-auto flex min-h-[72px] w-full max-w-[1400px] items-center justify-between rounded-[26px] bg-[#031B3D] px-5 py-3 text-white shadow-[0_8px_25px_rgba(3,27,61,0.22)] sm:min-h-[82px] sm:px-7 lg:px-10">
@@ -142,98 +147,148 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="mx-2 mt-2 overflow-hidden rounded-[22px] bg-[#031B3D] px-5 pb-5 pt-3 text-white shadow-xl sm:mx-3 lg:hidden">
-          <div className="flex flex-col">
-            {nav.map((item, index) => {
-              const isActive = pathname === item.href;
-              const hasChildren = item.children && item.children.length > 0;
+      {/* Mobile Menu Overlay Backdrop */}
+      <div
+        onClick={closeMenu}
+        aria-hidden="true"
+        className={`fixed inset-0 z-40 bg-black/60 backdrop-blur-[2px] transition-opacity duration-300 ease-in-out lg:hidden ${
+          mobileMenuOpen
+            ? "visible opacity-100"
+            : "invisible opacity-0"
+        }`}
+      />
 
-              return (
-                <div
-                  key={index}
-                  className="border-b border-white/10 last:border-0"
-                >
-                  <div className="flex items-center justify-between">
-                    <Link
-                      href={item.href || "#"}
-                      onClick={() => !hasChildren && setMobileMenuOpen(false)}
-                      className={`relative py-4 text-[15px] font-semibold transition-colors duration-300 ${isActive ? "text-[#A3E635]" : "text-white hover:text-[#A3E635]"}`}
+      {/* Mobile Menu Drawer - slides in from left, does not affect page layout */}
+      <div
+        className={`fixed left-0 top-0 z-50 flex h-full w-[82%] max-w-[340px] flex-col overflow-y-auto bg-[#031B3D] text-white shadow-2xl transition-transform duration-300 ease-in-out lg:hidden ${
+          mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        {/* Drawer Header */}
+        <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
+          <Link href="/" onClick={closeMenu} className="flex items-center">
+            {site.logo?.light ? (
+              <img
+                src={site.logo.light}
+                alt={site.siteName || "Aquafix"}
+                className="h-8 w-auto object-contain"
+              />
+            ) : (
+              <span className="text-xl font-extrabold tracking-tight text-white">
+                Aqua<span className="text-[#A3E635]">fix</span>
+              </span>
+            )}
+          </Link>
+
+          <button
+            type="button"
+            onClick={closeMenu}
+            className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-white transition-colors duration-300 hover:bg-white/10 hover:text-[#A3E635]"
+            aria-label="Close Menu"
+          >
+            <X className="h-5 w-5" />
+          </button>
+        </div>
+
+        {/* Drawer Nav */}
+        <div className="flex flex-1 flex-col px-5 py-3">
+          {nav.map((item, index) => {
+            const isActive = pathname === item.href;
+            const hasChildren = item.children && item.children.length > 0;
+
+            return (
+              <div
+                key={index}
+                className="border-b border-white/10 last:border-0"
+              >
+                <div className="flex items-center justify-between">
+                  <Link
+                    href={item.href || "#"}
+                    onClick={() => !hasChildren && closeMenu()}
+                    className={`relative py-4 text-[15px] font-semibold transition-colors duration-300 ${isActive ? "text-[#A3E635]" : "text-white hover:text-[#A3E635]"}`}
+                  >
+                    {item.label}
+                    <span
+                      className={`absolute bottom-2 left-0 h-[2px] rounded-full bg-[#A3E635] transition-all duration-500 ease-out ${isActive ? "w-full" : "w-0"}`}
+                    />
+                  </Link>
+
+                  {hasChildren && (
+                    <button
+                      type="button"
+                      onClick={() => toggleDropdown(item.label)}
+                      className="flex h-8 w-8 items-center justify-center rounded-full hover:bg-white/5"
                     >
-                      {item.label}
-                      <span
-                        className={`absolute bottom-2 left-0 h-[2px] rounded-full bg-[#A3E635] transition-all duration-500 ease-out ${isActive ? "w-full" : "w-0"}`}
+                      <ChevronDown
+                        className={`h-4 w-4 text-gray-300 transition-transform duration-300 ${openDropdown === item.label ? "rotate-180" : ""}`}
                       />
-                    </Link>
-
-                    {hasChildren && (
-                      <button
-                        type="button"
-                        onClick={() => toggleDropdown(item.label)}
-                        className="flex h-8 w-8 items-center justify-center rounded-full hover:bg-white/5"
-                      >
-                        <ChevronDown
-                          className={`h-4 w-4 text-gray-300 transition-transform duration-300 ${openDropdown === item.label ? "rotate-180" : ""}`}
-                        />
-                      </button>
-                    )}
-                  </div>
-
-                  {hasChildren && openDropdown === item.label && (
-                    <div className="mb-3 ml-3 flex flex-col rounded-xl bg-white/5 px-4 py-2">
-                      {item.children?.map((child, childIndex) => (
-                        <Link
-                          key={childIndex}
-                          href={child.href}
-                          onClick={() => setMobileMenuOpen(false)}
-                          className="py-2.5 text-sm font-medium text-gray-300 transition-colors duration-200 hover:text-[#A3E635]"
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
+                    </button>
                   )}
                 </div>
-              );
-            })}
-          </div>
 
-          {/* Mobile Contact */}
-          <div className="mt-4 flex flex-col gap-3 border-t border-white/10 pt-4">
-            {site.TopBar?.phone && (
-              <a
-                href={site.TopBar.phoneHref || `tel:${site.TopBar.phone}`}
-                className="flex items-center gap-3 rounded-xl border border-[#24446D] bg-[#061F45] p-3"
-              >
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#102E50] text-[#A3E635]">
-                  <Phone className="h-4 w-4" />
-                </div>
-
-                <div className="flex flex-col">
-                  <span className="text-[10px] uppercase tracking-wider text-gray-400">
-                    Call Us
-                  </span>
-                  <span className="text-sm font-bold text-white">
-                    {site.TopBar.phone}
-                  </span>
-                </div>
-              </a>
-            )}
-
-            {site.TopBar?.ctaButton && (
-              <Link
-                href={site.TopBar.ctaButton.href || "/login"}
-                onClick={() => setMobileMenuOpen(false)}
-                className="flex w-full items-center justify-center gap-2 rounded-full bg-[#A3E635] py-3 text-[15px] font-bold text-[#031B3D]"
-              >
-                <UserRound className="h-[18px] w-[18px]" />
-                <span>{site.TopBar.ctaButton.label || "Sign In"}</span>
-              </Link>
-            )}
-          </div>
+                {hasChildren && (
+                  <div
+                    className={`grid overflow-hidden transition-all duration-300 ease-in-out ${
+                      openDropdown === item.label
+                        ? "grid-rows-[1fr] opacity-100"
+                        : "grid-rows-[0fr] opacity-0"
+                    }`}
+                  >
+                    <div className="min-h-0 overflow-hidden">
+                      <div className="mb-3 ml-3 flex flex-col rounded-xl bg-white/5 px-4 py-2">
+                        {item.children?.map((child, childIndex) => (
+                          <Link
+                            key={childIndex}
+                            href={child.href}
+                            onClick={closeMenu}
+                            className="py-2.5 text-sm font-medium text-gray-300 transition-colors duration-200 hover:text-[#A3E635]"
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
-      )}
+
+        {/* Drawer Contact */}
+        <div className="mt-auto flex flex-col gap-3 border-t border-white/10 p-5">
+          {site.TopBar?.phone && (
+            <a
+              href={site.TopBar.phoneHref || `tel:${site.TopBar.phone}`}
+              className="flex items-center gap-3 rounded-xl border border-[#24446D] bg-[#061F45] p-3"
+            >
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#102E50] text-[#A3E635]">
+                <Phone className="h-4 w-4" />
+              </div>
+
+              <div className="flex flex-col">
+                <span className="text-[10px] uppercase tracking-wider text-gray-400">
+                  Call Us
+                </span>
+                <span className="text-sm font-bold text-white">
+                  {site.TopBar.phone}
+                </span>
+              </div>
+            </a>
+          )}
+
+          {site.TopBar?.ctaButton && (
+            <Link
+              href={site.TopBar.ctaButton.href || "/login"}
+              onClick={closeMenu}
+              className="flex w-full items-center justify-center gap-2 rounded-full bg-[#A3E635] py-3 text-[15px] font-bold text-[#031B3D]"
+            >
+              <UserRound className="h-[18px] w-[18px]" />
+              <span>{site.TopBar.ctaButton.label || "Sign In"}</span>
+            </Link>
+          )}
+        </div>
+      </div>
     </header>
   );
 }

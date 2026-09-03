@@ -150,7 +150,7 @@ export default function AboutSection({
   };
 
   return (
-    <section className="relative w-full overflow-hidden bg-white pb-8 md:py-12">
+    <section className="relative w-full overflow-hidden bg-white py-8 md:py-12">
       <div className="mx-auto max-w-[1300px] px-2 sm:px-6 lg:px-8">
         {/* 1. TOP CENTERED HEADER SECTION */}
         <SectionHeader

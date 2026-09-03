@@ -64,8 +64,6 @@ export default function TestimonialSection({
   return (
     <section className="relative w-full overflow-hidden bg-white py-8 md:py-12">
       {/* PURE X-AXIS (HORIZONTAL) FLOAT WITH DYNAMIC SHADOW */}
-
-      {/* WATER DROP OVERLAY - TOP RIGHT */}
       {data.image && (
         <div className="pointer-events-none absolute right-0 top-0  w-36 select-none sm:w-48 lg:w-64">
           <img
