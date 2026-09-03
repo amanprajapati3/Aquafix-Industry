@@ -667,9 +667,13 @@
               {
                 "label": "instagram",
                 "href": "https://www.instagram.com/"
+              },
+              {
+                "label": "linkedin",
+                "href": "https://www.linkedin.com/"
               }
             ],
-            "copyright": "© 2025 Aquafix. All rights reserved. Designed by Uxpitter.",
+            "copyright": "Copyright © 2026. All rights reserved. Powered by Lestow.",
             "legalLinks": [
               {
                 "label": "Privacy Policy",
@@ -1242,7 +1246,16 @@
                 "breadcrumbCurrent": "Service Details",
                 "title": "plumbing-repairs",
                 "backgroundImage": "/plumberImage/image9.jpg",
-                "homeHref": "/"
+                "homeHref": "/",
+                "breadcrumbs": [
+                  {
+                    "label": "Services",
+                    "href": "/service"
+                  },
+                  {
+                    "label": "Service Details"
+                  }
+                ]
               },
               "hero": {
                 "title": {
@@ -1311,7 +1324,16 @@
                 "breadcrumbCurrent": "Service Details",
                 "title": "Drain Services",
                 "backgroundImage": "/plumberImage/image9.jpg",
-                "homeHref": "/"
+                "homeHref": "/",
+                "breadcrumbs": [
+                  {
+                    "label": "Services",
+                    "href": "/service"
+                  },
+                  {
+                    "label": "Service Details"
+                  }
+                ]
               },
               "hero": {
                 "title": {
@@ -1380,7 +1402,16 @@
                 "breadcrumbCurrent": "Service Details",
                 "title": "Water Heater Services",
                 "backgroundImage": "/plumberImage/image9.jpg",
-                "homeHref": "/"
+                "homeHref": "/",
+                "breadcrumbs": [
+                  {
+                    "label": "Services",
+                    "href": "/service"
+                  },
+                  {
+                    "label": "Service Details"
+                  }
+                ]
               },
               "hero": {
                 "title": {
@@ -1449,7 +1480,16 @@
                 "breadcrumbCurrent": "Service Details",
                 "title": "Pipe Iinstallation Replacement",
                 "backgroundImage": "/plumberImage/image9.jpg",
-                "homeHref": "/"
+                "homeHref": "/",
+                "breadcrumbs": [
+                  {
+                    "label": "Services",
+                    "href": "/service"
+                  },
+                  {
+                    "label": "Service Details"
+                  }
+                ]
               },
               "hero": {
                 "title": {
@@ -1518,7 +1558,16 @@
                 "breadcrumbCurrent": "Service Details",
                 "title": "Toilet Services",
                 "backgroundImage": "/plumberImage/image9.jpg",
-                "homeHref": "/"
+                "homeHref": "/",
+                "breadcrumbs": [
+                  {
+                    "label": "Services",
+                    "href": "/service"
+                  },
+                  {
+                    "label": "Service Details"
+                  }
+                ]
               },
               "hero": {
                 "title": {
@@ -1587,7 +1636,16 @@
                 "breadcrumbCurrent": "Service Details",
                 "title": "Kitchen Plumbing",
                 "backgroundImage": "/plumberImage/image9.jpg",
-                "homeHref": "/"
+                "homeHref": "/",
+                "breadcrumbs": [
+                  {
+                    "label": "Services",
+                    "href": "/service"
+                  },
+                  {
+                    "label": "Service Details"
+                  }
+                ]
               },
               "hero": {
                 "title": {
@@ -1656,7 +1714,16 @@
                 "breadcrumbCurrent": "Service Details",
                 "title": "Bathroom Plumbing",
                 "backgroundImage": "/plumberImage/image9.jpg",
-                "homeHref": "/"
+                "homeHref": "/",
+                "breadcrumbs": [
+                  {
+                    "label": "Services",
+                    "href": "/service"
+                  },
+                  {
+                    "label": "Service Details"
+                  }
+                ]
               },
               "hero": {
                 "title": {
@@ -1725,7 +1792,16 @@
                 "breadcrumbCurrent": "Service Details",
                 "title": "Leak Detection",
                 "backgroundImage": "/plumberImage/image9.jpg",
-                "homeHref": "/"
+                "homeHref": "/",
+                "breadcrumbs": [
+                  {
+                    "label": "Services",
+                    "href": "/service"
+                  },
+                  {
+                    "label": "Service Details"
+                  }
+                ]
               },
               "hero": {
                 "title": {
@@ -2035,7 +2111,16 @@
                 "breadcrumbCurrent": "Blogs Detail",
                 "title": "5 Signs You Need Professional Plumbing Help",
                 "backgroundImage": "/plumberImage/image9.jpg",
-                "homeHref": "/"
+                "homeHref": "/",
+                "breadcrumbs": [
+                  {
+                    "label": "Blog",
+                    "href": "/blog"
+                  },
+                  {
+                    "label": "Blog Details"
+                  }
+                ]
               },
               "post": {
                 "id": 1,
@@ -2075,15 +2160,31 @@
               },
               "sidebar": {
                 "categories": [
-                  { "name": "Plumbing Tips", "count": 12, "icon": "wrench" },
-                  { "name": "Maintenance", "count": 8, "icon": "tools" },
+                  {
+                    "name": "Plumbing Tips",
+                    "count": 12,
+                    "icon": "wrench"
+                  },
+                  {
+                    "name": "Maintenance",
+                    "count": 8,
+                    "icon": "tools"
+                  },
                   {
                     "name": "Water Heaters",
                     "count": 6,
                     "icon": "water-heater"
                   },
-                  { "name": "Drain Cleaning", "count": 5, "icon": "drain" },
-                  { "name": "DIY Plumbing", "count": 7, "icon": "settings" }
+                  {
+                    "name": "Drain Cleaning",
+                    "count": 5,
+                    "icon": "drain"
+                  },
+                  {
+                    "name": "DIY Plumbing",
+                    "count": 7,
+                    "icon": "settings"
+                  }
                 ],
                 "cta": {
                   "title": "Need Expert Plumbing Help?",
@@ -2100,7 +2201,16 @@
                 "breadcrumbCurrent": "Blogs Detail",
                 "title": "How to Prevent Common Drain Blockages",
                 "backgroundImage": "/plumberImage/image9.jpg",
-                "homeHref": "/"
+                "homeHref": "/",
+                "breadcrumbs": [
+                  {
+                    "label": "Blog",
+                    "href": "/blog"
+                  },
+                  {
+                    "label": "Blog Details"
+                  }
+                ]
               },
               "post": {
                 "id": 2,
@@ -2140,15 +2250,31 @@
               },
               "sidebar": {
                 "categories": [
-                  { "name": "Plumbing Tips", "count": 12, "icon": "wrench" },
-                  { "name": "Maintenance", "count": 8, "icon": "tools" },
+                  {
+                    "name": "Plumbing Tips",
+                    "count": 12,
+                    "icon": "wrench"
+                  },
+                  {
+                    "name": "Maintenance",
+                    "count": 8,
+                    "icon": "tools"
+                  },
                   {
                     "name": "Water Heaters",
                     "count": 6,
                     "icon": "water-heater"
                   },
-                  { "name": "Drain Cleaning", "count": 5, "icon": "drain" },
-                  { "name": "DIY Plumbing", "count": 7, "icon": "settings" }
+                  {
+                    "name": "Drain Cleaning",
+                    "count": 5,
+                    "icon": "drain"
+                  },
+                  {
+                    "name": "DIY Plumbing",
+                    "count": 7,
+                    "icon": "settings"
+                  }
                 ],
                 "cta": {
                   "title": "Need Expert Plumbing Help?",
@@ -2165,7 +2291,16 @@
                 "breadcrumbCurrent": "Blogs Detail",
                 "title": "Choosing the Right Water Heater for Your Home",
                 "backgroundImage": "/plumberImage/image9.jpg",
-                "homeHref": "/"
+                "homeHref": "/",
+                "breadcrumbs": [
+                  {
+                    "label": "Blog",
+                    "href": "/blog"
+                  },
+                  {
+                    "label": "Blog Details"
+                  }
+                ]
               },
               "post": {
                 "id": 3,
@@ -2205,15 +2340,31 @@
               },
               "sidebar": {
                 "categories": [
-                  { "name": "Plumbing Tips", "count": 12, "icon": "wrench" },
-                  { "name": "Maintenance", "count": 8, "icon": "tools" },
+                  {
+                    "name": "Plumbing Tips",
+                    "count": 12,
+                    "icon": "wrench"
+                  },
+                  {
+                    "name": "Maintenance",
+                    "count": 8,
+                    "icon": "tools"
+                  },
                   {
                     "name": "Water Heaters",
                     "count": 6,
                     "icon": "water-heater"
                   },
-                  { "name": "Drain Cleaning", "count": 5, "icon": "drain" },
-                  { "name": "DIY Plumbing", "count": 7, "icon": "settings" }
+                  {
+                    "name": "Drain Cleaning",
+                    "count": 5,
+                    "icon": "drain"
+                  },
+                  {
+                    "name": "DIY Plumbing",
+                    "count": 7,
+                    "icon": "settings"
+                  }
                 ],
                 "cta": {
                   "title": "Need Expert Plumbing Help?",
@@ -2230,7 +2381,16 @@
                 "breadcrumbCurrent": "Blogs Detail",
                 "title": "DIY Plumbing Fixes You Can Do at Home",
                 "backgroundImage": "/plumberImage/image9.jpg",
-                "homeHref": "/"
+                "homeHref": "/",
+                "breadcrumbs": [
+                  {
+                    "label": "Blog",
+                    "href": "/blog"
+                  },
+                  {
+                    "label": "Blog Details"
+                  }
+                ]
               },
               "post": {
                 "id": 4,
@@ -2270,15 +2430,31 @@
               },
               "sidebar": {
                 "categories": [
-                  { "name": "Plumbing Tips", "count": 12, "icon": "wrench" },
-                  { "name": "Maintenance", "count": 8, "icon": "tools" },
+                  {
+                    "name": "Plumbing Tips",
+                    "count": 12,
+                    "icon": "wrench"
+                  },
+                  {
+                    "name": "Maintenance",
+                    "count": 8,
+                    "icon": "tools"
+                  },
                   {
                     "name": "Water Heaters",
                     "count": 6,
                     "icon": "water-heater"
                   },
-                  { "name": "Drain Cleaning", "count": 5, "icon": "drain" },
-                  { "name": "DIY Plumbing", "count": 7, "icon": "settings" }
+                  {
+                    "name": "Drain Cleaning",
+                    "count": 5,
+                    "icon": "drain"
+                  },
+                  {
+                    "name": "DIY Plumbing",
+                    "count": 7,
+                    "icon": "settings"
+                  }
                 ],
                 "cta": {
                   "title": "Need Expert Plumbing Help?",
@@ -2295,7 +2471,16 @@
                 "breadcrumbCurrent": "Blogs Detail",
                 "title": "The Benefits of Regular Plumbing Maintenance",
                 "backgroundImage": "/plumberImage/image9.jpg",
-                "homeHref": "/"
+                "homeHref": "/",
+                "breadcrumbs": [
+                  {
+                    "label": "Blog",
+                    "href": "/blog"
+                  },
+                  {
+                    "label": "Blog Details"
+                  }
+                ]
               },
               "post": {
                 "id": 5,
@@ -2335,15 +2520,31 @@
               },
               "sidebar": {
                 "categories": [
-                  { "name": "Plumbing Tips", "count": 12, "icon": "wrench" },
-                  { "name": "Maintenance", "count": 8, "icon": "tools" },
+                  {
+                    "name": "Plumbing Tips",
+                    "count": 12,
+                    "icon": "wrench"
+                  },
+                  {
+                    "name": "Maintenance",
+                    "count": 8,
+                    "icon": "tools"
+                  },
                   {
                     "name": "Water Heaters",
                     "count": 6,
                     "icon": "water-heater"
                   },
-                  { "name": "Drain Cleaning", "count": 5, "icon": "drain" },
-                  { "name": "DIY Plumbing", "count": 7, "icon": "settings" }
+                  {
+                    "name": "Drain Cleaning",
+                    "count": 5,
+                    "icon": "drain"
+                  },
+                  {
+                    "name": "DIY Plumbing",
+                    "count": 7,
+                    "icon": "settings"
+                  }
                 ],
                 "cta": {
                   "title": "Need Expert Plumbing Help?",
@@ -2360,7 +2561,16 @@
                 "breadcrumbCurrent": "Blogs Detail",
                 "title": "Top Plumbing Upgrades to Add Value to Your Home",
                 "backgroundImage": "/plumberImage/image9.jpg",
-                "homeHref": "/"
+                "homeHref": "/",
+                "breadcrumbs": [
+                  {
+                    "label": "Blog",
+                    "href": "/blog"
+                  },
+                  {
+                    "label": "Blog Details"
+                  }
+                ]
               },
               "post": {
                 "id": 6,
@@ -2400,15 +2610,31 @@
               },
               "sidebar": {
                 "categories": [
-                  { "name": "Plumbing Tips", "count": 12, "icon": "wrench" },
-                  { "name": "Maintenance", "count": 8, "icon": "tools" },
+                  {
+                    "name": "Plumbing Tips",
+                    "count": 12,
+                    "icon": "wrench"
+                  },
+                  {
+                    "name": "Maintenance",
+                    "count": 8,
+                    "icon": "tools"
+                  },
                   {
                     "name": "Water Heaters",
                     "count": 6,
                     "icon": "water-heater"
                   },
-                  { "name": "Drain Cleaning", "count": 5, "icon": "drain" },
-                  { "name": "DIY Plumbing", "count": 7, "icon": "settings" }
+                  {
+                    "name": "Drain Cleaning",
+                    "count": 5,
+                    "icon": "drain"
+                  },
+                  {
+                    "name": "DIY Plumbing",
+                    "count": 7,
+                    "icon": "settings"
+                  }
                 ],
                 "cta": {
                   "title": "Need Expert Plumbing Help?",
@@ -2480,15 +2706,21 @@
             "contactItems": [
               {
                 "iconTitle": "Phone",
-                "values": ["+91 98766 54321"]
+                "values": [
+                  "+91 98766 54321"
+                ]
               },
               {
                 "iconTitle": "Email",
-                "values": ["info@aquafix.com"]
+                "values": [
+                  "info@aquafix.com"
+                ]
               },
               {
                 "iconTitle": "Address",
-                "values": ["123 Plumbing Street, New York, NY 10001"]
+                "values": [
+                  "123 Plumbing Street, New York, NY 10001"
+                ]
               },
               {
                 "iconTitle": "Working Hours",
@@ -2967,10 +3199,22 @@
               "emailPlaceholder": "Enter your email address",
               "phonePlaceholder": "Enter your phone number",
               "typeOptions": [
-                { "label": "Residential Service", "value": "residential" },
-                { "label": "Commercial Service", "value": "commercial" },
-                { "label": "Emergency Repair", "value": "emergency" },
-                { "label": "Maintenance", "value": "maintenance" }
+                {
+                  "label": "Residential Service",
+                  "value": "residential"
+                },
+                {
+                  "label": "Commercial Service",
+                  "value": "commercial"
+                },
+                {
+                  "label": "Emergency Repair",
+                  "value": "emergency"
+                },
+                {
+                  "label": "Maintenance",
+                  "value": "maintenance"
+                }
               ],
               "requirementsPlaceholder": "Describe your plumbing requirements...",
               "submitButtonText": "Submit"
@@ -3426,7 +3670,10 @@
                 "designation": "Founder & CEO",
                 "description": "20+ years of experience in plumbing and business management.",
                 "image": "/personImage/men2.png",
-                "socials": { "linkedin": "#", "email": "david@aquafix.com" }
+                "socials": {
+                  "linkedin": "#",
+                  "email": "david@aquafix.com"
+                }
               },
               {
                 "id": 2,
@@ -3435,7 +3682,10 @@
                 "designation": "Lead Plumber",
                 "description": "Expert in residential & commercial plumbing with 15+ years of field experience.",
                 "image": "/personImage/men4.png",
-                "socials": { "linkedin": "#", "email": "michael@aquafix.com" }
+                "socials": {
+                  "linkedin": "#",
+                  "email": "michael@aquafix.com"
+                }
               },
               {
                 "id": 3,
@@ -3444,7 +3694,10 @@
                 "designation": "Plumbing Supervisor",
                 "description": "Specializes in project management and team leadership.",
                 "image": "/personImage/men4.png",
-                "socials": { "linkedin": "#", "email": "james@aquafix.com" }
+                "socials": {
+                  "linkedin": "#",
+                  "email": "james@aquafix.com"
+                }
               },
               {
                 "id": 4,
@@ -3453,7 +3706,10 @@
                 "designation": "Customer Service Manager",
                 "description": "Ensures smooth customer experience and support excellence.",
                 "image": "/personImage/women2.png",
-                "socials": { "linkedin": "#", "email": "sarah@aquafix.com" }
+                "socials": {
+                  "linkedin": "#",
+                  "email": "sarah@aquafix.com"
+                }
               },
               {
                 "id": 5,
@@ -3462,7 +3718,10 @@
                 "designation": "Senior Plumber",
                 "description": "Skilled in leak detection, pipe repair and system installations.",
                 "image": "/personImage/men4.png",
-                "socials": { "linkedin": "#", "email": "daniel@aquafix.com" }
+                "socials": {
+                  "linkedin": "#",
+                  "email": "daniel@aquafix.com"
+                }
               },
               {
                 "id": 6,
@@ -3470,8 +3729,11 @@
                 "name": "Chris Walker",
                 "designation": "Plumbing Technician",
                 "description": "Handles maintenance, inspections and plumbing system diagnostics.",
-                "image": "/personImage/men5.png",
-                "socials": { "linkedin": "#", "email": "chris@aquafix.com" }
+                "image": "/personImage/men3.png",
+                "socials": {
+                  "linkedin": "#",
+                  "email": "chris@aquafix.com"
+                }
               },
               {
                 "id": 7,
@@ -3480,7 +3742,10 @@
                 "designation": "Pipefitting Specialist",
                 "description": "Expert in pipefitting, repiping and water line solutions.",
                 "image": "/personImage/man1.png",
-                "socials": { "linkedin": "#", "email": "kevin@aquafix.com" }
+                "socials": {
+                  "linkedin": "#",
+                  "email": "kevin@aquafix.com"
+                }
               },
               {
                 "id": 8,
@@ -3489,7 +3754,10 @@
                 "designation": "Office Administrator",
                 "description": "Manages operations, scheduling and team coordination.",
                 "image": "/personImage/women2.png",
-                "socials": { "linkedin": "#", "email": "emily@aquafix.com" }
+                "socials": {
+                  "linkedin": "#",
+                  "email": "emily@aquafix.com"
+                }
               }
             ]
           }
@@ -3503,14 +3771,23 @@
               "breadcrumbHome": "Home",
               "breadcrumbCurrent": "Team Details",
               "backgroundImage": "/plumberImage/image9.jpg",
-              "homeHref": "/"
+              "homeHref": "/",
+              "breadcrumbs": [
+                {
+                  "label": "Team",
+                  "href": "/team"
+                },
+                {
+                  "label": "Team Details"
+                }
+              ]
             },
             "members": {
               "david-anderson": {
                 "slug": "david-anderson",
                 "designation": "FOUNDER & CEO",
                 "name": "David Anderson",
-                "image": "/personImage/men4.png",
+                "image": "/personImage/men2.png",
                 "experienceBadge": "20+ years of experience in plumbing and business management.",
                 "quickInfo": {
                   "joinedDate": "Joined Aquafix: March 2015",
@@ -3590,7 +3867,7 @@
                 "slug": "michael-roberts",
                 "designation": "LEAD PLUMBER",
                 "name": "Michael Roberts",
-                "image": "/personImage/men2.png",
+                "image": "/personImage/men4.png",
                 "experienceBadge": "15+ years of experience in residential and commercial plumbing services.",
                 "quickInfo": {
                   "joinedDate": "Joined Aquafix: March 2018",
@@ -3670,7 +3947,7 @@
                 "slug": "james-peterson",
                 "designation": "PLUMBING SUPERVISOR",
                 "name": "James Peterson",
-                "image": "/personImage/men3.png",
+                "image": "/personImage/men4.png",
                 "experienceBadge": "Specializes in project management and team leadership.",
                 "quickInfo": {
                   "joinedDate": "Joined Aquafix: June 2019",
@@ -3750,7 +4027,7 @@
                 "slug": "sarah-thompson",
                 "designation": "CUSTOMER SERVICE MANAGER",
                 "name": "Sarah Thompson",
-                "image": "/personImage/women3.png",
+                "image": "/personImage/women2.png",
                 "experienceBadge": "Dedicated to delivering excellent customer support and service coordination.",
                 "quickInfo": {
                   "joinedDate": "Joined Aquafix: January 2020",
@@ -3830,7 +4107,7 @@
                 "slug": "daniel-martinez",
                 "designation": "SENIOR PLUMBER",
                 "name": "Daniel Martinez",
-                "image": "/personImage/men5.png",
+                "image": "/personImage/men4.png",
                 "experienceBadge": "Skilled in leak detection, pipe repair and system installations.",
                 "quickInfo": {
                   "joinedDate": "Joined Aquafix: August 2017",
@@ -3910,7 +4187,7 @@
                 "slug": "chris-walker",
                 "designation": "PLUMBING TECHNICIAN",
                 "name": "Chris Walker",
-                "image": "/personImage/men1.png",
+                "image": "/personImage/men3.png",
                 "experienceBadge": "Experienced in maintenance, inspections and plumbing system diagnostics.",
                 "quickInfo": {
                   "joinedDate": "Joined Aquafix: February 2021",
@@ -3990,7 +4267,7 @@
                 "slug": "kevin-lewis",
                 "designation": "PIPEFITTING SPECIALIST",
                 "name": "Kevin Lewis",
-                "image": "/personImage/men5.png",
+                "image": "/personImage/man1.png",
                 "experienceBadge": "Expert in pipefitting, repiping and water line solutions.",
                 "quickInfo": {
                   "joinedDate": "Joined Aquafix: October 2019",
@@ -4164,13 +4441,34 @@
             "title": "Our Recent Projects",
             "description": "Explore our successfully completed plumbing projects across residential, commercial, and industrial sectors.",
             "categories": [
-              { "id": "all", "label": "All Projects" },
-              { "id": "residential", "label": "Residential" },
-              { "id": "commercial", "label": "Commercial" },
-              { "id": "industrial", "label": "Industrial" },
-              { "id": "hospitality", "label": "Hospitality" },
-              { "id": "healthcare", "label": "Healthcare" },
-              { "id": "education", "label": "Education" }
+              {
+                "id": "all",
+                "label": "All Projects"
+              },
+              {
+                "id": "residential",
+                "label": "Residential"
+              },
+              {
+                "id": "commercial",
+                "label": "Commercial"
+              },
+              {
+                "id": "industrial",
+                "label": "Industrial"
+              },
+              {
+                "id": "hospitality",
+                "label": "Hospitality"
+              },
+              {
+                "id": "healthcare",
+                "label": "Healthcare"
+              },
+              {
+                "id": "education",
+                "label": "Education"
+              }
             ],
             "projects": [
               {
@@ -4265,7 +4563,16 @@
               "breadcrumbCurrent": "Projects / Portfolio Detail",
               "title": "Projects/Portfolio Detail",
               "backgroundImage": "/plumberImage/image9.jpg",
-              "homeHref": "/"
+              "homeHref": "/",
+              "breadcrumbs": [
+                {
+                  "label": "Projects",
+                  "href": "/project"
+                },
+                {
+                  "label": "Project Details"
+                }
+              ]
             },
             "projects": {
               "green-valley-apartments": {
@@ -4329,13 +4636,34 @@
                   "/plumberImage/image4.jpg"
                 ],
                 "scopeOfWork": [
-                  { "id": "1", "text": "Plumbing system design & planning" },
-                  { "id": "2", "text": "Sewage treatment connection" },
-                  { "id": "3", "text": "Water supply & distribution system" },
-                  { "id": "4", "text": "Water pressure boosting system" },
-                  { "id": "5", "text": "Drainage & waste water management" },
-                  { "id": "6", "text": "Water heater & geyser installation" },
-                  { "id": "7", "text": "Rainwater harvesting system" },
+                  {
+                    "id": "1",
+                    "text": "Plumbing system design & planning"
+                  },
+                  {
+                    "id": "2",
+                    "text": "Sewage treatment connection"
+                  },
+                  {
+                    "id": "3",
+                    "text": "Water supply & distribution system"
+                  },
+                  {
+                    "id": "4",
+                    "text": "Water pressure boosting system"
+                  },
+                  {
+                    "id": "5",
+                    "text": "Drainage & waste water management"
+                  },
+                  {
+                    "id": "6",
+                    "text": "Water heater & geyser installation"
+                  },
+                  {
+                    "id": "7",
+                    "text": "Rainwater harvesting system"
+                  },
                   {
                     "id": "8",
                     "text": "Testing, commissioning & quality checks"
@@ -4415,10 +4743,22 @@
                     "id": "2",
                     "text": "Automated sensor-based restroom fittings"
                   },
-                  { "id": "3", "text": "Centralized hot water circulation" },
-                  { "id": "4", "text": "Commercial fire protection piping" },
-                  { "id": "5", "text": "Greywater recycling for HVAC cooling" },
-                  { "id": "6", "text": "Sub-metering water management" }
+                  {
+                    "id": "3",
+                    "text": "Centralized hot water circulation"
+                  },
+                  {
+                    "id": "4",
+                    "text": "Commercial fire protection piping"
+                  },
+                  {
+                    "id": "5",
+                    "text": "Greywater recycling for HVAC cooling"
+                  },
+                  {
+                    "id": "6",
+                    "text": "Sub-metering water management"
+                  }
                 ],
                 "scopeImage": "/plumberImage/image6.jpg",
                 "scopeBadgeText": "Engineered for 24/7 continuous corporate operational demand.",
@@ -4486,13 +4826,22 @@
                   "/plumberImage/image2.jpg"
                 ],
                 "scopeOfWork": [
-                  { "id": "1", "text": "High-temperature steel steam piping" },
+                  {
+                    "id": "1",
+                    "text": "High-temperature steel steam piping"
+                  },
                   {
                     "id": "2",
                     "text": "Corrosion-resistant effluent disposal"
                   },
-                  { "id": "3", "text": "Heavy-duty cooling tower lines" },
-                  { "id": "4", "text": "Emergency wash station installations" }
+                  {
+                    "id": "3",
+                    "text": "Heavy-duty cooling tower lines"
+                  },
+                  {
+                    "id": "4",
+                    "text": "Emergency wash station installations"
+                  }
                 ],
                 "scopeImage": "/plumberImage/image7.jpg",
                 "scopeBadgeText": "Built to strict industrial safety and environmental compliance guidelines.",
@@ -4564,12 +4913,18 @@
                     "id": "1",
                     "text": "Silent soil & waste pipe installation"
                   },
-                  { "id": "2", "text": "Commercial solar water heating grid" },
+                  {
+                    "id": "2",
+                    "text": "Commercial solar water heating grid"
+                  },
                   {
                     "id": "3",
                     "text": "Infinity pool and spa water filtration"
                   },
-                  { "id": "4", "text": "Water softening & purification plant" }
+                  {
+                    "id": "4",
+                    "text": "Water softening & purification plant"
+                  }
                 ],
                 "scopeImage": "/plumberImage/image8.jpg",
                 "scopeBadgeText": "Zero-noise drainage technology installed for maximum guest tranquility.",
@@ -4637,13 +4992,22 @@
                   "/plumberImage/image3.jpg"
                 ],
                 "scopeOfWork": [
-                  { "id": "1", "text": "Sterile RO water distribution lines" },
-                  { "id": "2", "text": "Surgical scrub sink plumbing setup" },
+                  {
+                    "id": "1",
+                    "text": "Sterile RO water distribution lines"
+                  },
+                  {
+                    "id": "2",
+                    "text": "Surgical scrub sink plumbing setup"
+                  },
                   {
                     "id": "3",
                     "text": "Bio-hazardous wastewater decontamination"
                   },
-                  { "id": "4", "text": "Redundant multi-stage reserve tanks" }
+                  {
+                    "id": "4",
+                    "text": "Redundant multi-stage reserve tanks"
+                  }
                 ],
                 "scopeImage": "/plumberImage/image1.jpg",
                 "scopeBadgeText": "Full compliance with NABH medical water purity standards.",
@@ -4719,8 +5083,14 @@
                     "id": "2",
                     "text": "Centralized chilled drinking water units"
                   },
-                  { "id": "3", "text": "High-volume sports complex drainage" },
-                  { "id": "4", "text": "Rainwater recharge pits" }
+                  {
+                    "id": "3",
+                    "text": "High-volume sports complex drainage"
+                  },
+                  {
+                    "id": "4",
+                    "text": "Rainwater recharge pits"
+                  }
                 ],
                 "scopeImage": "/plumberImage/image2.jpg",
                 "scopeBadgeText": "Tamper-proof and safe fixtures engineered specifically for school environments.",
@@ -4792,9 +5162,18 @@
                     "id": "1",
                     "text": "Siphonic rainwater roof drainage system"
                   },
-                  { "id": "2", "text": "High-density fire sprinkler mains" },
-                  { "id": "3", "text": "High-volume sewage holding tanks" },
-                  { "id": "4", "text": "Automated booster pump stations" }
+                  {
+                    "id": "2",
+                    "text": "High-density fire sprinkler mains"
+                  },
+                  {
+                    "id": "3",
+                    "text": "High-volume sewage holding tanks"
+                  },
+                  {
+                    "id": "4",
+                    "text": "Automated booster pump stations"
+                  }
                 ],
                 "scopeImage": "/plumberImage/image3.jpg",
                 "scopeBadgeText": "Siphonic roof drainage handles torrential monsoon rainfall effortless.",
@@ -4874,7 +5253,10 @@
                     "id": "3",
                     "text": "High-capacity public restroom batteries"
                   },
-                  { "id": "4", "text": "Automated water metering per shop" }
+                  {
+                    "id": "4",
+                    "text": "Automated water metering per shop"
+                  }
                 ],
                 "scopeImage": "/plumberImage/image4.jpg",
                 "scopeBadgeText": "Continuous grease trap separation prevents main line blockages.",
@@ -5013,7 +5395,16 @@
               "breadcrumbHome": "Home",
               "breadcrumbCurrent": "Job Detail",
               "backgroundImage": "/plumberImage/image9.jpg",
-              "homeHref": "/"
+              "homeHref": "/",
+              "breadcrumbs": [
+                {
+                  "label": "Career",
+                  "href": "/career"
+                },
+                {
+                  "label": "Job Detail"
+                }
+              ]
             },
             "jobs": [
               {
@@ -5138,56 +5529,120 @@
                 {
                   "category": "Company",
                   "links": [
-                    { "label": "Home", "href": "/" },
-                    { "label": "About Us", "href": "/about-us" },
-                    { "label": "Vision & Mission", "href": "/mission" },
-                    { "label": "Teams", "href": "/team" },
-                    { "label": "Awards", "href": "/award" },
-                    { "label": "Testimonials", "href": "/testimonial" },
-                    { "label": "FAQs", "href": "/faq" }
+                    {
+                      "label": "Home",
+                      "href": "/"
+                    },
+                    {
+                      "label": "About Us",
+                      "href": "/about-us"
+                    },
+                    {
+                      "label": "Vision & Mission",
+                      "href": "/mission"
+                    },
+                    {
+                      "label": "Teams",
+                      "href": "/team"
+                    },
+                    {
+                      "label": "Awards",
+                      "href": "/award"
+                    },
+                    {
+                      "label": "Testimonials",
+                      "href": "/testimonial"
+                    },
+                    {
+                      "label": "FAQs",
+                      "href": "/faq"
+                    }
                   ]
                 },
                 {
                   "category": "Services",
                   "links": [
-                    { "label": "Services", "href": "/service" },
-                    { "label": "Industries We Serve", "href": "/industry" },
-                    { "label": "Pricing / Packages", "href": "/pricing" }
+                    {
+                      "label": "Services",
+                      "href": "/service"
+                    },
+                    {
+                      "label": "Industries We Serve",
+                      "href": "/industry"
+                    },
+                    {
+                      "label": "Pricing / Packages",
+                      "href": "/pricing"
+                    }
                   ]
                 },
                 {
                   "category": "Projects",
                   "links": [
-                    { "label": "Projects / Portfolio", "href": "/project" }
+                    {
+                      "label": "Projects / Portfolio",
+                      "href": "/project"
+                    }
                   ]
                 },
                 {
                   "category": "Blog / News",
                   "links": [
-                    { "label": "Blog / News", "href": "/blog" }                  ]
+                    {
+                      "label": "Blog / News",
+                      "href": "/blog"
+                    }
+                  ]
                 },
                 {
                   "category": "Careers",
                   "links": [
-                    { "label": "Career", "href": "/career" }
+                    {
+                      "label": "Career",
+                      "href": "/career"
+                    }
                   ]
                 },
                 {
                   "category": "Enquiries",
                   "links": [
-                    { "label": "Get a quotes", "href": "/quote" },
-                    { "label": "Enquiry", "href": "/enquiry" },
-                    { "label": "Contact Us", "href": "/contact-us" }
+                    {
+                      "label": "Get a quotes",
+                      "href": "/quote"
+                    },
+                    {
+                      "label": "Enquiry",
+                      "href": "/enquiry"
+                    },
+                    {
+                      "label": "Contact Us",
+                      "href": "/contact-us"
+                    }
                   ]
                 },
                 {
                   "category": "Policies",
                   "links": [
-                    { "label": "Terms & Conditions", "href": "/terms" },
-                    { "label": "Privacy Policy", "href": "/privacy" },
-                    { "label": "Disclaimer", "href": "/disclaimer" },
-                    { "label": "Refund Policy", "href": "/refund-policy" },
-                    { "label": "Cookies Policy", "href": "/cookies-policy" }
+                    {
+                      "label": "Terms & Conditions",
+                      "href": "/terms"
+                    },
+                    {
+                      "label": "Privacy Policy",
+                      "href": "/privacy"
+                    },
+                    {
+                      "label": "Disclaimer",
+                      "href": "/disclaimer"
+                    },
+                    {
+                      "label": "Refund Policy",
+                      "href": "/refund-policy"
+                    },
+                    {
+                      "label": "Cookies Policy",
+                      "href": "/cookies-policy"
+                    }
                   ]
                 }
               ]

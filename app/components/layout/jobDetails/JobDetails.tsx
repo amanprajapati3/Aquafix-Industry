@@ -53,6 +53,7 @@ export default function JobDetailsClient({
           title={bannerData.title}
           breadcrumbHome={bannerData.breadcrumbHome}
           breadcrumbCurrent={bannerData.breadcrumbCurrent}
+          breadcrumbs={bannerData.breadcrumbs}
           backgroundImage={bannerData.backgroundImage}
           homeHref={bannerData.homeHref}
         />

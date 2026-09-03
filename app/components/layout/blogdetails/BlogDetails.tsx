@@ -47,6 +47,7 @@ export default function BlogDetailsPage({
           title={banner.title}
           breadcrumbHome={banner.breadcrumbHome}
           breadcrumbCurrent={banner.breadcrumbCurrent}
+          breadcrumbs={banner.breadcrumbs}
           backgroundImage={banner.backgroundImage}
           homeHref={banner.homeHref}
         />

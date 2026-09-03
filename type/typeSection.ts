@@ -1,5 +1,10 @@
 // --- Base & Utility Interfaces ---
 
+export interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
 export interface CtaButton {
   label: string;
   href: string;
@@ -272,6 +277,7 @@ export interface ServiceData {
 export interface ServiceDetailBanner {
   breadcrumbHome: string;
   breadcrumbCurrent: string;
+  breadcrumbs?: BreadcrumbItem[];
   title: string;
   backgroundImage: string;
   homeHref: string;
@@ -368,6 +374,7 @@ export interface TestimonialData {
 export interface BlogBannerData {
   breadcrumbHome: string;
   breadcrumbCurrent: string;
+  breadcrumbs?: BreadcrumbItem[];
   title: string;
   backgroundImage: string;
   homeHref: string;
@@ -826,6 +833,7 @@ export interface TeamDetailsBannerData {
   title: string;
   breadcrumbHome: string;
   breadcrumbCurrent: string;
+  breadcrumbs?: BreadcrumbItem[];
   backgroundImage: string;
   homeHref: string;
 }
@@ -948,6 +956,7 @@ export interface ProjectDetailsData {
   banner: {
     breadcrumbHome: string;
     breadcrumbCurrent: string;
+    breadcrumbs?: BreadcrumbItem[];
     title: string;
     backgroundImage: string;
     homeHref: string;
@@ -1009,6 +1018,7 @@ export interface JObDetailsBannerData {
   title: string;
   breadcrumbHome: string;
   breadcrumbCurrent: string;
+  breadcrumbs?: BreadcrumbItem[];
   backgroundImage: string;
   homeHref?: string;
 }

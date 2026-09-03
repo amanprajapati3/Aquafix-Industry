@@ -55,6 +55,7 @@ export default function ServiceDetails({ detailData }: ServiceDetailsProps) {
           title={detailData.banner.title}
           breadcrumbHome={detailData.banner.breadcrumbHome}
           breadcrumbCurrent={detailData.banner.breadcrumbCurrent}
+          breadcrumbs={detailData.banner.breadcrumbs}
           backgroundImage={detailData.banner.backgroundImage}
           homeHref={detailData.banner.homeHref}
         />

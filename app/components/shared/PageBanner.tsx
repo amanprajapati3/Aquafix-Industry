@@ -3,10 +3,16 @@ import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "./ScrollReveal";
 
+export interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
 interface PageBannerProps {
   title: string;
   breadcrumbHome?: string;
-  breadcrumbCurrent: string;
+  breadcrumbCurrent?: string;
+  breadcrumbs?: BreadcrumbItem[];
   backgroundImage: string;
   homeHref?: string;
 }
@@ -15,11 +21,14 @@ export default function PageBanner({
   title,
   breadcrumbHome = "Home",
   breadcrumbCurrent,
+  breadcrumbs,
   backgroundImage,
   homeHref = "/",
 }: PageBannerProps) {
+  const hasBreadcrumbs = breadcrumbs && breadcrumbs.length > 0;
+
   return (
-    <section className="relative -mt-20 flex min-h-[380px] w-full items-center overflow-hidden bg-[#062536] pt-20 sm:-mt-24 md:min-h-[440px] sm:pt-24">
+    <section className="relative -mt-20 flex min-h-[380px] w-full items-center overflow-hidden bg-[#062536] pt-20 sm:-mt-24 md:min-h-[380px] sm:pt-24">
       {/* Background Image */}
       <Image
         src={backgroundImage}
@@ -43,7 +52,7 @@ export default function PageBanner({
             </h1>
 
             {/* Breadcrumb */}
-            <div className="mt-5 flex items-center gap-3 text-sm font-medium text-white md:text-base">
+            <div className="mt-5 flex flex-wrap items-center gap-3 text-sm font-medium text-white md:text-base">
               <Link
                 href={homeHref}
                 className="transition-opacity hover:opacity-80"
@@ -51,9 +60,28 @@ export default function PageBanner({
                 {breadcrumbHome}
               </Link>
 
-              <span className="text-xl leading-none">»</span>
-
-              <span>{breadcrumbCurrent}</span>
+              {hasBreadcrumbs
+                ? breadcrumbs.map((crumb, idx) => (
+                    <span key={idx} className="flex items-center gap-3">
+                      <span className="text-xl leading-none">»</span>
+                      {crumb.href ? (
+                        <Link
+                          href={crumb.href}
+                          className="transition-opacity hover:opacity-80"
+                        >
+                          {crumb.label}
+                        </Link>
+                      ) : (
+                        <span>{crumb.label}</span>
+                      )}
+                    </span>
+                  ))
+                : breadcrumbCurrent && (
+                    <>
+                      <span className="text-xl leading-none">»</span>
+                      <span>{breadcrumbCurrent}</span>
+                    </>
+                  )}
             </div>
           </div>
         </ScrollReveal>

@@ -48,7 +48,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
       <span
-        className="text-xs font-black uppercase tracking-widest sm:text-sm"
+        className="text-sm font-black uppercase tracking-widest sm:text-sm"
         style={{ color: BRAND_BLUE }}
       >
         {children}
@@ -232,6 +232,7 @@ export default function ProjectDetails({
           title={bannerData.title}
           breadcrumbHome={bannerData.breadcrumbHome}
           breadcrumbCurrent={bannerData.breadcrumbCurrent}
+          breadcrumbs={bannerData.breadcrumbs}
           backgroundImage={bannerData.backgroundImage}
           homeHref={bannerData.homeHref}
         />
@@ -247,7 +248,7 @@ export default function ProjectDetails({
             >
               <div>
                 <div
-                  className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold sm:text-sm"
+                  className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold sm:text-sm"
                   style={{ backgroundColor: "#EAF0FE", color: BRAND_BLUE }}
                 >
                   <Building2 className="h-4 w-4" />
@@ -386,7 +387,7 @@ export default function ProjectDetails({
             <div className="mt-5 rounded-3xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6">
               <div className="flex items-center justify-between pb-4">
                 <span
-                  className="text-xs font-black uppercase tracking-widest sm:text-sm"
+                  className="text-sm font-black uppercase tracking-widest sm:text-sm"
                   style={{ color: BRAND_BLUE }}
                 >
                   Additional Project Photos
@@ -452,7 +453,7 @@ export default function ProjectDetails({
                     >
                       <AnimatedCounter value={stat.value} />
                     </span>
-                    <span className="mt-1.5 text-xs font-bold leading-snug text-[#64748B] sm:text-sm">
+                    <span className="mt-1.5 text-sm font-bold leading-snug text-[#64748B] sm:text-sm">
                       {stat.label}
                     </span>
                   </div>
@@ -654,7 +655,7 @@ export default function ProjectDetails({
                   </div>
                   <div>
                     <span
-                      className="text-xs font-black uppercase tracking-widest sm:text-sm"
+                      className="text-sm font-black uppercase tracking-widest sm:text-sm"
                       style={{ color: BRAND_BLUE }}
                     >
                       The Challenge
@@ -677,7 +678,7 @@ export default function ProjectDetails({
                   </div>
                   <div>
                     <span
-                      className="text-xs font-black uppercase tracking-widest sm:text-sm"
+                      className="text-sm font-black uppercase tracking-widest sm:text-sm"
                       style={{ color: "#65A30D" }}
                     >
                       Our Solution
