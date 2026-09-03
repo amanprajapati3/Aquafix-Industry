@@ -59,6 +59,422 @@
                 "component": "ServiceContactSection1"
               }
             ]
+          },
+          "about-us": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "AboutSection",
+                "component": "AboutSection"
+              },
+              {
+                "key": "WhyChooseUs",
+                "component": "Choose"
+              },
+              {
+                "key": "OurValues",
+                "component": "SectionHeader"
+              },
+              {
+                "key": "TeamGrid",
+                "component": "ScrollReveal"
+              },
+              {
+                "key": "CtaBanner",
+                "component": "CtaBanner"
+              }
+            ]
+          },
+          "award": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "AwardsTitle",
+                "component": "SectionHeader"
+              },
+              {
+                "key": "AwardsGrid",
+                "component": "ScrollReveal"
+              },
+              {
+                "key": "CtaBanner",
+                "component": "CtaBanner"
+              }
+            ]
+          },
+          "blog": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "BlogSection",
+                "component": "BlogSection"
+              },
+              {
+                "key": "ScrollReveal",
+                "component": "ScrollReveal"
+              }
+            ]
+          },
+          "blogs": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "BlogContent",
+                "component": "ScrollReveal"
+              }
+            ]
+          },
+          "career": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "CareerTitle",
+                "component": "SectionHeader"
+              },
+              {
+                "key": "CareerContent",
+                "component": "ScrollReveal"
+              }
+            ]
+          },
+          "contact-us": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "ContactTitle",
+                "component": "SectionHeader"
+              },
+              {
+                "key": "ContactContent",
+                "component": "ScrollReveal"
+              }
+            ]
+          },
+          "cookie": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "LegalTitle",
+                "component": "SectionHeader"
+              },
+              {
+                "key": "LegalContent",
+                "component": "ScrollReveal"
+              }
+            ]
+          },
+          "disclaimer": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "LegalTitle",
+                "component": "SectionHeader"
+              },
+              {
+                "key": "LegalContent",
+                "component": "ScrollReveal"
+              }
+            ]
+          },
+          "enquiry": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "EnquiryTitle",
+                "component": "SectionHeader"
+              },
+              {
+                "key": "EnquiryContent",
+                "component": "ScrollReveal"
+              }
+            ]
+          },
+          "faq": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "FaqTitle",
+                "component": "SectionHeader"
+              },
+              {
+                "key": "FaqAccordion",
+                "component": "ScrollReveal"
+              },
+              {
+                "key": "CtaBanner",
+                "component": "CtaBanner"
+              }
+            ]
+          },
+          "industry": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "IndustryTitle",
+                "component": "SectionHeader"
+              },
+              {
+                "key": "IndustryGrid",
+                "component": "ScrollReveal"
+              }
+            ]
+          },
+          "jobs": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "JobContent",
+                "component": "ScrollReveal"
+              }
+            ]
+          },
+          "mission": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "MissionTitle",
+                "component": "SectionHeader"
+              },
+              {
+                "key": "MissionContent",
+                "component": "ScrollReveal"
+              }
+            ]
+          },
+          "pricing": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "PricingTitle",
+                "component": "SectionHeader"
+              },
+              {
+                "key": "PricingContent",
+                "component": "ScrollReveal"
+              }
+            ]
+          },
+          "privacy-policy": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "LegalTitle",
+                "component": "SectionHeader"
+              },
+              {
+                "key": "LegalContent",
+                "component": "ScrollReveal"
+              }
+            ]
+          },
+          "project": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "ProjectTitle",
+                "component": "SectionHeader"
+              },
+              {
+                "key": "ProjectGrid",
+                "component": "ScrollReveal"
+              }
+            ]
+          },
+          "projects": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "ProjectContent",
+                "component": "ScrollReveal"
+              }
+            ]
+          },
+          "quote": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "QuoteTitle",
+                "component": "SectionHeader"
+              },
+              {
+                "key": "QuoteContent",
+                "component": "ScrollReveal"
+              }
+            ]
+          },
+          "refund": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "LegalTitle",
+                "component": "SectionHeader"
+              },
+              {
+                "key": "LegalContent",
+                "component": "ScrollReveal"
+              }
+            ]
+          },
+          "service": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "ServiceTitle",
+                "component": "SectionHeader"
+              },
+              {
+                "key": "ServiceGrid",
+                "component": "ScrollReveal"
+              }
+            ]
+          },
+          "services": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "ServiceDetailsTitle",
+                "component": "SectionHeader"
+              },
+              {
+                "key": "ServiceDetailsContent",
+                "component": "ScrollReveal"
+              }
+            ]
+          },
+          "sitemap": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "SitemapGrid",
+                "component": "ScrollReveal"
+              }
+            ]
+          },
+          "team": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "TeamTitle",
+                "component": "SectionHeader"
+              },
+              {
+                "key": "TeamGrid",
+                "component": "ScrollReveal"
+              }
+            ]
+          },
+          "teams": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "TeamDetailsContent",
+                "component": "ScrollReveal"
+              }
+            ]
+          },
+          "terms": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "LegalTitle",
+                "component": "SectionHeader"
+              },
+              {
+                "key": "LegalContent",
+                "component": "ScrollReveal"
+              }
+            ]
+          },
+          "testimonial": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "PageBanner"
+              },
+              {
+                "key": "TestimonialTitle",
+                "component": "SectionHeader"
+              },
+              {
+                "key": "TestimonialGrid",
+                "component": "ScrollReveal"
+              }
+            ]
           }
         }
       }
@@ -139,7 +555,7 @@
                 ]
               },
               {
-                "label": "Work",
+                "label": "Projects",
                 "href": "/project"
               },
               {
