@@ -49,7 +49,7 @@ export default function Footer() {
                   <img
                     src={logoImage}
                     alt="Aquafix"
-                    className="h-8 w-auto object-contain"
+                    className="h-12 w-auto object-contain"
                   />
                 ) : (
                   <span className="text-2xl font-extrabold tracking-tight text-white">

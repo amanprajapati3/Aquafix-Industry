@@ -52,19 +52,19 @@ export default function Contact({ contactData }: ContactProps) {
   const renderIcon = (iconName: string) => {
     switch (iconName) {
       case "mail":
-        return <Mail className="h-6 w-6 text-[#84CC16]" />;
+        return <Mail className="h-6 sm:w-10 sm:h-10 w-6 text-[#84CC16]" />;
       case "phone":
-        return <Phone className="h-6 w-6 text-[#84CC16]" />;
+        return <Phone className="h-6 sm:w-10 sm:h-10 w-6 text-[#84CC16]" />;
       case "map-pin":
-        return <MapPin className="h-6 w-6 text-[#84CC16]" />;
+        return <MapPin className="h-6 sm:w-10 sm:h-10 w-6 text-[#84CC16]" />;
       case "shield-check":
-        return <ShieldCheck className="h-6 w-6 text-[#84CC16]" />;
+        return <ShieldCheck className="h-6 sm:w-8 sm:h-8 w-6 text-[#84CC16]" />;
       case "users":
-        return <Users className="h-6 w-6 text-[#84CC16]" />;
+        return <Users className="h-6 sm:w-8 sm:h-8 w-6 text-[#84CC16]" />;
       case "award":
-        return <Award className="h-6 w-6 text-[#84CC16]" />;
+        return <Award className="h-6 sm:w-8 sm:h-8 w-6 text-[#84CC16]" />;
       default:
-        return <Mail className="h-6 w-6 text-[#84CC16]" />;
+        return <Mail className="h-6 sm:w-8 sm:h-8 w-6 text-[#84CC16]" />;
     }
   };
 
@@ -100,7 +100,7 @@ export default function Contact({ contactData }: ContactProps) {
                   key={idx}
                   className="flex items-start gap-4 rounded-2xl bg-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)]"
                 >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#ECFCCB]">
+                  <div className="flex h-12 sm:w-16 sm:h-16 w-12 shrink-0 items-center justify-center rounded-full bg-[#ECFCCB]">
                     {renderIcon(card.iconName)}
                   </div>
                   <div>
@@ -124,26 +124,26 @@ export default function Contact({ contactData }: ContactProps) {
           {data?.formSection && (
             <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-start">
               {/* Left Column - Form Features */}
-              <ScrollReveal direction="left" className="lg:col-span-5">
-                <span className="text-sm font-extrabold uppercase tracking-widest text-[#84CC16]">
+              <ScrollReveal direction="left" className="lg:col-span-5  md:pr-24">
+                <span className="text-base font-extrabold uppercase tracking-widest text-[#84CC16]">
                   {data.formSection.tagline}
                 </span>
-                <h2 className="mt-2 text-3xl font-black text-[#0F172A] sm:text-4xl">
+                <h2 className="mt-2 md:mt-4 text-3xl font-black text-[#0F172A] sm:text-4xl">
                   {data.formSection.title}
                 </h2>
-                <p className="mt-3 text-sm font-medium leading-relaxed text-[#64748B]">
+                <p className="mt-3 md:mt-5 text-sm font-medium leading-relaxed text-[#64748B]">
                   {data.formSection.description}
                 </p>
 
                 {/* Features List */}
-                <div className="mt-8 flex flex-col gap-6">
+                <div className="mt-8 flex flex-col gap-6 md:gap-8">
                   {data.formSection.features.map((feat, index) => (
-                    <div key={index} className="flex items-start gap-4">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#ECFCCB]">
+                    <div key={index} className="flex  md:pr-10 items-start gap-4">
+                      <div className="flex h-12 md:w-16 md:h-16 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#ECFCCB]">
                         {renderIcon(feat.iconName)}
                       </div>
                       <div>
-                        <h4 className="text-base font-bold text-[#0F172A]">
+                        <h4 className="text-lg font-bold text-[#0F172A]">
                           {feat.title}
                         </h4>
                         <p className="mt-1 text-sm font-medium text-[#64748B]">
@@ -159,7 +159,7 @@ export default function Contact({ contactData }: ContactProps) {
               <ScrollReveal direction="right" className="lg:col-span-7">
                 <form
                   onSubmit={handleSubmit}
-                  className="flex flex-col gap-5 rounded-2xl bg-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.03)] sm:p-8"
+                  className="flex flex-col gap-5 md:gap-3 rounded-2xl bg-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.03)] sm:p-8"
                 >
                   <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                     {/* Full Name */}

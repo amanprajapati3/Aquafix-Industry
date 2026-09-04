@@ -70,13 +70,13 @@ export default function GetQuote({ quoteData }: GetQuoteProps) {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
             {/* Left Content Area */}
             <ScrollReveal direction="left" className="lg:col-span-6">
-              <div className="lg:col-span-6">
+              <div className="lg:col-span-6  md:mt-28 ">
                   <SectionHeader
                     pretitle={data?.tagline}
                     title={data?.title}
                     description={data?.description}
                     align="center" 
-                    className="md:items-start md:text-left"
+                    className="md:items-start md:text-left  md:pr-32 md:space-y-3"
                     descriptionMaxWidth="md:items-start md:text-left"
                   />
 
@@ -117,7 +117,7 @@ export default function GetQuote({ quoteData }: GetQuoteProps) {
 
                   <form
                     onSubmit={handleSubmit}
-                    className="mt-8 flex flex-col gap-5"
+                    className="mt-8 flex flex-col gap-5 md:gap-3"
                   >
                     {/* Name Field */}
                     <div>

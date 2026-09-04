@@ -71,13 +71,17 @@ export default function BlogSection({
                   </div>
 
                   {/* Title */}
-                  <h3 className="line-clamp-2 text-[15px] font-bold leading-snug text-[#0F172A] transition-colors group-hover:text-[#1E40AF]">
+                  <h3 className="line-clamp-2 text-[15px] sm:text-[20px] font-bold leading-snug text-[#0F172A] transition-colors group-hover:text-[#1E40AF]">
                     {post.title}
                   </h3>
+
+                  {isBlogPage && (
+                    <p className="text-slate-700 pt-5">{post.description}</p>
+                  )}
                 </div>
 
                 {/* Read More Link */}
-                <div className="mt-6">
+                <div className="mt-3">
                   <a
                     href={post.slug || "#"}
                     className="inline-flex items-center gap-1.5 text-[13px] font-bold text-[#1E40AF] hover:underline"

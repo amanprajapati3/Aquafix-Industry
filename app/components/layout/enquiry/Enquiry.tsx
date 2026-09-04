@@ -38,13 +38,13 @@ export default function Enquiry({ enquiryData }: EnquiryProps) {
   const renderIcon = (iconName: string) => {
     switch (iconName) {
       case "clock":
-        return <Clock className="h-6 w-6 text-[#0052CC]" />;
+        return <Clock className="h-6 sm:w-10 sm:h-10 w-6 text-[#0052CC]" />;
       case "shield-check":
-        return <ShieldCheck className="h-6 w-6 text-[#0052CC]" />;
+        return <ShieldCheck className="h-6 sm:w-10 sm:h-10  w-6 text-[#0052CC]" />;
       case "headset":
-        return <Headset className="h-6 w-6 text-[#0052CC]" />;
+        return <Headset className="h-6 sm:w-10 sm:h-10  w-6 text-[#0052CC]" />;
       default:
-        return <Clock className="h-6 w-6 text-[#0052CC]" />;
+        return <Clock className="h-6 sm:w-10 sm:h-10  w-6 text-[#0052CC]" />;
     }
   };
 
@@ -63,11 +63,11 @@ export default function Enquiry({ enquiryData }: EnquiryProps) {
 
       {/* ENQUIRY SECTION */}
       <section className="bg-[#FAFBFD] py-8 md:py-12">
-        <div className="mx-auto max-w-[1200px] px-4 sm:px-6">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+        <div className="mx-auto max-w-[1200px]  px-4 sm:px-6">
+          <div className="grid grid-cols-1 gap-12  lg:grid-cols-12">
             {/* Left Content Column */}
             <ScrollReveal direction="left" className="lg:col-span-5">
-            <div className="lg:col-span-5">
+            <div className="lg:col-span-5 md:mt-24 md:pr-12">
               <SectionHeader
                 pretitle={data?.tagline}
                 title={data?.title}
@@ -84,7 +84,7 @@ export default function Enquiry({ enquiryData }: EnquiryProps) {
                       key={idx}
                       className="flex items-start gap-4 border-b border-slate-100 pb-6 last:border-0 last:pb-0"
                     >
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#EFF6FF]">
+                      <div className="flex h-12 sm:w-20 sm:h-20 w-12 shrink-0 items-center justify-center rounded-full bg-[#EFF6FF]">
                         {renderIcon(feature.iconName)}
                       </div>
                       <div>
@@ -115,7 +115,7 @@ export default function Enquiry({ enquiryData }: EnquiryProps) {
                   </div>
                 )}
 
-                <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-5">
+                <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-5 md:gap-3">
                   {/* Name */}
                   <div>
                     <label className="text-sm font-bold text-[#0F172A]">

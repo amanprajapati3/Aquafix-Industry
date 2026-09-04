@@ -53,10 +53,10 @@ export default function Banner({ data, featureCardsData }: BannerProps) {
   };
 
   return (
-    <section className="relative -mt-[80px] w-full overflow-hidden bg-[#F4F8FD] pb-8 sm:-mt-[100px] md:-mt-[90px] lg:-mt-[100px] lg:pb-12">
-      <div className="relative mx-auto max-w-[1400px]">
+    <section className="relative -mt-[80px] w-full overflow-hidden bg-[#F4F8FD] pb-8 sm:-mt-[100px] md:-mt-[90px] lg:-mt-[95px] lg:pb-12">
+      <div className="relative mx-auto max-w-[1400px] pl-0 sm:pl-6 lg:pl-8 pr-0">
         {/* HERO AREA SLIDER CONTAINER */}
-        <div className="relative overflow-hidden pb-6 lg:pb-10">
+        <div className="relative overflow-hidden pb-6 lg:pb-0">
           <div
             className="flex w-full transition-transform duration-700 ease-in-out"
             style={{
@@ -66,21 +66,20 @@ export default function Banner({ data, featureCardsData }: BannerProps) {
             {slides.map((slide, slideIdx) => (
               <div
                 key={slideIdx}
-                className="relative grid min-h-[620px] w-full flex-shrink-0 grid-cols-1 sm:min-h-[600px] sm:grid-cols-12 sm:gap-4 lg:min-h-[660px] xl:min-h-[700px]"
+                className="relative grid min-h-[620px] w-full flex-shrink-0 grid-cols-1 sm:min-h-[600px] sm:grid-cols-12 lg:min-h-[680px] xl:min-h-[720px]"
               >
-                {/* MOBILE BACKGROUND IMAGE (MOBILE ONLY FIX) */}
+                {/* MOBILE BACKGROUND IMAGE */}
                 <div className="absolute inset-x-0 top-0 bottom-0 z-0 block sm:hidden">
                   <img
                     src={slide.bgImageUrl}
                     alt={slide.title || "Background"}
                     className="h-full w-full object-cover object-center"
                   />
-
                   <div className="absolute inset-0 bg-gradient-to-t from-[#09244A]/98 via-[#09244A]/85 to-[#09244A]/60" />
                 </div>
 
-                {/* LEFT CONTENT (MOBILE PADDING & ALIGNMENT FIX) */}
-                <div className="relative z-20 flex flex-col items-start justify-center px-5 pb-20 pt-[120px] sm:col-span-6 sm:ml-6 sm:px-0 sm:pb-24 sm:pt-36 md:w-[84%] lg:col-span-6 lg:ml-7 lg:pb-40 lg:pt-36 xl:col-span-6">
+                {/* LEFT CONTENT AREA */}
+                <div className="relative  z-20 flex flex-col items-start justify-end px-5 pb-12 pt-[120px] sm:col-span-6 sm:px-0 sm:pb-16 sm:pt-28 md:w-[92%] lg:col-span-6 lg:pb-12 lg:pt-36 xl:col-span-6">
                   {/* Badge */}
                   {slide.badge && (
                     <div className="inline-flex items-center gap-2 rounded-full bg-[#EAF2FF] px-4 py-1.5 text-[12px] font-semibold text-[#245BC1] sm:py-2 sm:text-[13px]">
@@ -90,7 +89,7 @@ export default function Banner({ data, featureCardsData }: BannerProps) {
                   )}
 
                   {/* Heading */}
-                  <h1 className="mt-4 min-h-[150px] max-w-[650px] text-[28px] font-extrabold leading-[1.15] tracking-[-0.035em] text-white sm:mt-6 sm:min-h-[180px] sm:text-[36px] sm:text-[#09244A] md:min-h-[220px] md:text-[44px] lg:min-h-[240px] lg:text-[52px] xl:min-h-[270px] xl:text-[58px]">
+                  <h1 className="mt-4 min-h-[150px] max-w-[650px] text-[28px] font-extrabold leading-[1.15] tracking-[-0.035em] text-white sm:mt-6 sm:min-h-[180px] sm:text-[36px] sm:text-[#09244A] md:min-h-[200px] md:text-[44px] lg:min-h-[220px] lg:text-[50px] xl:min-h-[250px] xl:text-[56px]">
                     {slide.title}{" "}
                     <span className="block text-[#91D900]">
                       {slide.highlightedTitle}
@@ -100,7 +99,7 @@ export default function Banner({ data, featureCardsData }: BannerProps) {
 
                   {/* Description */}
                   {slide.desc && (
-                    <p className="mt-4 max-w-[590px] text-[13px] font-medium leading-[1.6] text-slate-200 sm:text-[14px] sm:text-[#526174] md:text-[15px] lg:h-[84px] lg:overflow-hidden lg:text-[16px]">
+                    <p className="mt-4 max-w-[560px]  text-[13px] font-medium leading-[1.6] text-slate-200 sm:text-[14px] sm:text-[#526174] md:text-[15px] lg:h-[80px] lg:overflow-hidden lg:text-[16px]">
                       {slide.desc}
                     </p>
                   )}
@@ -136,7 +135,7 @@ export default function Banner({ data, featureCardsData }: BannerProps) {
 
                   {/* SOCIAL PROOF */}
                   {slide.socialProof && (
-                    <div className="mt-6 flex items-center gap-4 sm:mt-8">
+                    <div className="mt-6  flex items-center gap-4 sm:mt-8">
                       {/* Avatars */}
                       <div className="flex items-center">
                         {slide.socialProof.avatarImages?.map((imgUrl, aIdx) => (
@@ -174,15 +173,15 @@ export default function Banner({ data, featureCardsData }: BannerProps) {
                   )}
                 </div>
 
-                {/* RIGHT IMAGE AREA (UNTOUCHED FOR DESKTOP & TAB) */}
-                <div className="relative z-10 hidden sm:col-span-6 sm:flex sm:-ml-12 sm:items-start sm:justify-end lg:-ml-28 xl:-ml-36">
-                  <div className="relative h-full min-h-[540px] w-full md:min-h-[590px] lg:h-full lg:w-[calc(100%+8rem)] xl:w-[calc(100%+12rem)]">
-                    <div className="absolute inset-0 overflow-hidden bg-[#D8E5F2] sm:[clip-path:ellipse(95%_82%_at_100%_48%)]">
-                      <div className="absolute inset-0 overflow-hidden bg-white sm:inset-y-[8px] sm:left-[8px] sm:right-0 sm:[clip-path:ellipse(95%_82%_at_100%_48%)] lg:inset-y-[10px] lg:left-[10px]">
+                {/* RIGHT IMAGE AREA (STARTS FROM EXACT TOP WITH ZERO RIGHT MARGIN/GAP) */}
+                <div className="relative z-10 hidden sm:col-span-6 sm:flex sm:items-start sm:justify-end">
+                  <div className="relative h-full  w-full min-h-[550px] lg:w-[calc(100%+2rem)] xl:w-[calc(100%+4rem)]">
+                    <div className="absolute top-0 right-0   left-0 bottom-0 overflow-hidden bg-[#D8E5F2] sm:[clip-path:ellipse(90%_88%_at_90%_85%)]">
+                      <div className="absolute top-0  right-0  bottom-0 left-[8px] overflow-hidden bg-white sm:[clip-path:ellipse(90%_88%_at_90%_85%)] ">
                         <img
                           src={slide.bgImageUrl}
                           alt={slide.title || "Plumbing service"}
-                          className="h-full w-full object-cover object-center"
+                          className="h-full sm:[clip-path:ellipse(100%_88%_at_90%_85%)] w-full object-cover object-top"
                         />
                       </div>
                     </div>
@@ -219,7 +218,7 @@ export default function Banner({ data, featureCardsData }: BannerProps) {
                 <ChevronRight className="h-6 w-6" />
               </button>
 
-              {/* MOBILE PAGINATION (POSITION REGROUNDED OVER BG IMAGE) */}
+              {/* MOBILE PAGINATION */}
               <div className="absolute bottom-10 left-1/2 z-30 flex -translate-x-1/2 items-center gap-2 sm:hidden">
                 {slides.map((_, dotIdx) => (
                   <button
@@ -238,16 +237,16 @@ export default function Banner({ data, featureCardsData }: BannerProps) {
             </>
           )}
 
-          {/* FEATURE CARDS (UNTOUCHED FOR DESKTOP & TAB) */}
+          {/* FEATURE CARDS (HORIZONTAL ALIGNMENT MATCHING LEFT CONTENT BOTTOM) */}
           {cards.length > 0 && (
-            <div className="relative z-30 hidden w-full sm:mb-6 sm:block lg:absolute lg:bottom-[48px] lg:right-6 lg:mb-0 lg:mt-0 lg:w-[58%] xl:w-[54%]">
-              <div className="overflow-hidden rounded-[20px] bg-[#061D3D] px-4 py-5 sm:px-6 sm:py-6 lg:px-5 lg:py-6 xl:px-8 xl:py-7">
+            <div className="relative z-30 hidden w-full pr-4 sm:mb-6 sm:block sm:pr-6 lg:absolute lg:bottom-0 lg:right-4 lg:mb-0 lg:mt-0 lg:w-[54%] lg:pr-0 xl:right-8 xl:w-[50%]">
+              <div className="overflow-hidden rounded-[20px] bg-[#061D3D] px-4 py-5 sm:px-6 sm:py-6 lg:px-4 lg:py-6 xl:px-6 xl:py-7">
                 <ScrollReveal direction="up">
                   <div className="grid grid-cols-2 lg:grid-cols-4">
                     {cards.slice(0, 4).map((card, idx) => (
                       <div
                         key={idx}
-                        className={`flex min-h-[120px] flex-col items-center justify-start px-2 py-1 text-center sm:px-3 lg:px-3 xl:px-4 ${
+                        className={`flex min-h-[120px] flex-col items-center justify-start px-2 py-1 text-center sm:px-3 lg:px-2 xl:px-3 ${
                           idx !== 0
                             ? "border-t border-white/10 sm:border-t-0 lg:border-l lg:border-white/10"
                             : ""
@@ -258,11 +257,11 @@ export default function Banner({ data, featureCardsData }: BannerProps) {
                         </div>
 
                         <div className="flex flex-col items-center justify-center">
-                          <h3 className="text-[14px] font-bold leading-tight text-white sm:text-[16px]">
+                          <h3 className="text-[14px] font-bold leading-tight text-white sm:text-[15px]">
                             {card.title}
                           </h3>
 
-                          <p className="mt-1.5 text-[11px] font-normal leading-relaxed text-[#B1C3D9] sm:text-[13px]">
+                          <p className="mt-1.5 text-[11px] font-normal leading-relaxed text-[#B1C3D9] sm:text-[12px]">
                             {card.desc}
                           </p>
                         </div>
