@@ -5629,7 +5629,7 @@
                     },
                     {
                       "label": "Privacy Policy",
-                      "href": "/privacy"
+                      "href": "/privacy-policy"
                     },
                     {
                       "label": "Disclaimer",
@@ -5637,11 +5637,11 @@
                     },
                     {
                       "label": "Refund Policy",
-                      "href": "/refund-policy"
+                      "href": "/refund"
                     },
                     {
                       "label": "Cookies Policy",
-                      "href": "/cookies-policy"
+                      "href": "/cookie"
                     }
                   ]
                 }

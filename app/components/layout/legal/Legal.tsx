@@ -28,9 +28,9 @@ export default function Legal({ legalData }: LegalProps) {
 
       {/* LEGAL CONTENT SECTION */}
       <section className="bg-[#FAFBFD] py-8 md:py-12">
-        <div className="mx-auto max-w-[1200px] px-4 sm:px-6">
+        <div className="mx-auto max-w-[1300px] px-4 sm:px-6">
           <ScrollReveal direction="up">
-          <div className="rounded-3xl border border-slate-100 bg-white p-6 shadow-[0_4px_25px_rgba(0,0,0,0.02)] sm:p-12">
+          <div className="rounded-3xl border border-slate-100 bg-white p-6 shadow-[0_4px_25px_rgba(0,0,0,0.02)] ">
             
             {/* Main Title & Last Updated */}
             <SectionHeader title={legalData.title} align="left" titleAs="h1" />
