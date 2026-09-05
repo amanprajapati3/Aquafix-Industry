@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import SectionHeader from "../shared/SectionHeader";
 import ScrollReveal from "../shared/ScrollReveal";
@@ -117,10 +118,12 @@ export default function ServicesSection({
 
                 {/* IMAGE AREA  */}
                 <div className="relative h-48 w-full sm:h-auto sm:w-[45%] shrink-0 overflow-hidden bg-slate-100">
-                  <img
+                  <Image
                     src={item.image?.src}
                     alt={item.image?.alt || item.title}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    fill
+                    sizes="(max-width: 640px) 100vw, 40vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
               </Link>

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
 import {
@@ -46,9 +47,11 @@ export default function Footer() {
             <div className="flex flex-col space-y-5">
               <Link href="/" className="inline-block">
                 {logoImage ? (
-                  <img
+                  <Image
                     src={logoImage}
                     alt="Aquafix"
+                    width={2172}
+                    height={724}
                     className="h-12 w-auto object-contain"
                   />
                 ) : (

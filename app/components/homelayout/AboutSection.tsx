@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   Calendar,
@@ -185,11 +186,13 @@ export default function AboutSection({
               <div className="absolute bottom-6 left-2 z-0 h-[100px] w-[100px] rounded-[15px] bg-[#1E40AF]" />
 
               {/* Main Image */}
-              <div className="relative z-10 overflow-hidden rounded-[45px] bg-slate-100 shadow-md">
-                <img
-                  src={data.sideImages?.mainLeft}
+              <div className="relative z-10 h-[360px] w-full overflow-hidden rounded-[45px] bg-slate-100 shadow-md sm:h-[440px] md:h-[480px]">
+                <Image
+                  src={data.sideImages?.mainLeft || ""}
                   alt={data.title || "About Us"}
-                  className="h-[360px] w-full object-cover sm:h-[440px] md:h-[480px]"
+                  fill
+                  sizes="(max-width: 640px) 100vw, 540px"
+                  className="object-cover"
                 />
               </div>
 

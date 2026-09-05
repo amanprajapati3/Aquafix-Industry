@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { Wrench, ArrowLeft, ArrowRight } from "lucide-react";
 import { ServiceTestimonialData, site } from "@/data";
 import SectionHeader from "../shared/SectionHeader";
@@ -66,9 +67,11 @@ export default function TestimonialSection({
       {/* PURE X-AXIS (HORIZONTAL) FLOAT WITH DYNAMIC SHADOW */}
       {data.image && (
         <div className="pointer-events-none absolute right-0 top-0  w-36 select-none sm:w-48 lg:w-64">
-          <img
+          <Image
             src={data.image}
             alt=""
+            width={216}
+            height={242}
             className="h-auto w-full object-contain"
           />
         </div>
@@ -77,9 +80,11 @@ export default function TestimonialSection({
       {/* WORKER ILLUSTRATION OVERLAY - BOTTOM LEFT */}
       {data.image2 && (
         <div className="pointer-events-none absolute bottom-0 left-0  w-44 select-none sm:w-60 lg:w-72">
-          <img
+          <Image
             src={data.image2}
             alt=""
+            width={248}
+            height={167}
             className="h-auto w-full object-contain"
           />
         </div>
@@ -130,9 +135,11 @@ export default function TestimonialSection({
                     aria-label={`View testimonial from ${item.name}`}
                     className={`absolute animate-float-x rounded-full border-2 border-[#2467EC] bg-white p-[2px] transition-transform duration-300 hover:scale-125 hover:z-40 ${spot.positionClass} ${spot.sizeClass} ${spot.delayClass}`}
                   >
-                    <img
+                    <Image
                       src={item.image}
                       alt={item.name}
+                      width={100}
+                      height={100}
                       className="h-full w-full rounded-full object-cover"
                     />
                   </button>
@@ -145,9 +152,11 @@ export default function TestimonialSection({
             <div className="relative z-30 mt-6 flex flex-col items-center text-center">
               {/* MAIN ACTIVE AVATAR - ALSO FLOATING ON X-AXIS WITH SHADOW */}
               <div className="relative h-20 w-20 animate-float-x rounded-full border-2 border-[#2467EC] bg-white p-[2px] sm:h-24 sm:w-24">
-                <img
+                <Image
                   src={currentTestimonial.image}
                   alt={currentTestimonial.name}
+                  width={100}
+                  height={100}
                   className="h-full w-full rounded-full object-cover"
                 />
               </div>

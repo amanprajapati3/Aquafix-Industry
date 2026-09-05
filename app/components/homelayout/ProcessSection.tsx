@@ -173,7 +173,7 @@ export default function ProcessSection({ processData }: ProcessSectionProps) {
    
       {/* WATER SPLASH OVERLAY - TOP RIGHT */}
       <div className="pointer-events-none absolute right-0 top-0 z-10 select-none opacity-80 sm:opacity-100">
-        <img src={data.image} alt="" />
+        <Image src={data.image || ""} alt="" width={194} height={173} />
       </div>
 
       <div className="relative z-20 mx-auto max-w-[1340px] px-4 sm:px-6 lg:px-8">

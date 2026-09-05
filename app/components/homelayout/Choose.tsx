@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import {
   ShieldCheck,
   Wrench,
@@ -116,10 +117,12 @@ export default function Choose({ chooseData }: ChooseProps) {
         </div>
 
         <div className="relative mt-0 h-[280px] w-full sm:h-[330px] md:absolute md:inset-0 md:z-0 md:mt-0 md:h-full md:w-[78%] md:[clip-path:polygon(0_0,58%_0,43%_100%,0_100%)] lg:w-[83%] lg:[clip-path:polygon(0_0,60%_0,45%_100%,0_100%)]">
-          <img
+          <Image
             src={imageSrc}
             alt={chooseData.sideImage?.alt || "Why Choose Us"}
-            className="h-full w-full object-cover object-left-top"
+            fill
+            sizes="(max-width: 768px) 100vw, 60vw"
+            className="object-cover object-left-top"
           />
         </div>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -70,10 +71,12 @@ export default function Banner({ data, featureCardsData }: BannerProps) {
               >
                 {/* MOBILE BACKGROUND IMAGE */}
                 <div className="absolute inset-x-0 top-0 bottom-0 z-0 block sm:hidden">
-                  <img
+                  <Image
                     src={slide.bgImageUrl}
                     alt={slide.title || "Background"}
-                    className="h-full w-full object-cover object-center"
+                    fill
+                    sizes="100vw"
+                    className="object-cover object-center"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#09244A]/98 via-[#09244A]/85 to-[#09244A]/60" />
                 </div>
@@ -135,14 +138,16 @@ export default function Banner({ data, featureCardsData }: BannerProps) {
 
                   {/* SOCIAL PROOF */}
                   {slide.socialProof && (
-                    <div className="mt-6  flex items-center gap-4 sm:mt-8">
+                    <div className="mt-6 flex items-center gap-4 sm:mt-8">
                       {/* Avatars */}
                       <div className="flex items-center">
                         {slide.socialProof.avatarImages?.map((imgUrl, aIdx) => (
-                          <img
+                          <Image
                             key={aIdx}
                             src={imgUrl}
                             alt="Satisfied client"
+                            width={100}
+                            height={100}
                             className={`h-[42px] w-[42px] rounded-full border-[2px] border-white object-cover shadow-sm sm:h-[49px] sm:w-[49px] ${
                               aIdx !== 0 ? "-ml-3" : ""
                             }`}
@@ -175,13 +180,15 @@ export default function Banner({ data, featureCardsData }: BannerProps) {
 
                 {/* RIGHT IMAGE AREA (STARTS FROM EXACT TOP WITH ZERO RIGHT MARGIN/GAP) */}
                 <div className="relative z-10 hidden sm:col-span-6 sm:flex sm:items-start sm:justify-end">
-                  <div className="relative h-full  w-full min-h-[550px] lg:w-[calc(100%+2rem)] xl:w-[calc(100%+4rem)]">
-                    <div className="absolute top-0 right-0   left-0 bottom-0 overflow-hidden bg-[#D8E5F2] sm:[clip-path:ellipse(90%_88%_at_90%_85%)]">
-                      <div className="absolute top-0  right-0  bottom-0 left-[8px] overflow-hidden bg-white sm:[clip-path:ellipse(90%_88%_at_90%_85%)] ">
-                        <img
+                  <div className="relative h-full w-full min-h-[550px] lg:w-[calc(100%+2rem)] xl:w-[calc(100%+4rem)]">
+                    <div className="absolute -top-2 right-0 -left-4 -bottom-8 overflow-hidden bg-gradient-to-b from-blue-200 via-gray-200 to-gray-200 sm:[clip-path:ellipse(90%_60%_at_100%_50%)]">
+                      <div className="absolute top-0 right-0 bottom-0 left-[8px] overflow-hidden bg-white sm:[clip-path:ellipse(90%_60%_at_102%_50%)]">
+                        <Image
                           src={slide.bgImageUrl}
                           alt={slide.title || "Plumbing service"}
-                          className="h-full sm:[clip-path:ellipse(100%_88%_at_90%_85%)] w-full object-cover object-top"
+                          fill
+                          sizes="55vw"
+                          className="object-cover object-top"
                         />
                       </div>
                     </div>
@@ -201,7 +208,7 @@ export default function Banner({ data, featureCardsData }: BannerProps) {
                     prev === 0 ? slides.length - 1 : prev - 1,
                   )
                 }
-                className="absolute left-6 top-1/2 z-30 hidden -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-[#09244A]/60 p-2.5 text-white shadow-lg transition-all duration-300 hover:bg-[#9BE500] hover:text-[#09244A] sm:flex"
+                className="absolute left-6 md:top-1/2 top-[30%] z-30 hidden -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-[#09244A]/30 p-2.5 text-white font-bold shadow-lg transition-all duration-300 hover:bg-[#09244A]  sm:flex"
                 aria-label="Previous slide"
               >
                 <ChevronLeft className="h-6 w-6" />
@@ -213,7 +220,7 @@ export default function Banner({ data, featureCardsData }: BannerProps) {
                   setCurrentSlide((prev) => (prev + 1) % slides.length)
                 }
                 aria-label="Next slide"
-                className="absolute right-6 top-1/2 z-30 hidden -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-[#09244A]/60 p-2.5 text-white shadow-lg transition-all duration-300 hover:bg-[#9BE500] hover:text-[#09244A] sm:flex"
+                className="absolute right-6 md:top-1/2 top-[30%] top-1/2 z-30 hidden -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-[#09244A]/30 p-2.5 text-white shadow-lg transition-all duration-300 hover:bg-[#09244A]  sm:flex"
               >
                 <ChevronRight className="h-6 w-6" />
               </button>

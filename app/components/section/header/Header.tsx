@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -40,9 +41,11 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex shrink-0 items-center">
           {site.logo?.light ? (
-            <img
+            <Image
               src={site.logo.light}
               alt={site.siteName || "Aquafix"}
+              width={2172}
+              height={724}
               className="h-9 w-auto object-contain sm:h-10 lg:h-11"
             />
           ) : (
@@ -168,9 +171,11 @@ export default function Header() {
         <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
           <Link href="/" onClick={closeMenu} className="flex items-center">
             {site.logo?.light ? (
-              <img
+              <Image
                 src={site.logo.light}
                 alt={site.siteName || "Aquafix"}
+                width={2172}
+                height={724}
                 className="h-8 w-auto object-contain"
               />
             ) : (

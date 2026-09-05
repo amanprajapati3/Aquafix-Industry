@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import siteData from "@/data/site.json";
 import { Calendar, ArrowRight, ShieldAlert } from "lucide-react";
 import { ServiceBlogData } from "@/data";
@@ -54,10 +55,12 @@ export default function BlogSection({
             >
               {/* Image Container */}
               <div className="relative h-44 w-full overflow-hidden bg-slate-100">
-                <img
+                <Image
                   src={post.image}
                   alt={post.image?.alt || post.title}
-                  className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
 
