@@ -104,7 +104,7 @@ export default function BlogDetailsPage({
             <ScrollReveal direction="right">
             <aside className="space-y-8">
               {/* Categories List */}
-              {sidebar?.categories && (
+              {/* {sidebar?.categories && (
                 <div className="rounded-2xl border border-slate-100 bg-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
                   <h3 className="mb-4 border-b pb-3 text-xl font-bold text-[#0F172A]">
                     Categories
@@ -126,7 +126,7 @@ export default function BlogDetailsPage({
                     ))}
                   </ul>
                 </div>
-              )}
+              )} */}
 
               {/* Recent Posts List */}
               {filteredPosts.length > 0 && (

@@ -53,7 +53,7 @@ export default function SectionHeader({
       )}
 
       {title && (
-        <TitleTag className="mt-0 text-2xl font-bold tracking-tight text-[#0F172A] sm:text-4xl lg:text-5xl">
+        <TitleTag className="mt-0 text-2xl font-bold tracking-tight text-[#0F172A] sm:text-4xl">
           {titleContent}
         </TitleTag>
       )}
